@@ -24,13 +24,16 @@
 |price|integer|null: false|
 |detail|text|null: false|
 |address|string|null: false|
+|category_id|integer|null: false|
+|brand_id|integer|null: false|
 |user_id|integer|null: false|
+|like_id|integer|null: false|
 ### Association
-- has_many :categories
-- has_many :brands
 - has_many :images
+- has_many :likes
+- belongs_to :category
+- belongs_to :brand
 - belongs_to :user
-- belongs_to :like
 
 
 
@@ -86,9 +89,8 @@
 |------|----|-------|
 |name|string|null: false|
 |genre|string|null: false|
-|item_id|integer|null: false|
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## brandsテーブル
@@ -96,19 +98,14 @@
 |------|----|-------|
 |name|string|null: false|
 |genre|string|null: false|
-|item_id|integer|null: false|
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|main|string|null: false|
-|sub1|string|null: false|
-|sub2|string|null: false|
-|sub3|string|null: false|
-|sub4|string|null: false|
+|image|string|null: false|
 |item_id|integer|null: false|
 ### Association
 - belongs_to :item
@@ -116,11 +113,10 @@
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|like|string|null: false|
+|item_id|string|null: false|
 |user_id|string|null: false|
-|item_id|integer|null: false|
 ### Association
-- has_many :items
+- belongs_to :like
 - belongs_to :user
 
 
