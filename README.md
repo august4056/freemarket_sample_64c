@@ -6,12 +6,14 @@
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|password_confirmation|string|null: false|
 ### Association
 - has_many :items
 - has_many :cards
 - has_many :addresses
 - has_many :profiles
 - has_many :SNSes
+- has_many :likes
 
 
 ## itemsテーブル
@@ -21,12 +23,14 @@
 |state|text|null: false|
 |price|integer|null: false|
 |detail|text|null: false|
+|address|string|null: false|
 |user_id|integer|null: false|
 ### Association
 - has_many :categories
 - has_many :brands
 - has_many :images
 - belongs_to :user
+- belongs_to :like
 
 
 
@@ -55,9 +59,13 @@
 ## profilesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|kanji__first|string|null: false|
+|kanji_last|string|null: false|
+|kana_first|string|null: false|
+|kana_last|string|null: false|
 |sex|string|null: false|
 |age|integer|null: false|
-|birthday|string|null: false|
+|birthday|integer|null: false|
 |user_id|integer|null: false|
 ### Association
 - belongs_to :user
@@ -68,7 +76,7 @@
 |------|----|-------|
 |facebook|string|null: false|
 |twitter|string|null: false|
-|nuser_id|integer|null: false|
+|user_id|integer|null: false|
 ### Association
 - belongs_to :user
 
@@ -105,9 +113,18 @@
 ### Association
 - belongs_to :item
 
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|like|string|null: false|
+|user_id|string|null: false|
+|item_id|integer|null: false|
+### Association
+- has_many :items
+- belongs_to :user
 
 
-<!-- 実装しないけど一応書いておく（中間テーブル必要だから簡略してます） -->
+<!-- 実装しなくていいけど一応書いておく（中間テーブル必要だから簡略してます） -->
 <!-- 
 ## commentsテーブル
 |Column|Type|Options|
