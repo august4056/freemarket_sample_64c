@@ -8,12 +8,12 @@
 |password|string|null: false|
 |password_confirmation|string|null: false|
 ### Association
-- has_many :items
-- has_many :cards
-- has_many :addresses
-- has_many :profiles
-- has_many :SNSes
-- has_many :likes
+- has_many :items, dependent: :destroy
+- has_many :cards, dependent: :destroy
+- has_many :addresses, dependent: :destroy
+- has_many :profiles, dependent: :destroy
+- has_many :SNSes, dependent: :destroy
+- has_many :likes, dependent: :destroy
 
 
 ## itemsテーブル
@@ -28,8 +28,8 @@
 |brand_id|integer|null: false|
 |user_id|integer|null: false|
 ### Association
-- has_many :images
-- has_many :likes
+- has_many :images, dependent: :destroy
+- has_many :likes, dependent: :destroy
 - belongs_to :category
 - belongs_to :brand
 - belongs_to :user
