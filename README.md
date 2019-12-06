@@ -27,7 +27,6 @@
 |category_id|integer|null: false|
 |brand_id|integer|null: false|
 |user_id|integer|null: false|
-|like_id|integer|null: false|
 ### Association
 - has_many :images
 - has_many :likes
@@ -116,7 +115,7 @@
 |item_id|string|null: false|
 |user_id|string|null: false|
 ### Association
-- belongs_to :like
+- belongs_to :item
 - belongs_to :user
 
 
