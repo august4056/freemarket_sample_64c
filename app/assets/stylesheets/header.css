@@ -6,99 +6,140 @@
 
 body{
   margin: 0 auto;
+  border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 header {
-  margin: 0 210px 0 210px;
-  display: block;
+  width: 1020px;
+  margin: 0px auto;
   height: 100px;
   background-color: rgb(255, 255, 255);
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  display: block;
-  border-bottom: 1px solid rgb(200, 200, 200);
+  list-style: none;
 }
 
 
 .heder-up{
   padding: 8px 0px 0px;
   display: flex;
-  -webkit-box-pack: justify;
 }
 
-
-.logo-image{
-  margin: 0px auto;
-  height: 36px;
-  width: 134px;
-}
 
 .header-form{
-  width: 53%;
-  position: center;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
 }
+
+
 
 .header-form-botton{
   background-color: transparent;
   cursor: pointer;
   height: 40px;
+  margin: 8px 0 0 5px;
   position: absolute;
   right: 0px;
   top: 0px;
   width: 40px;
   -webkit-appearance: none;
+  border-width: initial;
   border-style: none;
+  border-color: initial;
+  border-image: initial;
   border-radius: 0px 4px 4px 0px;
   padding: 0px;
+  line-height: cebter;
 }
 
+
+
+
 .fas.fa-search{
-  position:absolute;
-  top:50%;
-  right: 235px;
+  color: rgb(34, 34, 34);
+  height: 14px;
+  margin-top: 2px;
+  width: 14px;
+  font-size: 20px;
 }
+
+
 
 .logo-image{
   box-align: center;
   align-items: center;
   display: flex;
   height: 40px;
-  margin:0 40px 0 220px;
+  margin:0 35px 0 0;
 }
 
 .input-header{
-    background-color: rgb(245, 245, 245);
-    font-size: 16px;
-    height: 40px;
-    line-height: 1.4em;
-    position: relative;
-    width: 100%;
-    -webkit-appearance: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-image: initial;
-    border-radius: 4px;
-    outline: none;
-    padding: 0px 50px 0px 10px;
-    transition: all 0.3s ease-out 0s;
+  font-size: 16px;
+  height: 36px;
+  line-height: 1.4em;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease-out 0s;
+  background-color: rgb(245, 245, 245);
+  font-size: 16px;
+  font-family: inherit;
 }
 
 .header-under{
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
-  padding: 8px 0px 0px;
+  margin-top: 8px;
 }
 
 .header-under-left{
-  margin: 8px 0 0 220px;
-  display: block;
+  position: relative;
+  display: flex;
+  margin-left: -3px;
   font-size: 14px;
   font-weight: 600;
   line-height: 36px;
-  white-space: nowrap;
-  float: left;
+}
+
+
+#categoly__search{
+  color: inherit;
+  text-decoration: none;
+  margin-left: 8px;
+  padding-bottom: 10px;
+}
+
+
+#ex_menu1{
+  display:none;
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  background: #fff;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  border: 0.1px solid rgb(240, 240, 240);
+  list-style-type:none;
+}
+
+#ex_menu2{
+  display:none;
+  position: absolute;
+  top: 44px;
+  left: 180px;
+  background: #fff;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  border: 0.1px solid rgb(240, 240, 240);
+  list-style-type:none;
 }
 
 .fas.fa-list-ul{
@@ -107,19 +148,25 @@ header {
   font-size: 18px;
 }
 
+
 .fas.fa-tag{
   color: rgb(224, 60, 88);
   padding-right: 5px;
   font-size: 18px;
 }
 
-.brand-search{
+#brand-search{
+  position: relative;
+  color: black;
+  box-sizing: border-box;
+  text-decoration: none;
   margin-left: 20px;
+  padding-bottom: 10px;
 }
+
 
 .header-under-right{
   float: right;
-  margin: 8px 230px 0 0;
   display: block;
   font-size: 14px;
   line-height: 36px;
@@ -128,6 +175,8 @@ header {
 
 .like-list{
   margin-right: 30px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .far.fa-heart{
@@ -138,6 +187,8 @@ header {
 
 .infomation{
   margin-right: 30px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .far.fa-bell{
@@ -148,6 +199,9 @@ header {
 
 .todo-list{
   margin-right: 30px;
+  color: inherit;
+  text-decoration: none;
+  color: black;
 }
 
 .fas.fa-check{
@@ -160,5 +214,75 @@ header {
   color: rgb(134, 127, 127);
   padding-right: 8px;
   font-size: 24px;
-
 }
+
+.mypage{
+  color: inherit;
+  text-decoration: none;
+}
+
+.categoly__search:hover{
+  color: #51ceff;
+}
+.fas.fa-search:hover{
+  color: #51ceff;
+}
+.brand-search:hover{
+  color: #51ceff;
+}
+.like-list:hover{
+  color: #51ceff;
+}
+.far.fa-heart:hover{
+  color: #51ceff;
+}
+.infomation:hover{
+  color: #51ceff;
+}
+.far.fa-bell:hover{
+  color: #51ceff;
+}
+.todo-list:hover{
+  color: #51ceff;
+}
+.fas.fa-check:hover{
+  color: #51ceff;
+}
+.far.fa-user-circle:hover{
+  color: #51ceff;
+}
+.mypage:hover{
+  color: #51ceff;
+}
+
+.menu1_link{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.menu1_list:hover{
+  background-color: rgb(224, 60, 88);
+}
+
+.menu1_link:hover{
+  color: #fff;
+}
+
+.menu2_list:hover{
+  background-color: rgb(224, 60, 88);
+}
+
+.menu2_link:hover{
+  color: #fff;
+}
+
+.menu2_link{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+
