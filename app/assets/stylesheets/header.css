@@ -109,37 +109,10 @@ header {
 
 
 #categoly__search{
-  color: inherit;
+  color: black;
   text-decoration: none;
   margin-left: 8px;
   padding-bottom: 10px;
-}
-
-
-#ex_menu1{
-  display:none;
-  position: absolute;
-  top: 44px;
-  left: 0px;
-  background: #fff;
-  width: 200px;
-  padding: 0;
-  margin: 0;
-  border: 0.1px solid rgb(240, 240, 240);
-  list-style-type:none;
-}
-
-#ex_menu2{
-  display:none;
-  position: absolute;
-  top: 44px;
-  left: 180px;
-  background: #fff;
-  width: 200px;
-  padding: 0;
-  margin: 0;
-  border: 0.1px solid rgb(240, 240, 240);
-  list-style-type:none;
 }
 
 .fas.fa-list-ul{
@@ -221,31 +194,26 @@ header {
   text-decoration: none;
 }
 
-.categoly__search:hover{
-  color: #51ceff;
-}
 .fas.fa-search:hover{
   color: #51ceff;
 }
-.brand-search:hover{
-  color: #51ceff;
-}
+
 .like-list:hover{
   color: #51ceff;
 }
-.far.fa-heart:hover{
+.like-list:hover .far.fa-heart{
   color: #51ceff;
 }
 .infomation:hover{
   color: #51ceff;
 }
-.far.fa-bell:hover{
+.infomation:hover .far.fa-bell{
   color: #51ceff;
 }
 .todo-list:hover{
   color: #51ceff;
 }
-.fas.fa-check:hover{
+.todo-list:hover .fas.fa-check{
   color: #51ceff;
 }
 .far.fa-user-circle:hover{
@@ -255,6 +223,38 @@ header {
   color: #51ceff;
 }
 
+#ex_menu1{
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  display:none;
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  background: #fff;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  border: 0.1px solid rgb(240, 240, 240);
+  list-style-type:none;
+  font-weight: normal;
+  font-family: system;
+}
+
+#ex_menu2{
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  display:none;
+  position: absolute;
+  top: 44px;
+  left: 180px;
+  background: #fff;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  border: 0.1px solid rgb(240, 240, 240);
+  list-style-type:none;
+  font-weight: normal;
+  font-family: system;
+}
+
 .menu1_link{
   text-decoration: none;
   color: black;
@@ -262,19 +262,15 @@ header {
   padding-left: 18px;
 }
 
-.menu1_list:hover{
-  background-color: rgb(224, 60, 88);
-}
-
 .menu1_link:hover{
+  background-color: rgb(224, 60, 88);
   color: #fff;
 }
 
-.menu2_list:hover{
-  background-color: rgb(224, 60, 88);
-}
+
 
 .menu2_link:hover{
+  background-color: rgb(224, 60, 88);
   color: #fff;
 }
 
@@ -286,3 +282,58 @@ header {
 }
 
 
+
+
+/* 横から出るメニュー */
+
+#ladies_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 200px;
+  position: absolute;
+  top: 0px;
+  width: 224px;
+  padding-inline-start: 0;
+}
+
+.ladies_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.ladies_goods:hover{
+  background-color: rgb(223, 223, 223);
+  
+}
+
+
+#tops_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  padding-inline-start: 0;
+}
+
+.tops_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.tops_goods:hover{
+  background-color: rgb(223, 223, 223);
+}
