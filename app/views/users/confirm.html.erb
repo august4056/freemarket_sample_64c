@@ -1,0 +1,33 @@
+<%= render 'header' %>
+<div class = "main">
+  <div class = "member-info">
+    <h2 class = "member-info__title">電話番号の確認</h2>
+    <%= form_with model: @user do |form| %>
+    <div class = "single-content">
+      <div class = "form-group">
+      <label for = "telephone-field" >携帯電話の番号<span class = "required">必須</span></p>
+      <%= form.telephone_field :text, placeholder:"携帯電話の番号を入力" ,id:"telephone-field" %>
+      <p class= "sms-text">本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。</p>
+      <%= form.submit "SMSを送信する", class:"submit-btn" %>
+      <p>※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません</p>
+      </div>
+      <div class = "form-group">
+        <p><a href="">電話番号の確認が必要な理由</a></p>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%= render 'footer'%>

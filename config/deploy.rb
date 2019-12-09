@@ -30,7 +30,7 @@ namespace :deploy do
     # invoke 'unicorn:restart'
     invoke 'unicorn:stop'
     invoke 'unicorn:start'
-  end
+end
 
   desc 'upload secrets.yml'
   task :upload do
@@ -54,4 +54,5 @@ end
 # }
 
 # secrets.yml用のシンボリックリンクを追加
+
 # set :linked_files, %w{ config/secrets.yml }

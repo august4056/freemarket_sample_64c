@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root "items#index"
+
+  root "items#index"
+
+  get 'confirm', to: 'users#confirm'
+  get 'address', to: 'users#address'
+  get 'payment', to: 'users#payment'
+  get 'complete', to: 'users#complete'
 
 resources :items, only: [:index, :show ,:new]
 

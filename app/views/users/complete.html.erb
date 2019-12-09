@@ -1,0 +1,25 @@
+<%= render 'header' %>
+<div class = "main">
+  <div class = "member-info">
+    <h2 class = "member-info__title">会員登録完了</h2>
+    <%= form_with model: @user do |form| %>
+    <div class = "single-content">
+      <div class = "form-group">
+        <div class = "thanks-message">
+          <p>ありがとうございます</p>
+          <p>会員登録が完了しました</p>
+        </div>
+      </div>
+      <div class = "form-group">
+        <%= form.submit "メルカリをはじめる", class:"submit-btn" %>
+      </div>
+
+      <!-- 背景画像、アプリダウンロード挿入する -->
+      <div class = "download">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'footer'%>
