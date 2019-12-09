@@ -1,0 +1,383 @@
+.single-header{
+  width:1424px;
+  height:128px;
+  text-align: center;
+  vertical-align: middle;
+  background-color:rgb(245, 245, 245);
+}
+
+
+.containar{
+  background-color:rgb(245, 245, 245);
+}
+
+
+.main-content{
+  width:700px;
+  height:2016px;
+  margin:0 auto;
+  background-color:#fff;
+}
+
+.main-head{
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding:32px 16px;
+  font-size:22px;
+  border-bottom:solid 3px rgb(245, 245, 245);
+}
+
+.sell-upload-box {
+  width:620px;
+  height:303px;
+  padding:40px;
+  margin:0;
+  border-bottom:solid 3px rgb(245, 245, 245);
+}
+
+.form-require{
+  background-color:#ea352d;
+  margin:0 0 0 8px;
+  padding:2px 4px;
+  border-radius:2px;
+  color:#fff;
+  font-size:12px;
+  vertical-align:top;
+}
+
+.sell-dropbox{
+  width:620px;
+  height:162px;
+}
+.sell-dropbox-item{
+ width:620px;
+ height:162px;
+ border:1px dashed #ccc;
+ background-color:rgb(245, 245, 245);
+
+
+}
+.visible-pc{
+  text-align: center;
+  font-size:14px;
+  position: relative;
+  top:46px;
+}
+
+
+
+.sell-content{
+  width:700px;
+  height:354px;
+  border-top:1px solid #eee;
+  padding:40 0 40 0;
+  border-bottom:1px solid #eee;
+}
+.sell-sub-head{
+  padding:0 0 0 40;
+}
+
+.form-group{
+  margin:0;
+  padding:40px 40px 0 40px;
+
+}
+.label{
+  display:inline-block;
+}
+
+.input-default{
+  width:100%;
+  margin:8px 0 0;
+  height:48px;
+  padding:10px 16px 8px;
+  border-radius:4px;
+  border: 1px solid #ccc;
+  background:#fff;
+  line-height:1.5;
+  font-size:16px;
+}
+
+.textarea-default{
+  margin:8px 0 0;
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-height:104px;
+  padding:10px;
+  border:1px solid #ccc;
+  background:#fff;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.sell-content-sub{
+  width:700px;
+  height:301px;
+  padding:40 0 40 0;
+  font-size:14px;
+  color:#888;
+
+}
+.sell-form-box{
+  width:400px;
+  height:220px;
+  padding:0 80px 0 0;
+  float:right;
+}
+
+
+.form-group2{
+  position: relative;
+  bottom:40px;
+}
+
+
+.select-wrap{
+  position: relative;
+  background:#fff;
+  height:42px;
+  width:394px;
+}
+
+.fas{
+  position: absolute;
+  right:16px;
+  top:37%;
+  color:#888;
+  font-size:20px;
+}
+
+.select-default{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:42px;
+  width:394px;
+}
+
+.sell-content-sub2{
+  width:700px;
+  height:330px;
+  padding: 40 0 0 0;
+  position: relative;
+  top:160px;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+
+}
+
+.form-question{
+  display:inline-block;
+  width:14px;
+  height:14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color:#fff;
+  line-height:14px;
+  font-size:12px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  bottom:35px;
+  left:140px;
+
+}
+
+.sell-form-box2{
+  width:400px;
+  height:290px;
+  position: relative;
+  left:220px;
+  bottom:50px; 
+}
+
+.form-group4{
+  margin: 80px 0 0;
+}
+.form-require1{
+  position: relative;
+  bottom:63px;
+  background-color:#ea352d;
+  margin:0 0 0 8px;
+  padding:2px 4px;
+  border-radius:2px;
+  color:#fff;
+  font-size:12px;
+  vertical-align:top;
+}
+.label1{
+  position: relative;
+  bottom:63px;
+}
+
+.form-require2{
+  background-color:#ea352d;
+  margin:0 0 0 8px;
+  padding:2px 4px;
+  border-radius:2px;
+  color:#fff;
+  font-size:12px;
+  vertical-align:top;
+}
+
+
+
+
+
+
+
+
+
+.select-default2{
+  position: relative;
+  bottom:85px;
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:42px;
+  width:394px;
+}
+.select-default3{
+  position: relative;
+  bottom:67px;
+  left:4px;
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:42px;
+  width:394px;
+
+}
+.select-default4{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:42px;
+  width:394px;
+
+}
+
+
+
+
+.sell-content-low{
+  width:620px;
+  height:160px;
+  margin-top :120;
+  padding:100 40 40 40;
+}
+
+.sell-sub-head2{
+  color:#888;
+  font-size:14px;
+  width:160px;
+  height:14px;
+}
+
+.form-question2{
+  display:inline-block;
+  width:14px;
+  height:14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color:#fff;
+  line-height:14px;
+  font-size:12px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  bottom:25px;
+  left:152px;
+}
+
+.sell-form-box3{
+  float:right;
+  width:400px;
+  height:218px;
+}
+
+
+.l-left{
+  position: relative;
+  bottom:70px;
+}
+
+.l-right-input{
+  margin:0;
+  text-align: right;
+  height:48px;
+  padding:10px 16px 8px;
+  border-radius:4px;
+  border:1px solid #ccc;
+  background:#fff;
+  line-height:1.5;
+  font-size:16px;
+  position: relative;
+  bottom:60px;
+  left:50px;
+}
+.creafix{
+  width:350px;
+  height:96px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+.footer{
+  background-color:rgb(245, 245, 245);
+}
+
+
+.single-footer{
+  width:456px;
+  height:220px;
+  margin:0 auto;
+  padding:40px 0;
+  text-align: center;
+  background-color:rgb(245, 245, 245);
+
+}
+
+.single-footer ul{
+  list-style: none;
+  
+}
+
+li {
+  font-size:12px;
+  display:inline-block;
+  line-height:8em;
+}
+
+.footer a {
+  text-decoration:none;
+  color:#333;
+  letter-spacing:0.1em;
+}
