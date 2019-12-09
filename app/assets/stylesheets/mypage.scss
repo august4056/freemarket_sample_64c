@@ -1,0 +1,75 @@
+.default-container {
+  width: 1440px;
+  height: 2130.93px;
+  position: relative;
+}
+
+.head {
+  height: 100px;
+  width: 1440px;
+  background-color: blue;
+}
+
+.body-content {
+  height: 1381px;
+  width: 1440px;
+  background-color: #eeeeee;
+  padding-top: 40px;
+}
+
+.main-content {
+  width: 1020px;
+  height: 1292px;
+  background-color: #FFF;
+  margin: 0 auto;
+  padding: 0 0 40px;
+  position: relative;
+}
+
+.right-content{
+  width: 700px;
+  height: 1211.84px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+}
+
+.mypage-user-icon{
+  height: 200px;
+  width: 700px;
+  background-image: url(レインボー.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.icon{
+  width: 700px;
+  height: 111px;
+}
+
+
+.mypage-content-tab{
+  width: 700px;
+  height: 589.84px;
+  background-color: green;
+}
+
+
+
+
+
+
+.app-banner img{
+  width: 1440px;
+  height: 260px;
+}
+
+.footer-content {
+  width: 1440px;
+  height: 389px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
