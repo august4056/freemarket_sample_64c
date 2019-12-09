@@ -35,7 +35,6 @@ window.addEventListener("load", function() {
   }, false);
   
   //レディース開閉
-
   document.getElementById("ladies1_list").addEventListener("mouseover", function(){
     document.getElementById("ladies_ul").style.display = 'block';
   }, false);
@@ -53,7 +52,6 @@ window.addEventListener("load", function() {
   }, false);
 
   //トップス開閉
-
   document.getElementById("tops_list").addEventListener("mouseover", function(){
     document.getElementById("tops_ul").style.display = 'block';
   }, false);
@@ -70,10 +68,47 @@ window.addEventListener("load", function() {
     document.getElementById("tops_ul").style.display = 'none';
   }, false);
 
+  //ジャケット、アウター開閉
+  document.getElementById("jacket-outer_list").addEventListener("mouseover", function(){
+    document.getElementById("jacket-outer_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("jacket-outer_list").addEventListener("mouseout", function(){
+    document.getElementById("jacket-outer_ul").style.display = 'none';
+  }, false);
+
+  document.getElementById("jacket-outer_ul").addEventListener("mouseover", function(){
+    document.getElementById("jacket-outer_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("jacket-outer_ul").addEventListener("mouseout", function(){
+    document.getElementById("jacket-outer_ul").style.display = 'none';
+  }, false);
+
+  //パンツ開閉
+  document.getElementById("pants_list").addEventListener("mouseover", function(){
+    document.getElementById("pants_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("pants_list").addEventListener("mouseout", function(){
+    document.getElementById("pants_ul").style.display = 'none';
+  }, false);
+
+  document.getElementById("pants_ul").addEventListener("mouseover", function(){
+    document.getElementById("pants_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("pants_ul").addEventListener("mouseout", function(){
+    document.getElementById("pants_ul").style.display = 'none';
+  }, false);
+
+
+
+  //メニュータグを青くし続ける
   $(function(){
     $(".categoly__title:has(a)").addClass("links-hover");
   });
-  
+
   $(function(){
     $("#ex_menu1:has(a)").addClass("title1-over");
     
