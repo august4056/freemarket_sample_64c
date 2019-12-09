@@ -1,0 +1,15 @@
+= render 'header'
+.main
+  .member-info
+    %h2.member-info__title 会員登録完了
+    = form_with model: @user do |form|
+      .single-content
+        .form-group
+          .thanks-message
+            %p ありがとうございます
+            %p 会員登録が完了しました
+        .form-group
+          = form.submit "メルカリをはじめる", class:"submit-btn"
+        / 背景画像、アプリダウンロード挿入する
+        .download
+= render 'footer'
