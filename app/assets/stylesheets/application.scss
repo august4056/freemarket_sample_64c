@@ -1,11 +1,12 @@
 @import "font-awesome-sprockets";
+@import "./font-awesome";
+@import 'color';
 @import 'reset';
 @import 'users';
 @import 'login';
-@import 'color';
 @import 'header';
 @import 'footer';
-@import 'items';
+@import 'itemdetail';
 @import 'login';
 @import 'mypage';
 @import 'sellpage';
