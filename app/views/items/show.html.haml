@@ -5,18 +5,67 @@
     .item-detail-main
       .item-detail-main__photos
         %img.item-detail-main__photos__photo{:src => "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg"}/
-      %table
-        %tbody.item-detail-main__detail
-
-          %tr.table-header
-            出品者
-          %td.table-data
-            こじこじ
-
-
-    
-    
-    
+      %table.item-detail-main__table
+        %tbody
+          %tr
+            %th
+              出品者
+            %td
+              こじこじ
+              .item-user
+                .item-user__laugh
+                  %i.fas.fa-laugh
+                .item-user__rating
+                  22
+                .item-user__meh
+                  %i.fas.fa-meh
+                .item-user__rating
+                  2
+                .item-user__frown
+                  %i.fas.fa-frown
+                .item-user__rating
+                  12
+          %tr
+            %th
+              カテゴリー
+            %td
+              ふく
+          %tr
+            %th
+              ブランド
+            %td
+              ごふく
+          %tr
+            %th
+              -# もし商品のサイズがあれば表示するようif分岐させる
+              商品のサイズ
+            %td
+              ちいさい
+          %tr
+            %th
+              商品の状態
+            %td
+              きれい？
+          %tr
+            %th
+              配送料の負担
+            %td
+              送料込み（出品者負担）
+          %tr
+            %th
+              配送の方法
+            %td
+              ゆうゆうメルカリ便
+          %tr
+            %th
+              配送元地域
+            %td
+              ギリシャ
+          %tr
+            %th
+              発送日の目安
+            %td
+              1週間程
     .item-detail-price
       .item-detail-price-box
         .item-detail-price-box__yen
@@ -40,13 +89,13 @@
       .item-detail-description__bottom
         .item-detail-description__bottom__left
           .item-detail-description__bottom__left__like
-            %i.fa.fa-heart
+            %i.far.fa-heart
             いいね!
           .item-detail-description__bottom__left__report
-            %i.fa.fa-flag
+            %i.far.fa-flag
             不適切な商品の報告
         .item-detail-description__bottom__right
-          %i.fa.fa-lock
+          %i.fas.fa-lock
           あんしん・あんぜんへの取り組み
   .item-detail-comment
     .item-detail-comment__caution

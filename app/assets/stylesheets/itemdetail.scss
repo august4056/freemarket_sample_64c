@@ -1,6 +1,6 @@
 .item-detail-cotainer{
 .item-detail-contents{
-  background-color: #fff;
+  background-color: $White;
   width: 620px;
   margin: 40px auto 0;
   padding: 24px 40px 40px;
@@ -21,22 +21,63 @@
       position: relative;
       width: 300px;
       min-height: 280px;
-      margin: 0 auto;
-      background-color: #fafafa;
+      margin: 0 5px 0 auto;
+      background-color: $Lightgray;
+
       &__photo{
         width: 100%;
         vertical-align: bottom;
       }
     }
-    &__detail{
-      background-color: rgba(89, 100, 112, 0.267);
+    &__table{
       position: relative;
       min-width: 280px;
       max-width: 300px;
       height: 420px;
-      margin: 0 auto;
+      margin: 0 auto ;
+      & tbody{
+        font-size: 14px;
+        & tr{
+          border: 1px solid #f5f5f5;
+        }
+        & th{
+          background-color: $Lightgray;
+          font-weight: bold;
+          text-align: left;
+          width: 39%;
+          padding: 8px;
+        }
+        & td{
+          background-color: $White;
+          width: 61%;
+          padding: 8px;
+          text-align: left;
+        }
+      }
     }
   }
+  .item-user{
+    display: flex;
+    &__laugh{
+      color: #ef5185;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    &__meh{
+      color: #fba933;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    &__frown{
+      color: #6ab5d8;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    &__rating{
+      margin-right: 15px;
+    }
+  }
+
   .item-detail-price-box{
     display: flex;
     justify-content: center;
@@ -83,7 +124,7 @@
     &__text{
       font-size: inherit;
       line-height: inherit;
-      margin-top: 16px;
+      margin-top: 32px;
       font-size: 18px;
     }
     &__bottom{
@@ -91,6 +132,7 @@
       justify-content: space-between;
       font-size: 14px;
       margin-top: 16px;
+      line-height: inherit;
       &__left{
         display: flex;
         &__like{
