@@ -27,6 +27,7 @@
 |category_id|integer|null: false|
 |brand_id|integer|null: false|
 |user_id|integer|null: false|
+<!-- buy_id -->
 ### Association
 - has_many :images, dependent: :destroy
 - has_many :likes, dependent: :destroy
