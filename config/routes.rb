@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'complete', to: 'users#complete'
 
 resources :items, only: [:index, :show ,:new]
+resources :users, only: [:new, :edit, :create, :show]
 
 end
