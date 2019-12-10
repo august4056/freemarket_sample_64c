@@ -1,0 +1,34 @@
+.user-single-container
+  = render 'user-single-header'
+  .user-single-main
+    .user-single-login-panel
+      .user-single-login-no-account
+        %p アカウントをお持ちでない方はこちら
+        %button.create-account
+          新規会員登録
+      .user-single-buttons
+        .user-single-btn
+          %button.btn.facebook
+            %i.fab.fa-facebook-square
+            Facebookでログイン
+        .user-single-btn
+          %button.btn.google
+            %i.fab.fa-google
+            Googleでログイン
+      = form_with model: @user do |form|
+        .user-login-form
+          .form-group
+            = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
+            -# %input.mail.holder{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
+          .form-group
+            = form.password_field :text, class:"password-field", placeholder:"" 
+            -# %input.password.holder{:name => "password", :placeholder => "パスワード", :type => "password"}/
+          .robot
+            %button.robot-button
+              %input.check{:type => "checkbox"}/
+              私はロボットではありません
+          .login-btn
+            %button.login-submit{:type => "submit"}
+              ログイン
+          %a{:href => "#"} パスワードをお忘れの方
+  = render 'footer'
