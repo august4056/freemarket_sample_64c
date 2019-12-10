@@ -1,19 +1,19 @@
 window.addEventListener("load", function() {
 
   //カテゴリー開閉
-  document.getElementById("categoly__search").addEventListener("mouseover", function(){
+  document.getElementById("categoly__search22").addEventListener("mouseover", function(){
     document.getElementById("ex_menu1").style.display = 'block';
   }, false);
   
-  document.getElementById("categoly__search").addEventListener("mouseout", function(){
+  document.getElementById("categoly__search22").addEventListener("mouseout", function(){
     document.getElementById("ex_menu1").style.display = 'none';
   }, false);
   
-  document.getElementById("ex_out1").addEventListener("mouseover", function(){
+  document.getElementById("ex_menu1").addEventListener("mouseover", function(){
     document.getElementById("ex_menu1").style.display = 'block';
   }, false);
   
-  document.getElementById("ex_out1").addEventListener("mouseout", function(){
+  document.getElementById("ex_menu1").addEventListener("mouseout", function(){
     document.getElementById("ex_menu1").style.display = 'none';
   }, false);
   
@@ -102,55 +102,157 @@ window.addEventListener("load", function() {
     document.getElementById("pants_ul").style.display = 'none';
   }, false);
 
+  //スカート開閉
+  document.getElementById("skirt_list").addEventListener("mouseover", function(){
+    document.getElementById("skirt_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("skirt_list").addEventListener("mouseout", function(){
+    document.getElementById("skirt_ul").style.display = 'none';
+  }, false);
 
+  document.getElementById("skirt_ul").addEventListener("mouseover", function(){
+    document.getElementById("skirt_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("skirt_ul").addEventListener("mouseout", function(){
+    document.getElementById("skirt_ul").style.display = 'none';
+  }, false);
 
-  //メニュータグを青くし続ける
-  $(function(){
-    $(".categoly__title:has(a)").addClass("links-hover");
-  });
+  //ワンピース開閉
+  document.getElementById("one-pirce_list").addEventListener("mouseover", function(){
+    document.getElementById("one-pirce_ul").style.display = 'block';
+  }, false);
+  
+  document.getElementById("one-pirce_list").addEventListener("mouseout", function(){
+    document.getElementById("one-pirce_ul").style.display = 'none';
+  }, false);
 
-  $(function(){
-    $("#ex_menu1:has(a)").addClass("title1-over");
+  document.getElementById("one-pirce_ul").addEventListener("mouseover", function(){
+    document.getElementById("one-pirce_ul").style.display = 'block';
+  }, false);
     
-    $('#categoly__search').mouseover(function() {
-      $(this).css('color', '#51ceff');
-    });
+  document.getElementById("one-pirce_ul").addEventListener("mouseout", function(){
+    document.getElementById("one-pirce_ul").style.display = 'none';
+  }, false);
+
+  //女性用靴開閉
+  document.getElementById("ladies-boots_list").addEventListener("mouseover", function(){
+    document.getElementById("ladies-boots_ul").style.display = 'block';
+  }, false);
     
-    $('#categoly__search').mouseout(function() {
-      $(this).css('color', 'black');
-    });
-
-
-    $('.title1-over').mouseover(function() {
-      $('#categoly__search').css('color', '#51ceff');
-    });
-
-    $('.title1-over').mouseout(function() {
-      $('#categoly__search').css('color', '');
-    });
+  document.getElementById("ladies-boots_list").addEventListener("mouseout", function(){
+    document.getElementById("ladies-boots_ul").style.display = 'none';
+  }, false);
+  
+  document.getElementById("ladies-boots_ul").addEventListener("mouseover", function(){
+    document.getElementById("ladies-boots_ul").style.display = 'block';
+  }, false);
     
-  });
+  document.getElementById("ladies-boots_ul").addEventListener("mouseout", function(){
+    document.getElementById("ladies-boots_ul").style.display = 'none';
+  }, false);
 
-
-  $(function(){
-    $("#ex_menu2:has(a)").addClass("title2-over");
-
-    $('#brand-search').mouseover(function() {
-      $(this).css('color', '#51ceff');
-    });
+  //ルームウェアパジャマ開閉
+  document.getElementById("roomwear-pajamas_list").addEventListener("mouseover", function(){
+    document.getElementById("roomwear-pajamas_ul").style.display = 'block';
+  }, false);
     
-    $('#brand-search').mouseout(function() {
-      $(this).css('color', 'black');
-    });
-
-    $('.title2-over').mouseover(function() {
-      $('#brand-search').css('color', '#51ceff');
-    });
-
-    $('.title2-over').mouseout(function() {
-      $('#brand-search').css('color', 'black');
-    });
+  document.getElementById("roomwear-pajamas_list").addEventListener("mouseout", function(){
+    document.getElementById("roomwear-pajamas_ul").style.display = 'none';
+  }, false);
+  
+  document.getElementById("roomwear-pajamas_ul").addEventListener("mouseover", function(){
+    document.getElementById("roomwear-pajamas_ul").style.display = 'block';
+  }, false);
     
-  });
+  document.getElementById("roomwear-pajamas_ul").addEventListener("mouseout", function(){
+    document.getElementById("roomwear-pajamas_ul").style.display = 'none';
+  }, false);
+
+  //レッグウェア開閉
+  document.getElementById("leg-wear_list").addEventListener("mouseover", function(){
+    document.getElementById("leg-wear_ul").style.display = 'block';
+  }, false);
+    
+  document.getElementById("leg-wear_list").addEventListener("mouseout", function(){
+    document.getElementById("leg-wear_ul").style.display = 'none';
+  }, false);
+  
+  document.getElementById("leg-wear_ul").addEventListener("mouseover", function(){
+    document.getElementById("leg-wear_ul").style.display = 'block';
+  }, false);
+    
+  document.getElementById("leg-wear_ul").addEventListener("mouseout", function(){
+    document.getElementById("leg-wear_ul").style.display = 'none';
+  }, false);
+
+  //帽子開閉
+  document.getElementById("ladies-hats_list").addEventListener("mouseover", function(){
+    document.getElementById("ladies-hats_ul").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ladies-hats_list").addEventListener("mouseout", function(){
+    document.getElementById("ladies-hats_ul").style.display = 'none';
+  }, false);
+  
+  document.getElementById("ladies-hats_ul").addEventListener("mouseover", function(){
+    document.getElementById("ladies-hats_ul").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ladies-hats_ul").addEventListener("mouseout", function(){
+    document.getElementById("ladies-hats_ul").style.display = 'none';
+  }, false);
+
+
+
+  // //メニュータグを青くし続ける
+  // $(function(){
+  //   $(".header-under-left:has(a)").addClass("links-hover");
+  // });
+
+  // $(function(){
+  //   $("#ex_menu1:has(a)").addClass("title1-over");
+    
+  //   $('#categoly__search22').mouseover(function() {
+  //     $(this).css('color', '#51ceff');
+  //   });
+    
+  //   $('#categoly__search22').mouseout(function() {
+  //     $(this).css('color', 'black');
+  //   });
+
+
+  //   $('.title1-over').mouseover(function() {
+  //     $('#categoly__search22').css('color', '#51ceff');
+  //   });
+
+  //   $('.title1-over').mouseout(function() {
+  //     $('#categoly__search22').css('color', '');
+  //   });
+    
+  // });
+
+
+  // $(function(){
+  //   $("#ex_menu2:has(a)").addClass("title2-over");
+
+  //   $('#brand-search').mouseover(function() {
+  //     $(this).css('color', '#51ceff');
+  //   });
+    
+  //   $('#brand-search').mouseout(function() {
+  //     $(this).css('color', 'black');
+  //   });
+
+  //   $('.title2-over').mouseover(function() {
+  //     $('#brand-search').css('color', '#51ceff');
+  //   });
+
+  //   $('.title2-over').mouseout(function() {
+  //     $('#brand-search').css('color', 'black');
+  //   });
+    
+  // });
 
 });

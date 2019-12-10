@@ -4,18 +4,17 @@
 //   display: block;
 // }
 
-// body{
-//   margin: 0 auto;
-//   border-bottom: 1px solid rgb(200, 200, 200);
-// }
-
-// header {
-//   width: 1020px;
-//   margin: 0px auto;
-//   height: 100px;
-//   background-color: rgb(255, 255, 255);
-//   list-style: none;
-// }
+.header0{
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  &__body {
+    width: 1020px;
+    margin: 0px auto;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+  }
+}
 
 
 .heder-up{
@@ -32,46 +31,44 @@
 
 
 
-.header-form-botton{
+.header-form-button{
   background-color: transparent;
   cursor: pointer;
   height: 40px;
-  margin: 8px 0 0 5px;
+  width: 40px;
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 40px;
   -webkit-appearance: none;
-  border-width: initial;
   border-style: none;
-  border-color: initial;
-  border-image: initial;
   border-radius: 0px 4px 4px 0px;
   padding: 0px;
-  line-height: cebter;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 
 
 
-.fas.fa-search{
+.search__icon1{
   color: rgb(34, 34, 34);
-  height: 14px;
-  margin-top: 2px;
-  width: 14px;
-  font-size: 20px;
+  display: inline-block;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 3px;
+  }
+
+
+.header__logo{
+  margin: 0 auto;
+  &__image{
+    box-align: center;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    margin:0 35px 0 0;
+  }
 }
-
-
-
-.logo-image{
-  box-align: center;
-  align-items: center;
-  display: flex;
-  height: 40px;
-  margin:0 35px 0 0;
-}
-
 .input-header{
   font-size: 16px;
   height: 36px;
@@ -93,26 +90,33 @@
 
 .header-under{
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
   margin-top: 8px;
+  margin-left: -3px;
+  height: 53px;
 }
+
 
 .header-under-left{
   position: relative;
   display: flex;
   margin-left: -3px;
   font-size: 14px;
-  font-weight: 600;
   line-height: 36px;
 }
 
 
-#categoly__search{
+#categoly__search22{
+  font-weight: 510;
   color: black;
   text-decoration: none;
   margin-left: 8px;
   padding-bottom: 10px;
+  font-family: Tahoma;
+}
+
+#categoly__search22:hover{
+  color: #51ceff;
 }
 
 .fas.fa-list-ul{
@@ -129,21 +133,29 @@
 }
 
 #brand-search{
+  font-weight: 510;
   position: relative;
   color: black;
   box-sizing: border-box;
   text-decoration: none;
   margin-left: 20px;
   padding-bottom: 10px;
+  font-family: Tahoma;
+}
+
+#brand-search:hover{
+  color: #51ceff;
 }
 
 
 .header-under-right{
   float: right;
-  display: block;
-  font-size: 14px;
+  display: flex;
+  font-size: 13px;
   line-height: 36px;
   white-space: nowrap;
+  position: relative;
+  font-family: Tahoma;
 }
 
 .like-list{
@@ -175,6 +187,7 @@
   color: inherit;
   text-decoration: none;
   color: black;
+  display: block;
 }
 
 .fas.fa-check{
@@ -190,12 +203,8 @@
 }
 
 .mypage{
-  color: inherit;
+  color: black;
   text-decoration: none;
-}
-
-.fas.fa-search:hover{
-  color: #51ceff;
 }
 
 .like-list:hover{
@@ -223,9 +232,11 @@
   color: #51ceff;
 }
 
+
 #ex_menu1{
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   display:none;
+  height: 505px;
   position: absolute;
   top: 44px;
   left: 0px;
@@ -237,6 +248,7 @@
   list-style-type:none;
   font-weight: normal;
   font-family: system;
+  z-index: 10;
 }
 
 #ex_menu2{
@@ -253,6 +265,7 @@
   list-style-type:none;
   font-weight: normal;
   font-family: system;
+  z-index: 10;
 }
 
 .menu1_link{
@@ -260,6 +273,7 @@
   color: black;
   display: list-item;
   padding-left: 18px;
+  position: relative;
 }
 
 .menu1_link:hover{
@@ -267,12 +281,16 @@
   color: #fff;
 }
 
-
-
 .menu2_link:hover{
+  color: #fff;
+}
+
+
+
+.menu2_list:hover{
   background-color: rgb(224, 60, 88);
   color: #fff;
-  
+
 }
 
 .menu2_link{
@@ -325,6 +343,7 @@
   left: 220px;
   position: absolute;
   top: 0px;
+  height: 550px;
   width: 300px;
   padding-inline-start: 0;
 }
@@ -351,6 +370,7 @@
   position: absolute;
   top: 0px;
   width: 300px;
+  height: 550px;
   padding-inline-start: 0;
 }
 
@@ -376,6 +396,7 @@
   position: absolute;
   top: 0px;
   width: 300px;
+  height: 550px;
   padding-inline-start: 0;
 }
 
@@ -390,3 +411,200 @@
   background-color: rgb(223, 223, 223)
 }
 
+#skirt_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.skirt_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.skirt_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+#one-pirce_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.one-pirce_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.one-pirce_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+#ladies-boots_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.ladies-boots_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.ladies-boots_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+#roomwear-pajamas_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.roomwear-pajamas_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.roomwear-pajamas_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+#leg-wear_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.leg-wear_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.leg-wear_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+#ladies-hats_ul{
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  border: 0.1px solid rgb(240, 240, 240);
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+  display: none;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 550px;
+  padding-inline-start: 0;
+}
+
+.ladies-hats_goods{
+  text-decoration: none;
+  color: black;
+  display: list-item;
+  padding-left: 18px;
+}
+
+.ladies-hats_goods:hover{
+  background-color: rgb(223, 223, 223)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #mens_ul-22{
+//   list-style-type: none;
+//   background-color: rgb(255, 255, 255);
+//   bottom: 0px;
+//   border: 0.1px solid rgb(240, 240, 240);
+//   box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
+//   display: none;
+//   left: 220px;
+//   position: absolute;
+//   top: 0px;
+//   width: 300px;
+//   padding-inline-start: 0;
+// }
