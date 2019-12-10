@@ -1,43 +1,85 @@
 .smaph_area {
+  background-color: #f0f8ff;
   height: 300px;
   width: 100%;
-  position: relative;
-  background-image: url("img/room_img.jpg");
+  margin-top: auto;
+  
+  
+  .smaph_box {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .smaph__text {
+    font-size: 16px;
+    color: #222222;
+    padding: 10px 0 10px 0;
+    font-weight:bold;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 }
 
-.smaph_box {
-  width: 750px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 
-}
 
 .footer__index {
-  background: #222222;
+  background-color: #222222;
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin: 0 50px 100px 0;
+  position: fixed;
+  position: relative;
+  
+
+  .footer__index__contaner {
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    
+  }
   
   .footer__index__box {
     width: 250px;
-    margin-top: 20px; 
-    list-style: none;  
+    list-style: none;
+    margin: 20px 0px 50px 0px;
   }
 
   .footer__title {
     font-size: 16px;
     color: #ffffff;
-    margin: 10px 0 10px 0;
-    font-weight:bold; 
+    // margin: 10px 0 10px 0;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
   }
+
+  .footer__comments {
+    margin-top: 16px;
+
+  }
+
   .footer__comment {
     color: #d3d3d3;
     text-decoration: none;
     font-size: 12px;
-    margin: 20px 0px 50px 0px;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+ 
   }
 
+  .copy_box {
+  
+    .copy__comment {
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+      box-sizing: content-box;
+    }
+  }
 }
 
 
@@ -56,13 +98,4 @@
 
 
 
-// a:hover {
-//   text-decoration: underline;
-// }
 
-.copy {
-  font-size: 15px;
-  color: #fff;
-  text-align: center;
-  box-sizing: border-box;
-}
