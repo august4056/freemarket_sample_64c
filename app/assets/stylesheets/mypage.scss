@@ -1,56 +1,82 @@
-.default-container {
-  width: 1440px;
-  height: 2130.93px;
-  position: relative;
-}
 
-.head {
-  height: 100px;
-  width: 1440px;
-  background-color: blue;
-}
-
-.body-content {
+.user__mypage-body-content {
   height: 1381px;
   width: 1440px;
   background-color: #eeeeee;
   padding-top: 40px;
+ 
 }
 
-.main-content {
+.user__mypage-main-content {
   width: 1020px;
   height: 1292px;
-  background-color: #FFF;
   margin: 0 auto;
-  padding: 0 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__mypage-left-content{
+  width: 280px;
+  height: 100%;
+  margin-right: 40px;
+  background-color: #eeeeee;
+}
+
+.user__mypage-left-lists{
+  list-style: none;
+}
+
+.user__mypage-left-list{
+  color:#333333;
+  background-color: #fff;
+  width: 244px;
+  height: 16px;
+  padding: 16px;
+  border-top:1px solid #eee;
   position: relative;
 }
 
-.right-content{
-  width: 700px;
-  height: 1211.84px;
-  background-color: red;
+
+.fa-chevron-right{
   position: absolute;
-  right: 0;
+  right: 10px;
 }
 
-.mypage-user-icon{
+
+.user__mypage-nav-head{
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.user__mypage-right-content{
+  width: 700px;
+  height: 100%;
+  background-color: red;
+}
+
+.user__mypage-user-icon{
   height: 200px;
   width: 700px;
   background-image: url(レインボー.png);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  position: relative;
 }
 
-.icon{
+.user__mypage-icon{
   width: 700px;
   height: 111px;
 }
 
 
-.mypage-content-tab{
+.user__mypage-content-tab{
   width: 700px;
   height: 589.84px;
   background-color: green;
@@ -59,17 +85,3 @@
 
 
 
-
-
-.app-banner img{
-  width: 1440px;
-  height: 260px;
-}
-
-.footer-content {
-  width: 1440px;
-  height: 389px;
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-}
