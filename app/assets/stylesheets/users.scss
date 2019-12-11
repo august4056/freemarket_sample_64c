@@ -55,13 +55,11 @@
 }
 
 
-
 //メイン
-.main {
-  background-color: #eeeeee;
+.user-main {
   display: flex;
   justify-content: center;
-  .member-info {
+  .user-member-info {
     width: 700px;
     margin :0 72px;
     background-color: #fff;
@@ -76,11 +74,11 @@
 }
 
 //入力フォーム
-.single-content {
+.user-single-content {
   max-width: 343px;
   margin: 0 auto;
   padding: 0;
-  .form-group-top {
+  .user-form-group-top {
     font-size: 14px;
     font-weight: bold;
     margin-top:24px ;
@@ -97,7 +95,7 @@
       padding: 10px 16px 8px;
     }
   }
-  .form-group {
+  .user-form-group {
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
@@ -163,7 +161,7 @@
       padding: 10px 16px 8px;
     }
   }
-  .form-group-password {
+  .user-form-group-password {
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
@@ -176,6 +174,11 @@
       padding: 10px 16px 8px;
     }
   }   
+}
+
+.registration-link a {
+  text-decoration: none;
+  color: #0098e8;
 }
 
 //address　form部分
@@ -246,9 +249,9 @@
   font-size: 16px;
   padding: 10px 16px 8px;
 }
-.cards {
+.user-cards {
   display: flex;
-  .card {
+  &__card {
     margin-left: 10px;
     height: 19px;
     .card-logo {
@@ -259,19 +262,17 @@
 }
 
 //complete メイン部分
-.thanks-message {
+.user-thanks-message {
   text-align: center;
 }
 
-
-
-
-.robot {
+.user-robot-field {
   height: 78px;
   border: 1px solid #ccc;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
+//赤字　必須
 .required {
   font-size: 12px;
   color: #fff;
@@ -280,6 +281,8 @@
   background-color:#ea352d;
   border-radius: 3px;
 }
+
+//グレー　任意
 .option {
   font-size: 12px;
   color: #fff;
@@ -304,6 +307,16 @@
 
 
 //フッター
+
+.login-footer {
+  height:140px;
+  background-color: #eeeeee;
+  padding: 40px 0;
+  text-align: center;
+  padding-top: 110px;
+}
+
+
 .footer {
   height:140px;
   background-color: #eeeeee;
