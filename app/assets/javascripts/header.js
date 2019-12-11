@@ -1,3 +1,4 @@
+
 window.addEventListener("load", function() {
 
   //カテゴリー開閉
@@ -16,6 +17,7 @@ window.addEventListener("load", function() {
   document.getElementById("ex_menu1").addEventListener("mouseout", function(){
     document.getElementById("ex_menu1").style.display = 'none';
   }, false);
+
   
   // ブランド開閉
   document.getElementById("brand-search").addEventListener("mouseover", function(){
@@ -255,6 +257,56 @@ window.addEventListener("load", function() {
     document.getElementById("mypage22").style.display = 'none';
   }, false);
 
+
+//   //メニュータグを青くし続ける
+//   $(function(){
+//     $(".categoly__title:has(a)").addClass("links-hover");
+//   });
+
+//   $(function(){
+//     $("#ex_menu1:has(a)").addClass("title1-over");
+    
+//     $('#categoly__search').mouseover(function() {
+//       $(this).css('color', '#51ceff');
+//     });
+    
+//     $('#categoly__search').mouseout(function() {
+//       $(this).css('color', 'black');
+//     });
+
+
+//     $('.title1-over').mouseover(function() {
+//       $('#categoly__search').css('color', '#51ceff');
+//     });
+
+//     $('.title1-over').mouseout(function() {
+//       $('#categoly__search').css('color', '');
+//     });
+    
+//   });
+
+
+//   $(function(){
+//     $("#ex_menu2:has(a)").addClass("title2-over");
+
+//     $('#brand-search').mouseover(function() {
+//       $(this).css('color', '#51ceff');
+//     });
+    
+//     $('#brand-search').mouseout(function() {
+//       $(this).css('color', 'black');
+//     });
+
+//     $('.title2-over').mouseover(function() {
+//       $('#brand-search').css('color', '#51ceff');
+//     });
+
+//     $('.title2-over').mouseout(function() {
+//       $('#brand-search').css('color', 'black');
+//     });
+    
+//   });
+  
   // //メニュータグを青くし続ける
   // $(function(){
   //   $(".header-under-left:has(a)").addClass("links-hover");
@@ -304,4 +356,5 @@ window.addEventListener("load", function() {
     
   // });
 
-});
+
+// });
