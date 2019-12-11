@@ -1,245 +1,191 @@
-//ログイン
-
-
-.single-container{
-  width: 1440px;
-  height: 1079px;
+//ページ全体を含む
+.user-single-container{
   background-color: #EEEEEE;
 }
 
-.single-header{
-  width: 1440px;
+//共通ヘッダー
+.user-single-header{
   height: 128px;
   text-align: center;
 }
-
-.single-header h1{
-  width: 193px;
-  height: 49px;
-  display: inline-block;
-  margin: 40px 0 0;
-}
-
-.single-header img{
-  width: 185px;
-  height: 49px;
-  display: inline-block;
-  margin: 0 8px 0 0;
-  line-height: 49px;
-}
-.single-main{
-  width: 1440px;
-  height: 731px;
-}
-
-.single-login-panel{
-  width: 456px;
-  height: 731px;
-  background-color: #FFF;
-  margin: 0 auto;
-}
-
-.single-login-no-account{
-  width: 456px;
-  height: 144px;
-  text-align: center;
-  /* padding: 40px 64px; */
-}
-
-.single-login-no-account p{
-  font-size: 16px;
-   padding-top: 40px;
-   height: 14px;
-}
-
-.create-account{
-  margin: 8px 0 0;
-  border: 1px solid #0099e8;
-  background-color: #0099e8;
-  color: #fff;
-  line-height: 40px;
-  width: 382px;
-  height: 42px;
-  font-size: 16px;
-
-}
-
-.single-buttons{
-  width: 456px;
-  height: 181px;
-  padding-top: 32px;
-}
-
-.single-btn{
-  text-align: center;
-}
-
-.btn{
-  width: 382px;
-  height: 50px;
-  margin-top: 16px;
-  font-size: 16px;
-  position: relative;
-}
-
-.facebook{
-  background-color: #385185;
-  color: white;
-}
-
-.google{
-  background-color: #fff;
-  color: black;
-  border: #979797 solid 1px;
-}
-
-.fab{
-  position: absolute;
-  left: 10px;
-  font-size: 20px;
-}
-
-.single-forms{
-  width: 456px;
-  height: 406px;
-}
-
-.single-form{
- text-align: center;
-}
-
-.holder{
-  width: 363px;
-  height: 36px;
-  margin-top: 24px;
-  border-radius: 4px;
-  border: 1px solid #ccc;  
-  background: #fff;
-  font-size: 16px;
-  padding: 10px
-}
-
-.robot{
-  text-align: center;
-}
-
-.robot-button{
-  width: 363px;
-  height: 56px;
-  margin-top: 24px;
-  font-size: 16px;
-  position: relative;
-}
-
-.check{
-  position: absolute;
-  left: 10px;
-  font-size: 20px;
-
-}
-.login-btn{
- 
-  text-align: center;
+.logo {
+  width: 150px;
+  height: 128px;
 }
 
 
-.login-submit{
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 24px 0 0;
-  width: 360px;
-  height: 50px;
+//ログインをクリックしたら遷移する　registration
+
+//メイン
+.user-single-main{
+  .user-single-login-panel{
+    width: 456px;
+    height: 731px;
+    background-color: #FFF;
+    margin: 0 auto;
+    &__no-account{
+      width: 456px;
+      height: 144px;
+      text-align: center;
+      border-bottom: 1px solid #EEEEEE;
+      &__account-message {
+        font-size: 14px;
+        padding-top: 40px;
+        height: 14px;
+        padding-top: 40px;    
+      }
+      &__create-account{
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background-color: #0099e8;
+        color: #fff;
+        line-height: 40px;
+        width: 326px;
+        height: 42px;
+        font-size: 14px;
+      }
+    }
+    &__buttons{
+      width: 328px;
+      padding: 32px 64px;
+      .user-single-btn{
+        text-align: center;
+        .btn{
+          width: 326px;
+          height: 48px;
+          font-size: 16px;
+          position: relative;
+          border-radius: 0;
+        }
+        .facebook{
+          background-color: #385185;
+          color: white;
+        }
+        .google{
+          background-color: #fff;
+          color: black;
+          border: #979797 solid 1px;
+          margin-top: 16px;
+        }
+        .fab{
+          position: absolute;
+          left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 
-.help{
-  margin: 24px;
+.user-login-form {
+  .user-form-group {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+    .mail-field {
+      width: 294px;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+    }
+    .password-field {
+      width: 294px;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+    }
+    .robot{
+      text-align: center;
+      .robot-button{
+        width: 294px;
+        height: 74px;
+        font-size: 16px;
+        position: relative;
+        .check{
+          position: absolute;
+          left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .login-btn{
+    text-align: center;
+    .login-submit{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      width: 324px;
+      height: 50px;
+    }
+  }
+}
+
+
+
+//registration 「パスワードをお忘れの方」の位置決め
+.user-login-form a {
+  display: block;
+  margin-left: 64px;
+  text-decoration: none;
+}
+
+//ログイン　メールボタンの色変更
+.user-login-form:first-child {
+  padding: 100px 64px 32px;
+  background-color:red;
+}
+
+
+
+.user-single-login-panel a{
   font-size: 10px;
-}
-
-//新規会員登録
-.single-container{
-  background-color: #EEEEEE;
-  width: 1440px;
-  height: 732px;
+  margin: 40 0 0 ;
+  padding: 20px 0;
+  color: #0098e8;
+  font-size: 14px;
 }
 
 
 
 
 
-.single-header{
-  text-align: center;
-  width: 1440px;
-  height: 128px;
-  background-color: #EEEEEE;
+//新規会員登録をクリックしたら遷移するページ　login
+
+.user-single-main{
+  &__content{
+    width: 700px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #fff;
+    &__section{
+      height: 33px;
+      font-size: 22px;
+      text-align: center;
+      padding: 32px;
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+    }
+    .user-single-form-content{
+      width: 700px;
+      height: 287px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+      .user-single-forms{
+        width: 343px;
+        margin: 0 auto;
+      }
+    }
+  }
 }
-
-.single-header h1{
-  width: 193px;
-  height: 49px;
-  display: inline-block;
-  margin: 40px 0 0;
-}
-
-.single-header img{
-  width: 185px;
-  height: 49px;
-  display: inline-block;
-  margin: 0 8px 0 0;
-  line-height: 49px;
-}
-
-
-
-.single-main{
-  width: 1440px;
-  height: 384px;
-}
-
-.single-content{
-  width: 700px;
-  height: 384;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-
-
-.single-main-section{
-  width: 630px;
-  height: 97px;
-  font-size: 22px;
-  text-align: center;
-  line-height: 97px;
-  padding: 32px;
-  margin: 0 auto;
-}
-
-.single-form-content{
-  width: 700px;
-  height: 287px;
-  margin: 0 auto;
-}
-
-
-.single-forms{
-  width: 343px;
-  height: 182px;
-  margin: 0 auto;
-}
-
-
-
-.form{
-  width: 343px;
-  height: 50px;
-  margin: 0 auto;
-  margin-top: 16px;
-}
-
+//login ログインボタン
 .btn{
   width: 343px;
   height: 50px;
@@ -248,34 +194,32 @@
   cursor: pointer;
   position: relative;
 }
-
 .mail{
-  background-color: red;
-  color: white;
+  background-color: #ea352d;
+  color: #fff;
 }
-
-.facebook{
-  background-color: blue;
-  color: white;
+.facebook {
+  margin-top: 16px;
+  background-color: #385185;
+  color: #fff;
 }
-
+.google {
+  margin-top: 16px;
+  color: #333;
+  border: #979797 1px solid; 
+}
 .fab{
   position: absolute;
   left: 10px;
   width: 20px;
   height: 16px;
   bottom: 15px;
+  font-size: 20px;
 }
-
 .far{
   position: absolute;
   left :10px;
   width: 20px;
   height: 16px;
+  font-size: 20px;
 }
-
-
-
-
-
-
