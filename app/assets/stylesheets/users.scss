@@ -176,6 +176,11 @@
   }   
 }
 
+.registration-link a {
+  text-decoration: none;
+  color: #0098e8;
+}
+
 //address　form部分
 .wfamily-name-kanji {
   width: 341px;
@@ -264,9 +269,9 @@
 
 
 
-.robot {
+.robot-field {
   height: 78px;
-  // border: 1px solid #ccc;
+  border: 1px solid #ccc;
   margin-top: 24px;
 }
 

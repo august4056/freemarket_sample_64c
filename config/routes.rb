@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'registration', to: 'users#registration'
   get 'login', to: 'users#login'
+  get 'info', to: 'users#info'
   get 'complete', to: 'users#complete'
   get 'confirm', to: 'users#confirm'
   get 'address', to: 'users#address'

@@ -11,7 +11,7 @@
               %span.required 必須
             = form.text_field :text, class:"nick-name-field"
           .form-group
-            %p.mail
+            %p.mail-name
               メールアドレス
               %span.required 必須
             = form.text_field :email, class:"mail-field"
@@ -58,7 +58,7 @@
               「次へ進む」のボタンを押すことにより、
               %a{:href => ""} 利用規約に
             %p 同意したものとみなします
-          .robot
+          .robot-field
             = form.check_box :check_box, id:"check_robot"
             %label{:for => "check_robot"}
               私はロボットではあり
@@ -66,6 +66,6 @@
               ません
           .form-group
             = form.submit "次へ進む", class:"submit-btn"
-          %p
+          %p.registration-link
             %a{:href => ""} 本人情報の登録について
   = render 'footer'

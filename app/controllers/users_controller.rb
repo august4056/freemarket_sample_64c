@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def index
+  def info
   end
 
   def registration
