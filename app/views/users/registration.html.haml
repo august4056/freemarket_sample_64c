@@ -2,11 +2,11 @@
   = render 'user-single-header'
   .user-single-main
     .user-single-login-panel
-      .user-single-login-no-account
-        %p.account-message アカウントをお持ちでない方はこちら
-        %button.create-account
+      .user-single-login-panel__no-account
+        %p.user-single-login-panel__no-account__account-message アカウントをお持ちでない方はこちら
+        %button.user-single-login-panel__no-account__create-account
           新規会員登録
-      .user-single-buttons
+      .user-single-login-panel__buttons
         .user-single-btn
           %button.btn.facebook
             %i.fab.fa-facebook-square
@@ -17,13 +17,11 @@
             Googleでログイン
       = form_with model: @user do |form|
         .user-login-form
-          .form-group
+          .user-form-group
             = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
-            -# %input.mail.holder{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-          .form-group
+          .user-form-group
             = form.password_field :text, class:"password-field", placeholder:"" 
-            -# %input.password.holder{:name => "password", :placeholder => "パスワード", :type => "password"}/
-          .form-group
+          .user-form-group
             .robot
               %button.robot-button
                 %input.check{:type => "checkbox"}/

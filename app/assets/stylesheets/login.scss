@@ -1,6 +1,6 @@
+//ページ全体を含む
 .user-single-container{
   background-color: #EEEEEE;
-  
 }
 
 //共通ヘッダー
@@ -23,18 +23,18 @@
     height: 731px;
     background-color: #FFF;
     margin: 0 auto;
-    .user-single-login-no-account{
+    &__no-account{
       width: 456px;
       height: 144px;
       text-align: center;
       border-bottom: 1px solid #EEEEEE;
-      .account-message {
+      &__account-message {
         font-size: 14px;
         padding-top: 40px;
         height: 14px;
         padding-top: 40px;    
       }
-      .create-account{
+      &__create-account{
         margin: 8px 0 0;
         border: 1px solid #0099e8;
         background-color: #0099e8;
@@ -45,7 +45,7 @@
         font-size: 14px;
       }
     }
-    .user-single-buttons{
+    &__buttons{
       width: 328px;
       padding: 32px 64px;
       .user-single-btn{
@@ -77,9 +77,8 @@
   }
 }
 
-
 .user-login-form {
-  .form-group {
+  .user-form-group {
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
@@ -100,50 +99,51 @@
       font-size: 16px;
       padding: 10px 16px 8px;
     }
+    .robot{
+      text-align: center;
+      .robot-button{
+        width: 294px;
+        height: 74px;
+        font-size: 16px;
+        position: relative;
+        .check{
+          position: absolute;
+          left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
   }
-}
-
-.user-login-form:first-child {
-  padding: 100px 64px 32px;
-  background-color: red;
-}
-
-
-.robot{
-  text-align: center;
-  .robot-button{
-    width: 294px;
-    height: 74px;
-    font-size: 16px;
-    position: relative;
-    .check{
-      position: absolute;
-      left: 10px;
-      font-size: 20px;
+  .login-btn{
+    text-align: center;
+    .login-submit{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      width: 324px;
+      height: 50px;
     }
   }
 }
 
 
 
-.login-btn{
-  text-align: center;
-  .login-submit{
-    background: #ea352d;
-    border: 1px solid #ea352d;
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
-    width: 324px;
-    height: 50px;
-  }
-}
-
+//registration 「パスワードをお忘れの方」の位置決め
 .user-login-form a {
   display: block;
   margin-left: 64px;
   text-decoration: none;
 }
+
+//ログイン　メールボタンの色変更
+.user-login-form:first-child {
+  padding: 100px 64px 32px;
+  background-color:red;
+}
+
+
 
 .user-single-login-panel a{
   font-size: 10px;
@@ -160,12 +160,12 @@
 //新規会員登録をクリックしたら遷移するページ　login
 
 .user-single-main{
-  .user-single-content{
+  &__content{
     width: 700px;
     height: 350px;
     margin: 0 auto;
     background-color: #fff;
-    .user-single-main-section{
+    &__section{
       height: 33px;
       font-size: 22px;
       text-align: center;
@@ -185,7 +185,7 @@
     }
   }
 }
-
+//login ログインボタン
 .btn{
   width: 343px;
   height: 50px;
@@ -194,28 +194,20 @@
   cursor: pointer;
   position: relative;
 }
-
-
-
 .mail{
   background-color: #ea352d;
   color: #fff;
 }
-
 .facebook {
   margin-top: 16px;
   background-color: #385185;
   color: #fff;
-
 }
-
 .google {
   margin-top: 16px;
   color: #333;
-  border: #979797 1px solid;
-  
+  border: #979797 1px solid; 
 }
-
 .fab{
   position: absolute;
   left: 10px;
@@ -224,7 +216,6 @@
   bottom: 15px;
   font-size: 20px;
 }
-
 .far{
   position: absolute;
   left :10px;
