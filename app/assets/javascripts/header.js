@@ -204,7 +204,56 @@ window.addEventListener("load", function() {
     document.getElementById("ladies-hats_ul").style.display = 'none';
   }, false);
 
+  //お知らせ開閉
+  document.getElementById("ex_out3").addEventListener("mouseover", function(){
+    document.getElementById("ex_menu3").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ex_out3").addEventListener("mouseout", function(){
+    document.getElementById("ex_menu3").style.display = 'none';
+  }, false);
+  
+  document.getElementById("ex_menu3").addEventListener("mouseover", function(){
+    document.getElementById("ex_menu3").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ex_menu3").addEventListener("mouseout", function(){
+    document.getElementById("ex_menu3").style.display = 'none';
+  }, false);
 
+  //やることリスト開閉
+  document.getElementById("ex_out4").addEventListener("mouseover", function(){
+    document.getElementById("ex_menu4").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ex_out4").addEventListener("mouseout", function(){
+    document.getElementById("ex_menu4").style.display = 'none';
+  }, false);
+  
+  document.getElementById("ex_menu4").addEventListener("mouseover", function(){
+    document.getElementById("ex_menu4").style.display = 'block';
+  }, false);
+    
+  document.getElementById("ex_menu4").addEventListener("mouseout", function(){
+    document.getElementById("ex_menu4").style.display = 'none';
+  }, false);
+
+  //マイページ開閉
+  document.getElementById("mypage").addEventListener("mouseover", function(){
+    document.getElementById("mypage22").style.display = 'block';
+  }, false);
+   
+  document.getElementById("mypage").addEventListener("mouseout", function(){
+    document.getElementById("mypage22").style.display = 'none';
+  }, false);
+  
+  document.getElementById("mypage22").addEventListener("mouseover", function(){
+    document.getElementById("mypage22").style.display = 'block';
+  }, false);
+      
+  document.getElementById("mypage22").addEventListener("mouseout", function(){
+    document.getElementById("mypage22").style.display = 'none';
+  }, false);
 
   // //メニュータグを青くし続ける
   // $(function(){

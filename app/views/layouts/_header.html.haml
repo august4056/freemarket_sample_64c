@@ -260,12 +260,53 @@
             %a.like-list{:href => "#"}
               %i.far.fa-heart
               いいね！一覧
-            %a.infomation{:href => "#"}
-              %i.far.fa-bell
-              お知らせ
-            %a.todo-list{:href => "#"}
-              %i.fas.fa-check
-              やることリスト
-            %a.mypage{:href => "#"}
+            #ex_out3
+              %a.infomation{:href => "#"}
+                %i.far.fa-bell
+                お知らせ
+              %ul#ex_menu3
+                %a.infomation__list{:href => "#"}
+                  %li.infomation__link
+                    = image_tag "logo_red.svg", class: 'infomation__logo__image'
+                    .get__message
+                      .get__message__text
+                        『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
+                    = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
+                    .infomation__time
+                      = icon('far', 'clock', class: 'infomation__time__icon')
+                      1時間46分前
+            #ex_out4
+              %a.todo-list{:href => "#"}
+                %i.fas.fa-check
+                やることリスト
+                %ul#ex_menu4
+                  = image_tag "logo_gray.svg", class: 'todo__logo__image'
+                  .todo__menu 明日からやるよ、やる。
+            %a#mypage{:href => "#"}
               %i.far.fa-user-circle
               マイページ
+            #mypage22
+              .mypage22__icon
+                じこしょーかい
+              %ul#mypage22_menu
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}いいね！一覧
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 出品中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 取引中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 売却済み
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}購入した商品 - 取引中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}購入した商品 - 過去の取引
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+
+                
+                
