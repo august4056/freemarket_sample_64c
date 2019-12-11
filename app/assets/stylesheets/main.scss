@@ -1,8 +1,12 @@
 
-.slick {
+.slider {
+  width: 1309px;
   
-  height: 100%;
-  width: 100%;
+
+  .slick__img {
+    max-width: 100%;
+  }
+
 }
 
 // .header h1 {
