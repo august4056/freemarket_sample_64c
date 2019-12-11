@@ -1,186 +1,312 @@
 %body
   %header
-    .heder-up
-      %a{:href => "https://www.mercari.com/jp/"}
-        %img.logo-image{:alt => "logo", :src => "/Users/108kuroto/SVG/fmarket_logo_red.svg"}/
-      %form.header-form{:action => "#"}
-        %input.input-header{:mane => "keyword", :placeholder => "   何かお探しですか？", :type => "seach", :value => ""}/
-        %botton.header-form-botton{:type => "sabmit"}
-          %i.fas.fa-search
-    .header-under
-      .header-under-left
-        %a#categoly__search{:href => "#"}
-          %i.fas.fa-list-ul>
-          カテゴリーから探す
-        #ex_out1
-          %ul#ex_menu1
-            %li#ladies1_list.menu1_list
-              %a.menu1_link{:href => "#"} レディース
-            %ul#ladies_ul
-              %li#tops_list.ladies-lists
-                %a.ladies_goods{:href => "#"} トップス
-              %ul#tops_ul
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} Tシャツ/カットソー(七分/長袖)
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} シャツ/ブラウス(半袖/袖なし)
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} シャツ/ブラウス(七分/長袖)
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} ポロシャツ
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} キャミソール
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} タンクトップ
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} ホルターネック
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} ニット/セーター
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} チュニック
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} カーディガン/ポレロ
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} アンサンブル
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} ベスト/ジレ
-                %li.tops-lists
-                  %a.tops_goods{:href => "#"} パーカー
-              %li#jacket-outer_list.ladies-lists
-                %a.ladies_goods{:href => "#"} ジャケット/アウター
-              %ul#jacket-outer_ul
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} テラードジャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ノーカラージャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} Gジャン/デニムジャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} レザージャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ダウンジャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ライダースジャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ミリタリージャケット
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ダウンベスト
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ジャンバー/ブルゾン
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ポンチョ
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ロングコート
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} トレンチコート
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ダッフルコート
-                %li.jacket-outer_lists
-                  %a.jacket-outer_goods{:href => "#"} ピーコート
-              %li#pants_list.ladies-lists
-                %a.ladies_goods{:href => "#"} パンツ
-              %ul#pants_ul
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} デニム/ジーンズ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} ショートパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} カジュアルパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} ハーフパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} チノパン
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} ワークパンツ/カーゴパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} クロップドパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} サロペット/オーバーオール
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} オールインワン
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} サルエルパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} ガウチョパンツ
-                %li.pants_lists
-                  %a.pants_goods{:href => "#"} その他
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} スカート
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} ワンピース
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} 靴
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} ルームウェア/パジャマ
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} レッグウェア
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} 帽子
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} バッグ
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} アクセサリー
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} ヘアアクセサリー
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} 小物
-              %li.ladies-lists
-                %a.ladies_goods{:href => "#"} 時計
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} メンズ
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} ベビー・キッズ
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} インテリア・住まい・小物
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} 本・音楽・ゲーム
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} おもちゃ・ホビー・グッズ
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} コスメ・香水・美容
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} 家電・スマホ・カメラ
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} スポーツ・レジャー
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} ハンドメイド
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} チケット
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} 自動車・オートバイ
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} その他
-            %li.menu1_list
-              %a.menu1_link{:href => "#"} カテゴリ一覧
-        %a#brand-search{:href => "#"}
-          %i.fas.fa-tag>
-          ブランドから探す
-        #ex_out2
-          %ul#ex_menu2
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} シャネル
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} ナイキ
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} ルイ ヴィトン
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} シュプリーム
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} アディダス
-            %li.menu2_list
-              %a.menu2_link{:href => "#"} ブランド一覧
-      .header-under-right
-        %a.like-list{:href => "#"}
-          %i.far.fa-heart>
-          いいね！一覧
-        %a.infomation{:href => "#"}
-          %i.far.fa-bell>
-          お知らせ
-        %a.todo-list{:href => "#"}
-          %i.fas.fa-check>
-          やることリスト
-        %a.mypage{:href => "#"}
-          %i.far.fa-user-circle>
-          マイページ
+    .header0
+      .header0__body
+        .heder-up
+          %a{:href => "https://www.mercari.com/jp/", class: 'header__logo'}
+            = image_tag "fmarket_logo_red.svg", class: 'header__logo__image'
+          %form_with.header-form{:action => "#"}
+            %input.input-header{:mane => "keyword", :placeholder => "   何かお探しですか？", :type => "seach", :value => ""}/
+            %button.header-form-button{:type => "sabmit"}
+              = icon('fas', 'search', class: 'search__icon1')
+        .header-under
+          .header-under-left
+            %a#categoly__search22{:href => "#"}
+              %i.fas.fa-list-ul
+              カテゴリーから探す
+            #ex_out1
+              %ul#ex_menu1
+                %li#ladies1_list.menu1_list
+                  %a.menu1_link{:href => "#"} レディース
+                  %ul#ladies_ul
+                    %li#tops_list.ladies-lists
+                      %a.ladies_goods{:href => "#"} トップス
+                      %ul#tops_ul
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} Tシャツ/カットソー(七分/長袖)
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} シャツ/ブラウス(半袖/袖なし)
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} シャツ/ブラウス(七分/長袖)
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} ポロシャツ
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} キャミソール
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} タンクトップ
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} ホルターネック
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} ニット/セーター
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} チュニック
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} カーディガン/ポレロ
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} アンサンブル
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} ベスト/ジレ
+                        %li.tops-lists
+                          %a.tops_goods{:href => "#"} パーカー
+
+                      %li#jacket-outer_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} ジャケット/アウター
+                      %ul#jacket-outer_ul
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} テラードジャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ノーカラージャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} Gジャン/デニムジャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} レザージャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ダウンジャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ライダースジャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ミリタリージャケット
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ダウンベスト
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ジャンバー/ブルゾン
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ポンチョ
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ロングコート
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} トレンチコート
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ダッフルコート
+                        %li.jacket-outer_lists
+                          %a.jacket-outer_goods{:href => "#"} ピーコート
+
+                      %li#pants_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} パンツ
+                      %ul#pants_ul
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} デニム/ジーンズ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} ショートパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} カジュアルパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} ハーフパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} チノパン
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} ワークパンツ/カーゴパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} クロップドパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} サロペット/オーバーオール
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} オールインワン
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} サルエルパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} ガウチョパンツ
+                        %li.pants_lists
+                          %a.pants_goods{:href => "#"} その他
+
+                      %li#skirt_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} スカート
+                      %ul#skirt_ul
+                        %li.skirt_lists
+                          %a.skirt_goods{:href => "#"}ミニスカート
+                        %li.skirt_lists
+                          %a.skirt_goods{:href => "#"} ひざ丈スカート
+                        %li.skirt_lists
+                          %a.skirt_goods{:href => "#"} ロングスカート
+                        %li.skirt_lists
+                          %a.skirt_goods{:href => "#"} キュロット
+                        %li.skirt_lists
+                          %a.skirt_goods{:href => "#"} その他
+
+                      %li#one-pirce_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} ワンピース
+                      %ul#one-pirce_ul
+                        %li.one-pirce_lists
+                          %a.one-pirce_goods{:href => "#"}ミニワンピース
+                        %li.one-pirce_lists
+                          %a.one-pirce_goods{:href => "#"}ひざ丈ワンピース
+                        %li.one-pirce_lists
+                          %a.one-pirce_goods{:href => "#"}ロングワンピース
+                        %li.one-pirce_lists
+                          %a.one-pirce_goods{:href => "#"}その他
+
+                      %li.ladies-lists
+                        %a#ladies-boots_list.ladies_goods{:href => "#"} 靴
+                      %ul#ladies-boots_ul
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}ハイヒール/パンプス
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}ブーツ
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}サンダル
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}スニーカー
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}ミュール
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}モカシン
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}ローファー/革靴
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}フラットシューズ/バレエシューズ
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}長靴/レインシューズ
+                        %li.ladies-boots_lists
+                          %a.one-pirce_goods{:href => "#"}その他
+
+                      %li#roomwear-pajamas_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} ルームウェア/パジャマ
+                      %ul#roomwear-pajamas_ul
+                        %li.roomwear-pajamas_lists
+                          %a.roomwear-pajamas_goods{:href => "#"}パジャマ
+                        %li.roomwear-pajamas_lists
+                          %a.roomwear-pajamas_goods{:href => "#"}ルームウェア
+
+                      %li#leg-wear_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} レッグウェア
+                      %ul#leg-wear_ul
+                        %li.leg-wear_lists
+                          %a.leg-wear_goods{:href => "#"}ソックス
+                        %li.leg-wear_lists
+                          %a.leg-wear_goods{:href => "#"}スパッツ/レギンス
+                        %li.leg-wear_lists
+                          %a.leg-wear_goods{:href => "#"}ストッキング/タイツ
+                        %li.leg-wear_lists
+                          %a.leg-wear_goods{:href => "#"}レッグウォーマー
+                        %li.leg-wear_lists
+                          %a.leg-wear_goods{:href => "#"}その他
+                        
+                      %li#ladies-hats_list.ladies-lists
+                        %a.ladies_goods{:href => "#"} 帽子
+                      %ul#ladies-hats_ul
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}ニットキャップ/ビーニー
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}ハット
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}ハンチング/ベレー帽
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}キャップ
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}キャスケット
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}麦わら帽子
+                        %li.ladies-hats_lists
+                          %a.ladies-hats_goods{:href => "#"}その他
+
+                      %li.ladies-lists
+                        %a.ladies_goods{:href => "#"} バッグ
+                      %li.ladies-lists
+                        %a.ladies_goods{:href => "#"} アクセサリー
+                      %li.ladies-lists
+                        %a.ladies_goods{:href => "#"} ヘアアクセサリー
+                    %li.ladies-lists
+                      %a.ladies_goods{:href => "#"} 小物
+                    %li.ladies-lists
+                      %a.ladies_goods{:href => "#"} 時計
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} メンズ
+                  %ul#mens_ul-22
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} ベビー・キッズ
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} インテリア・住まい・小物
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} 本・音楽・ゲーム
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} おもちゃ・ホビー・グッズ
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} コスメ・香水・美容
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} 家電・スマホ・カメラ
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} スポーツ・レジャー
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} ハンドメイド
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} チケット
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} 自動車・オートバイ
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} その他
+                %li.menu1_list
+                  %a.menu1_link{:href => "#"} カテゴリ一覧
+
+            %a#brand-search{:href => "#"}
+              %i.fas.fa-tag>
+              ブランドから探す
+            #ex_out2
+              %ul#ex_menu2
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} シャネル
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} ナイキ
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} ルイ ヴィトン
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} シュプリーム
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} アディダス
+                %li.menu2_list
+                  %a.menu2_link{:href => "#"} ブランド一覧
+          .header-under-right
+            %a.like-list{:href => "#"}
+              %i.far.fa-heart
+              いいね！一覧
+            #ex_out3
+              %a.information{:href => "#"}
+                %i.far.fa-bell
+                お知らせ
+              %ul#ex_menu3
+                %a.information__list{:href => "#"}
+                  %li.information__link
+                    = image_tag "logo_red.svg", class: 'infomation__logo__image'
+                    .get__message
+                      .get__message__text
+                        『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
+                    = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
+                    .information__time
+                      = icon('far', 'clock', class: 'information__time__icon')
+                      1時間46分前
+            #ex_out4
+              %a.todo-list{:href => "#"}
+                %i.fas.fa-check
+                やることリスト
+                %ul#ex_menu4
+                  = image_tag "logo_gray.svg", class: 'todo__logo__image'
+                  .todo__menu 明日からやるよ、やる。
+            %a#mypage{:href => "#"}
+              %i.far.fa-user-circle
+              マイページ
+            #mypage22
+              .mypage22__icon
+                じこしょーかい
+              %ul#mypage22_menu
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}いいね！一覧
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 出品中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 取引中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}出品した商品 - 売却済み
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}購入した商品 - 取引中
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+                %li.mypage22_list
+                  %a.mypage22_link{:href => "#"}購入した商品 - 過去の取引
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
+
+                
+                
