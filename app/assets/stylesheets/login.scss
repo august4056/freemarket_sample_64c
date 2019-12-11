@@ -77,18 +77,6 @@
   }
 }
 
-//ログイン
-
-// .holder{
-//   width: 363px;
-//   height: 36px;
-//   margin-top: 24px;
-//   border-radius: 4px;
-//   border: 1px solid #ccc;  
-//   background: #fff;
-//   font-size: 16px;
-//   padding: 10px
-// }
 
 .user-login-form {
   .form-group {
@@ -119,8 +107,6 @@
   padding: 100px 64px 32px;
   background-color: red;
 }
-
-
 
 
 .robot{
@@ -171,45 +157,34 @@
 
 
 
-
-//新規会員登録
-
-
-
-
+//新規会員登録をクリックしたら遷移するページ　login
 
 .user-single-main{
   .user-single-content{
     width: 700px;
-    height: 384;
+    height: 350px;
     margin: 0 auto;
     background-color: #fff;
     .user-single-main-section{
-      width: 630px;
-      height: 97px;
+      height: 33px;
       font-size: 22px;
       text-align: center;
-      line-height: 97px;
       padding: 32px;
       margin: 0 auto;
+      border-bottom: 1px solid #eee;
     }
     .user-single-form-content{
       width: 700px;
       height: 287px;
       margin: 0 auto;
+      padding: 24px 16px 40px;
       .user-single-forms{
         width: 343px;
         margin: 0 auto;
+      }
+    }
+  }
 }
-}
-}
-}
-// .form{
-//   width: 343px;
-//   height: 50px;
-//   margin: 0 auto;
-//   margin-top: 16px;
-// }
 
 .btn{
   width: 343px;
@@ -220,9 +195,25 @@
   position: relative;
 }
 
+
+
 .mail{
-  background-color: black;
-  color: white;
+  background-color: #ea352d;
+  color: #fff;
+}
+
+.facebook {
+  margin-top: 16px;
+  background-color: #385185;
+  color: #fff;
+
+}
+
+.google {
+  margin-top: 16px;
+  color: #333;
+  border: #979797 1px solid;
+  
 }
 
 .fab{
@@ -231,6 +222,7 @@
   width: 20px;
   height: 16px;
   bottom: 15px;
+  font-size: 20px;
 }
 
 .far{
@@ -238,10 +230,5 @@
   left :10px;
   width: 20px;
   height: 16px;
+  font-size: 20px;
 }
-
-
-
-
-
-
