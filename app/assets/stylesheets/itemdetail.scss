@@ -95,215 +95,215 @@
     }
     .item-detail-buy{
       font-size: 24px;
-    line-height: 60px;
-    background-color: $Red;
-    display: block;
-    margin-top: 16px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    & button{
-      display: none;
-    }
-  }
-  .item-detail-caution{
-    margin-top: 16px;
-    color: $Red;
-    line-height: 1.5;
-    font-size: 14px;
-    text-align: center;
-  }
-  .item-detail-description{
-    &__text{
-      line-height: inherit;
-      margin-top: 32px;
-      font-size: 18px;
-    }
-    &__bottom{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
+      line-height: 60px;
+      background-color: $Red;
+      display: block;
       margin-top: 16px;
-      &__left{
-        display: flex;
-        &__like{
-          background-color: lightgray;
-          border-radius: 40px;
-          text-align: center;
-          margin-left: 16px;
-          padding: 5px 15px;
-        }
-        &__report{
-          background-color: lightgray;
-          border-radius: 40px;
-          text-align: center;
-          margin-left: 16px;
-          padding: 5px 15px;
-        }
-      }
-      &__right{
-        color: $Blue;
-        font-size: 14px;
-      }
-    }
-  }
-}
-.item-detail-comments{
-  background-color: #fff;
-  width: 640px;
-  margin: 5px auto 0;
-  padding: 24px 30px 40px;
-  height: 100%;
-  &__caution{
-    background-color: #fff6de;
-    padding: 8px;
-    font-size: 14px;
-    margin-top: 20px;
-  }
-  &__form{
-    margin-top: 8px;
-    height: 100px;
-    width: 100%;
-    background-color: #fff;
-  }
-  &__btn{
-    margin-top: 8px;
-    background-color: #aaa;
-    width: 100%;
-    border: 1px solid #aaa;
-    color: #fff;
-    display: block;
-    line-height: 48px;
-    cursor: pointer;
-    text-align: center;
-    & button{
-      display: none;
-    }
-  }
-}
-.comment{
-  margin: 30px 0 20px 0;
-  display: flex;
-  &__user{
-    display: flex;
-    position: relative;
-    & i{
-      font-size: 35px;
-    }
-    &__name{
-      margin-left: 10px;
+      color: #fff;
+      text-align: center;
       font-weight: bold;
-      position: absolute;
-      top: 0;
-      left: 30px;
-    }
-  }
-  &__body{
-    background-color: #eef0f4;
-    border-radius: 15px;
-    margin: 25px 0 10px 10px;
-    line-height: 1.5;
-    padding: 16px;
-    width: 100%;
-    position: relative;
-    &::before{
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 3px;
-      left: -19px;
-      border: 8px solid transparent;
-      border-right: 18px solid #edf1ee;
-      -webkit-transform: rotate(35deg);
-      transform: rotate(35deg);
-    }
-    &__text{
-      margin-bottom: 16px;
-    }
-    &__bottom{
-      display: flex;
-      justify-content: space-between;
-      color: #aaa;
-      font-size: 14px;
-      &__time{
-        display: flex;
-        align-items: flex-start;
-        font-size: 14px;
-        &__clock{
-          margin-right: 2px;
-        }
-        &__date{
-          font-size: 12px;
-        }
+      cursor: pointer;
+      & button{
+        display: none;
       }
     }
-  }
-}
-.item-detail-link{
-  width: 700px;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px auto;
-  color: $Blue;
-  &__left{
-    display: flex;
-    & i{
-      margin: 4px 2px 0 0;
+    .item-detail-caution{
+      margin-top: 16px;
+      color: $Red;
+      line-height: 1.5;
+      font-size: 14px;
+      text-align: center;
     }
-  }
-  &__right{
-    display: flex;
-    & i{
-      margin: 4px 0 0 2px;
-      order: 2;
-    }
-  }
-}
-
-.item-detail-user{
-  margin-top: 10px;
-}
-.item-detail-related{
-  margin-top: 10px;
-}
-.item-detail-other{
-  width: 700px;
-  margin: 10px auto;
-  &__header{
-    color: $Blue;
-    font-size: 22px;
-    margin: 20px 0 8px;
-    font-weight: bold;
-  }
-  &__product{
-    margin: 0 20px 40px 0;
-    width: 220px;
-    background-color: $White;
-    & img{
-      width: 220px;
-    }
-    &__info{
-      padding: 16px;
-      &__name{
-        height: 50px;
+    .item-detail-description{
+      &__text{
+        line-height: inherit;
+        margin-top: 32px;
+        font-size: 18px;
       }
       &__bottom{
         display: flex;
         justify-content: space-between;
-        &__price{
-          font-weight: bold;
-        }
-        &__like{
+        align-items: center;
+        font-size: 14px;
+        margin-top: 16px;
+        &__left{
           display: flex;
+          &__like{
+            background-color: lightgray;
+            border-radius: 40px;
+            text-align: center;
+            margin-left: 16px;
+            padding: 5px 15px;
+          }
+          &__report{
+            background-color: lightgray;
+            border-radius: 40px;
+            text-align: center;
+            margin-left: 16px;
+            padding: 5px 15px;
+          }
         }
-        & i{
-          margin-top: 3px;
+        &__right{
+          color: $Blue;
           font-size: 14px;
         }
       }
     }
   }
-}
+  .item-detail-comments{
+    background-color: #fff;
+    width: 640px;
+    margin: 5px auto 0;
+    padding: 24px 30px 40px;
+    height: 100%;
+    &__caution{
+      background-color: #fff6de;
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    &__form{
+      margin-top: 8px;
+      height: 100px;
+      width: 100%;
+      background-color: #fff;
+    }
+    &__btn{
+      margin-top: 8px;
+      background-color: #aaa;
+      width: 100%;
+      border: 1px solid #aaa;
+      color: #fff;
+      display: block;
+      line-height: 48px;
+      cursor: pointer;
+      text-align: center;
+      & button{
+        display: none;
+      }
+    }
+  }
+  .comment{
+    margin: 30px 0 20px 0;
+    display: flex;
+    &__user{
+      display: flex;
+      position: relative;
+      & i{
+        font-size: 35px;
+      }
+      &__name{
+        margin-left: 10px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 30px;
+      }
+    }
+    &__body{
+      background-color: #eef0f4;
+      border-radius: 15px;
+      margin: 25px 0 10px 10px;
+      line-height: 1.5;
+      padding: 16px;
+      width: 100%;
+      position: relative;
+      &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        left: -19px;
+        border: 8px solid transparent;
+        border-right: 18px solid #edf1ee;
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+      }
+      &__text{
+        margin-bottom: 16px;
+      }
+      &__bottom{
+        display: flex;
+        justify-content: space-between;
+        color: #aaa;
+        font-size: 14px;
+        &__time{
+          display: flex;
+          align-items: flex-start;
+          font-size: 14px;
+          &__clock{
+            margin-right: 2px;
+          }
+          &__date{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .item-detail-link{
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    color: $Blue;
+    &__left{
+      display: flex;
+      & i{
+        margin: 4px 2px 0 0;
+      }
+    }
+    &__right{
+      display: flex;
+      & i{
+        margin: 4px 0 0 2px;
+        order: 2;
+      }
+    }
+  }
+  
+  .item-detail-user{
+    margin-top: 10px;
+  }
+  .item-detail-related{
+    margin-top: 10px;
+  }
+  .item-detail-other{
+    width: 700px;
+    margin: 10px auto;
+    &__header{
+      color: $Blue;
+      font-size: 22px;
+      margin: 20px 0 8px;
+      font-weight: bold;
+    }
+    &__product{
+      margin: 0 20px 40px 0;
+      width: 220px;
+      background-color: $White;
+      & img{
+        width: 220px;
+      }
+      &__info{
+        padding: 16px;
+        &__name{
+          height: 50px;
+        }
+        &__bottom{
+          display: flex;
+          justify-content: space-between;
+          &__price{
+            font-weight: bold;
+          }
+          &__like{
+            display: flex;
+          }
+          & i{
+            margin-top: 3px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
