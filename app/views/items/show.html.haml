@@ -1,39 +1,168 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %title FreemarketSample64c
-    %link{:href => "items.css", :rel => "stylesheet"}/
-  %body
-    .container
-      .contents
-        .item-name
-          売り切れ必須！驚愕のLogicool mouse 2!
-        .item-main
-          .item-main__photos
-            %img.item-main__photos__photo{:src => "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg"}/
-          .item-main__detail 商品の説明あああああああああああああ
-        .item-price
-          .item-price-box
-            .item-price-box__yen
-              ¥ 12,121,212
-            .item-price-box__tax
-              (税込)
-            .item-price-box__postage
-              送料込み
-          .item-buy
-            .item-buy__btn 購入画面に進む
-          .item-caution
-        .item-description
-          .item-description__text
-          .item-description__bottom
-            .item-description__bottom__left
-              .item-description__bottom__left__like
-              .item-description__bottom__left__report
-            .item-description__bottom__right
-        .comments
-          .comment
-            .comment__caution
-            .comment__form
-            .comment__btn
+.item-detail-cotainer
+  .item-detail-contents
+    .item-detail-name
+      売り切れ必須！驚愕のLogicool mouse 2!
+    .item-detail-main
+      .item-detail-main__photos
+        = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
+      %table.item-detail-main__table
+        %tbody
+          %tr
+            %th
+              出品者
+            %td
+              こじこじ
+              .item-user
+                .item-user__laugh
+                  %i.fas.fa-laugh
+                .item-user__rating
+                  22
+                .item-user__meh
+                  %i.fas.fa-meh
+                .item-user__rating
+                  2
+                .item-user__frown
+                  %i.fas.fa-frown
+                .item-user__rating
+                  12
+          %tr
+            %th
+              カテゴリー
+            %td
+              ふく
+          %tr
+            %th
+              ブランド
+            %td
+              ごふく
+          %tr
+            %th
+              -# もし商品のサイズがあれば表示するようif分岐させる
+              商品のサイズ
+            %td
+              ちいさい
+          %tr
+            %th
+              商品の状態
+            %td
+              きれい？
+          %tr
+            %th
+              配送料の負担
+            %td
+              送料込み（出品者負担）
+          %tr
+            %th
+              配送の方法
+            %td
+              ゆうゆうメルカリ便
+          %tr
+            %th
+              配送元地域
+            %td
+              ギリシャ
+          %tr
+            %th
+              発送日の目安
+            %td
+              1週間程
+    .item-detail-price
+      .item-detail-price__yen
+        ¥ 12,121,212
+      .item-detail-price__tax
+        (税込)
+      .item-detail-price__postage
+        送料込み
+
+    %label.item-detail-buy
+      %button
+      購入画面に進む
+
+    .item-detail-caution
+      -# もしこれがスマホからしか買い物できなかったらここを表示
+      この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+    .item-detail-description
+      .item-detail-description__text
+        この商品は壊れてるので買わない方が身のためです
+        ああああ
+      .item-detail-description__bottom
+        .item-detail-description__bottom__left
+          .item-detail-description__bottom__left__like
+            %i.far.fa-heart
+            いいね!
+          .item-detail-description__bottom__left__report
+            %i.far.fa-flag
+            不適切な商品の報告
+        .item-detail-description__bottom__right
+          %i.fas.fa-lock
+          あんしん・あんぜんへの取り組み
+
+          -# コメント機能実装 <=けど実装しない
+  .item-detail-comments
+    -# 以下renderで繰り返させる <=けど実装しない
+    %ul.item-detail-comments__comennt
+      %li.comment
+        .comment__user
+          .comment__user__icon
+            %i.far.fa-user-circle
+          .comment__user__name
+            kojikoji
+        .comment__body
+          .comment__body__text
+            いい商品ですけど高いですね
+          .comment__body__bottom
+            .comment__body__bottom__time
+              .comment__body__bottom__time__clock
+                %i.far.fa-clock
+              .comment__body__bottom__time__date
+                2年前
+            .comment__body__bottom__report
+              %i.far.fa-flag
+
+      .item-detail-comments__caution
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %input(type="text" class = "item-detail-comments__form" )
+      %label.item-detail-comments__btn
+        %button
+        コメントする
+  .item-detail-link
+    .item-detail-link__left
+      %i.fas.fa-chevron-left
+      中島みゆきのCD
+    .item-detail-link__right
+      %i.fas.fa-chevron-right
+      MDプレーヤー
+
+  .item-detail-user
+    .item-detail-other
+      .item-detail-other__header
+        こじこじさんのその他の出品
+        -# ここから下をrenderで繰り返し
+      .item-detail-other__product
+        = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-other__product__picture"
+        .item-detail-other__product__info
+          .item-detail-other__product__info__name
+            Logicool Mouse 4
+          .item-detail-other__product__info__bottom
+            .item-detail-other__product__info__bottom__price
+              ¥1,234
+            .item-detail-other__product__info__bottom__like
+              %i.far.fa-heart
+              3
+
+  .item-detail-related
+    .item-detail-other
+      .item-detail-other__header
+        Logicool Mouse 2 その他の商品
+        -# ここから下をrenderで繰り返し
+      .item-detail-other__product
+        = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-other__product__picture"
+        .item-detail-other__product__info
+          .item-detail-other__product__info__name
+            Logicool Mouse 4
+          .item-detail-other__product__info__bottom
+            .item-detail-other__product__info__bottom__price
+              ¥1,234
+            .item-detail-other__product__info__bottom__like
+              %i.far.fa-heart
+              3
