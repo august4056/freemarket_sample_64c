@@ -1,18 +1,20 @@
-//ログイン
 .user-single-container{
   background-color: #EEEEEE;
   
 }
-//ヘッダー
+
+//共通ヘッダー
 .user-single-header{
   height: 128px;
   text-align: center;
 }
 .logo {
   width: 150px;
-  height: 150px;
+  height: 128px;
 }
 
+
+//ログインをクリックしたら遷移する　registration
 
 //メイン
 .user-single-main{
@@ -26,11 +28,11 @@
       height: 144px;
       text-align: center;
       border-bottom: 1px solid #EEEEEE;
-      /* padding: 40px 64px; */
-      .user-single-login-no-account p{
-        font-size: 16px;
+      .account-message {
+        font-size: 14px;
         padding-top: 40px;
         height: 14px;
+        padding-top: 40px;    
       }
       .create-account{
         margin: 8px 0 0;
@@ -38,23 +40,22 @@
         background-color: #0099e8;
         color: #fff;
         line-height: 40px;
-        width: 382px;
+        width: 326px;
         height: 42px;
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     .user-single-buttons{
-      width: 456px;
-      height: 181px;
-      padding-top: 32px;
+      width: 328px;
+      padding: 32px 64px;
       .user-single-btn{
         text-align: center;
         .btn{
-          width: 382px;
-          height: 50px;
-          margin-top: 16px;
+          width: 326px;
+          height: 48px;
           font-size: 16px;
           position: relative;
+          border-radius: 0;
         }
         .facebook{
           background-color: #385185;
@@ -64,86 +65,106 @@
           background-color: #fff;
           color: black;
           border: #979797 solid 1px;
+          margin-top: 16px;
+        }
+        .fab{
+          position: absolute;
+          left: 10px;
+          font-size: 20px;
         }
       }
     }
   }
 }
 
+//ログイン
 
+// .holder{
+//   width: 363px;
+//   height: 36px;
+//   margin-top: 24px;
+//   border-radius: 4px;
+//   border: 1px solid #ccc;  
+//   background: #fff;
+//   font-size: 16px;
+//   padding: 10px
+// }
 
-
-
-
-
-
-
-
-
-
-.fab{
-  position: absolute;
-  left: 10px;
-  font-size: 20px;
+.user-login-form {
+  .form-group {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+    .mail-field {
+      width: 294px;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+    }
+    .password-field {
+      width: 294px;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+    }
+  }
 }
 
-.user-single-forms{
-  width: 456px;
+.user-login-form:first-child {
+  padding: 100px 64px 32px;
+  background-color: red;
 }
 
-.user-single-form{
-  text-align: center;
-}
 
-.holder{
-  width: 363px;
-  height: 36px;
-  margin-top: 24px;
-  border-radius: 4px;
-  border: 1px solid #ccc;  
-  background: #fff;
-  font-size: 16px;
-  padding: 10px
-}
+
 
 .robot{
   text-align: center;
+  .robot-button{
+    width: 294px;
+    height: 74px;
+    font-size: 16px;
+    position: relative;
+    .check{
+      position: absolute;
+      left: 10px;
+      font-size: 20px;
+    }
+  }
 }
 
-.robot-button{
-  width: 363px;
-  height: 56px;
-  margin-top: 24px;
-  font-size: 16px;
-  position: relative;
-}
 
-.check{
-  position: absolute;
-  left: 10px;
-  font-size: 20px;
 
-}
 .login-btn{
   text-align: center;
+  .login-submit{
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    width: 324px;
+    height: 50px;
+  }
 }
 
-
-.login-submit{
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 24px 0 0;
-  width: 360px;
-  height: 50px;
+.user-login-form a {
+  display: block;
+  margin-left: 64px;
+  text-decoration: none;
 }
 
 .user-single-login-panel a{
   font-size: 10px;
   margin: 40 0 0 ;
   padding: 20px 0;
+  color: #0098e8;
+  font-size: 14px;
 }
 
 
@@ -157,41 +178,32 @@
 
 
 
-
-
-.user-single-content{
-  width: 700px;
-  height: 384;
-  margin: 0 auto;
-  background-color: #fff;
+.user-single-main{
+  .user-single-content{
+    width: 700px;
+    height: 384;
+    margin: 0 auto;
+    background-color: #fff;
+    .user-single-main-section{
+      width: 630px;
+      height: 97px;
+      font-size: 22px;
+      text-align: center;
+      line-height: 97px;
+      padding: 32px;
+      margin: 0 auto;
+    }
+    .user-single-form-content{
+      width: 700px;
+      height: 287px;
+      margin: 0 auto;
+      .user-single-forms{
+        width: 343px;
+        margin: 0 auto;
 }
-
-
-
-.user-single-main-section{
-  width: 630px;
-  height: 97px;
-  font-size: 22px;
-  text-align: center;
-  line-height: 97px;
-  padding: 32px;
-  margin: 0 auto;
 }
-
-.user-single-form-content{
-  width: 700px;
-  height: 287px;
-  margin: 0 auto;
 }
-
-
-.user-single-forms{
-  width: 343px;
-  margin: 0 auto;
 }
-
-
-
 // .form{
 //   width: 343px;
 //   height: 50px;
@@ -210,11 +222,6 @@
 
 .mail{
   background-color: black;
-  color: white;
-}
-
-.facebook{
-  background-color: blue;
   color: white;
 }
 

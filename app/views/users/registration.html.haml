@@ -3,7 +3,7 @@
   .user-single-main
     .user-single-login-panel
       .user-single-login-no-account
-        %p アカウントをお持ちでない方はこちら
+        %p.account-message アカウントをお持ちでない方はこちら
         %button.create-account
           新規会員登録
       .user-single-buttons
@@ -23,12 +23,13 @@
           .form-group
             = form.password_field :text, class:"password-field", placeholder:"" 
             -# %input.password.holder{:name => "password", :placeholder => "パスワード", :type => "password"}/
-          .robot
-            %button.robot-button
-              %input.check{:type => "checkbox"}/
-              私はロボットではありません
+          .form-group
+            .robot
+              %button.robot-button
+                %input.check{:type => "checkbox"}/
+                私はロボットではありません
           .login-btn
             %button.login-submit{:type => "submit"}
               ログイン
-          %a{:href => "#"} パスワードをお忘れの方
+          %a{href: "#"} パスワードをお忘れの方
   = render 'footer'
