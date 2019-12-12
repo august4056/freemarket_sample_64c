@@ -13,12 +13,12 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
 
 development:
   <<: *default
   database: freemarket_sample_64c_development
+  username: root
+  password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -27,6 +27,8 @@ development:
 test:
   <<: *default
   database: freemarket_sample_64c_test
+  username: root
+  password:
   socket: /tmp/mysql.sock
 
 # As with config/secrets.yml, you never want to store sensitive information,
