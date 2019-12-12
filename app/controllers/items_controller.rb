@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
   
-  layout'items'
+  
 
   def index
+    @item = Items.all
   end
 
   def show
+    @items = Items.all
+
   end
 
   def new
