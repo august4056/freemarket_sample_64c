@@ -711,6 +711,13 @@
   font-weight: normal;
   font-family: system;
   height: 50px;
+  .chevron-right__icon2{
+    color: $header-icon;
+    position: relative;
+    left: 290px;
+    bottom: 38px;
+    font-size: 20px;
+  }
   &__link{
     text-decoration: none;
     width: 302px;
@@ -734,13 +741,6 @@
   }
 }
 
-.chevron-right__icon2{
-  color: $header-icon;
-  position: relative;
-  left: 290px;
-  bottom: 38px;
-  font-size: 20px;
-}
 
 
 
