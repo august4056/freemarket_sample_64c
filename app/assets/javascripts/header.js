@@ -244,7 +244,7 @@ window.addEventListener("load", function() {
   document.getElementById("mypage").addEventListener("mouseover", function(){
     document.getElementById("mypage22").style.display = 'block';
   }, false);
-   
+  
   document.getElementById("mypage").addEventListener("mouseout", function(){
     document.getElementById("mypage22").style.display = 'none';
   }, false);
@@ -252,12 +252,13 @@ window.addEventListener("load", function() {
   document.getElementById("mypage22").addEventListener("mouseover", function(){
     document.getElementById("mypage22").style.display = 'block';
   }, false);
-      
+  
   document.getElementById("mypage22").addEventListener("mouseout", function(){
     document.getElementById("mypage22").style.display = 'none';
   }, false);
-
-
+  
+  
+});
 //   //メニュータグを青くし続ける
 //   $(function(){
 //     $(".categoly__title:has(a)").addClass("links-hover");
@@ -356,5 +357,3 @@ window.addEventListener("load", function() {
     
   // });
 
-
-// });

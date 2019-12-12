@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  layout'items_layout'
+  layout'items'
 
   def index
   end
