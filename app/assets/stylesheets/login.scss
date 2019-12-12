@@ -139,7 +139,7 @@
 
 //ログイン　メールボタンの色変更
 .user-login-form:first-child {
-  padding: 100px 64px 32px;
+  // padding: 100px 64px 32px;
   background-color:red;
 }
 
@@ -174,13 +174,16 @@
       border-bottom: 1px solid #eee;
     }
     .user-single-form-content{
-      width: 700px;
-      height: 287px;
+      height: 200px;
       margin: 0 auto;
       padding: 24px 16px 40px;
       .user-single-forms{
         width: 343px;
         margin: 0 auto;
+        & .form-group {
+          text-align: center;
+
+        }
       }
     }
   }

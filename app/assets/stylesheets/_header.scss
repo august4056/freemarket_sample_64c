@@ -734,6 +734,31 @@
   }
 }
 
+.mypage-login-buttons {
+  display: flex;
+  &__registration {
+    background-color: rgb(234, 53, 45);
+    font-size: 14px;
+    line-height: 14px;
+    border:1px solod rgb(234, 53, 45) ;
+    border-radius: 4px;
+    color: #fff;
+    padding: 9px 10px;
+  }
+  &__login {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(0, 149, 238);
+    border:1px solid rgb(0, 149, 238);
+    border-radius:4px ;
+    padding: 8px 10px;
+    margin-left: 11px;
+  }
+  & a {
+    text-decoration: none;
+  }
+}
+
 .chevron-right__icon2{
   color: $header-icon;
   position: relative;
