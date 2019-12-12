@@ -62,10 +62,11 @@
 
 .ladies_items {
   width: 1100px;
-  height: 750px;
+  height: 730px;
   margin: 10px auto 10px;
   
-  cursor:pointer
+  
+  
 
 }
 
@@ -94,28 +95,22 @@
   width: 188px;
   margin: 10px;
   float: left;
+  // align-content: stretch;
   position: relative;
+  cursor: pointer;
   
-
-  &:hover {
-    // text-decoration: underline;
-    border: solid 1px #0095EE;
-  } 
-
-
+  // &:hover {
+  //   // text-decoration: underline;
+  //   border: solid 1px #0095EE;
+    
+  // } 
 
   .ladies-photo {
     // background-color: #ffffff;
     height: 188px;
     width: 188px;
-    float: left;
-    
-    // list-style: none;
-    // -webkit-box-sizing: border-box;
-    // -moz-box-sizing: border-box;
-    // box-sizing: border-box;
-    // -webkit-transition: all .3s;
-    // transition: all .5s;
+    background: none;
+
   }
 
   .ladies__comment-box {
