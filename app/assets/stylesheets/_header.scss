@@ -711,6 +711,8 @@
   font-weight: normal;
   font-family: system;
   height: 50px;
+
+
   &__link{
     text-decoration: none;
     width: 302px;
@@ -732,16 +734,15 @@
       color: rgb(100, 100, 100);
     }
   }
-}
 
-.chevron-right__icon2{
-  color: $header-icon;
-  position: relative;
-  left: 290px;
-  bottom: 38px;
-  font-size: 20px;
+  .chevron-right__icon2{
+    color: $header-icon;
+    position: relative;
+    left: 290px;
+    bottom: 38px;
+    font-size: 20px;
+  }
 }
-
 
 
 
