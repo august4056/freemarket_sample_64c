@@ -735,44 +735,36 @@
     }
   }
 
-  .chevron-right__icon2{
-    color: $header-icon;
-    position: relative;
-    left: 290px;
-    bottom: 38px;
-    font-size: 20px;
+.mypage-login-buttons {
+  display: flex;
+  &__registration {
+    background-color: rgb(234, 53, 45);
+    font-size: 14px;
+    line-height: 14px;
+    border:1px solod rgb(234, 53, 45) ;
+    border-radius: 4px;
+    color: #fff;
+    padding: 9px 10px;
+  }
+  &__login {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(0, 149, 238);
+    border:1px solid rgb(0, 149, 238);
+    border-radius:4px ;
+    padding: 8px 10px;
+    margin-left: 11px;
+  }
+  & a {
+    text-decoration: none;
   }
 }
 
+.chevron-right__icon2{
+  color: $header-icon;
+  position: relative;
+  left: 290px;
+  bottom: 38px;
+  font-size: 20px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #mens_ul-22{
-//   list-style-type: none;
-//   background-color: rgb(255, 255, 255);
-//   bottom: 0px;
-//   border: 0.1px solid rgb(240, 240, 240);
-//   box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
-//   display: none;
-//   left: 220px;
-//   position: absolute;
-//   top: 0px;
-//   width: 300px;
-//   padding-inline-start: 0;
-//}
+}
