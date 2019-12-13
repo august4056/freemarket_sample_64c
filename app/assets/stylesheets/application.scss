@@ -4,9 +4,9 @@
 @import 'reset';
 @import 'header';
 @import 'footer';
-@import 'users';
-@import 'login';
-@import 'itemdetail';
+@import 'item-detail';
+@import 'users/login';
+@import 'users/users';
 @import 'sellpage';
 @import 'main';
 @import "slick-theme";

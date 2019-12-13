@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
   
-  layout'items'
+  layout "items"
 
   def index
+ 
   end
 
   def show
