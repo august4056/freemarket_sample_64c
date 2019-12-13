@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+}
+
+.credit-container {
+  width: 700px;
+  height: 400px;
+  background-color:#ffffff;
+  &__title {
+    font-size: 24px;
+    padding: 8px 24px;
+    text-align: center;
+    font-weight: bold;
+
+  }
+}
+
+.add_card {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ea352d;
+}
+
+.fa-credit-card {
+  color: #fff;
+}
