@@ -11,6 +11,9 @@ class ItemsController < ApplicationController
 
   def new
   end
+
+  def credit
+  end
   
   def mypage
 

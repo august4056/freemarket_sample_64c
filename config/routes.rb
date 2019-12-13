@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get 'address', to: 'users#address'
   get 'payment', to: 'users#payment'
   get 'logout', to: 'items#logout'
-  
-  
+  get 'logout', to: 'users#logout'
+  get 'credit', to: 'items#credit'
 resources :items, only: [:index, :show ,:new]
 resources :users, only: [:new, :edit, :create, :show]
 
