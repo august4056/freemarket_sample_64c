@@ -1,0 +1,58 @@
+
+.user__mypage-body-content {
+  height: 1381px;
+  width: 1440px;
+  background-color: #eeeeee;
+  padding-top: 40px;
+ 
+}
+
+.user__mypage-main-content {
+  width: 1020px;
+  height: 1292px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__mypage-left-content{
+  width: 280px;
+  height: 100%;
+  margin-right: 40px;
+  background-color: #eeeeee;
+}
+
+.user__mypage-left-lists{
+  list-style: none;
+}
+
+.user__mypage-left-list{
+  color:#333333;
+  background-color: #fff;
+  width: 244px;
+  height: 16px;
+  padding: 16px;
+  border-top:1px solid #eee;
+  position: relative;
+}
+
+
+.fa-chevron-right{
+  position: absolute;
+  right: 10px;
+}
+
+
+.user__mypage-nav-head{
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
