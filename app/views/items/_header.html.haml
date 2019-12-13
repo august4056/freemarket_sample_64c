@@ -5,12 +5,12 @@
         %a{:href => "https://www.mercari.com/jp/", class: 'header__logo'}
           = image_tag "fmarket_logo_red.svg", class: 'header__logo__image'
         %form_with.header-form{:action => "#"}
-          %input.header-form__input{:mane => "keyword", :placeholder => "   何かお探しですか？", :type => "seach", :value => ""}/
-          %button.header-form__button{:type => "sabmit"}
-            = icon('fas', 'search', class: 'header-form__search__icon1')
+          %input.input-header{:mane => "keyword", :placeholder => "   何かお探しですか？", :type => "search", :value => ""}/
+          %button.header-form-button{:type => "sabmit"}
+            = icon('fas', 'search', class: 'search__icon1')
       .header-under
         .header-under-left
-          %a#categoly__search22{:href => "./users/logout"}
+          %a#categoly__search22{:href => "#"}
             %i.fas.fa-list-ul
             カテゴリーから探す
           #ex_out1
