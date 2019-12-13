@@ -1,23 +1,9 @@
 
-
-.containar{
-  background-color:rgb(245, 245, 245);
-}
-
-
 .item__sell-main--content{
   width:700px;
   height:2016px;
   margin:0 auto;
   background-color:#fff;
-}
-
-.main-head{
-  text-align: center;
-  margin: 0;
-  padding:32px 16px;
-  font-size:22px;
-  border-bottom:solid 2px rgb(245, 245, 245);
 }
 
 .item__sell--uploadbox {
@@ -36,10 +22,17 @@
   vertical-align:top;
 }
 
+.style_counter{
+  margin-top:16px;
+  margin-right:80px;
+  text-align: right;
+}
+
 .item__sell--dropbox{
   width:700px;
   height:162px;
 }
+
 .item__sell--dropbox-item{
   border-bottom:solid 2px rgb(245, 245, 245);
   margin:40px 0 0 0;
@@ -78,8 +71,6 @@
   font-size:16px;
 }
 
-
-
 .item__sell--textarea-default{
   margin:8px 0 0;
   width:600px;
@@ -96,16 +87,22 @@
 }
 
 .item__sell-sub-head{
+  margin-bottom:20px;
   width:620px;
   font-size:16px;
   color:#333
 }
 
+.fa-chevron-down {
+  position: relative;
+  left:580px;
+  top:35px;
+  
+}
+
 .item__sell-form-box{
   width:620px;
   height:180px;
-  position: relative;
-  top:50px;
 }
 
 .item__sell-select-wrap{
@@ -114,7 +111,73 @@
   width:400px;
 }
 
+.item__sell-formgroup{
+  padding:30px 0 0 0;
+  position: relative;  
+}
+
+.item__sell-form-group2{
+  position: relative;
+  top:30px;
+  padding:20px;
+}
+
+.item__sell-form-group4{ 
+  padding:30px 0 0 0; 
+}
+
+.item__sell-select-default{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:48px;
+  width:620px;
+}
+
 .item__sell-select-default1{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:48px;
+  width:620px;
+}
+
+.item__sell-select-default2{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:48px;
+  width:620px;
+}
+
+.item__sell-select-default3{
+  padding:0 16px;
+  background:0;
+  font-size:16px;
+  line-height:1.5;
+  cursor:pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height:48px;
+  width:620px;
+  position: absolute;
+  right:40px;
+  bottom:10px;
+}
+
+.item__sell-select-default4{
   padding:0 16px;
   background:0;
   font-size:16px;
@@ -131,8 +194,16 @@
   right:40px;
   padding:40px;
   width:660px;
-  height:300px;
+  height:360px;
   border-top:2px solid rgb(245, 245, 245);
+}
+
+.item__sell-sub-head2{
+  color:#888;
+  padding:0 ;
+  font-size:14px;
+  width:160px;
+  height:14px;
 }
 
 .item__sell-form-question{
@@ -148,27 +219,24 @@
   text-decoration: none;
   position: relative;
   left:90px;
-  bottom:30px;
+  bottom:14px;
 }
 
 .item__sell-form-box2{
-  width:400px;
-  height:290px;
-  position: absolute;
-  right:100px;
-  bottom:50px; 
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-.item__sell-select-default4{
-  background:0;
-  font-size:16px;
-  cursor:pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+.item__sell-form-group3{
+  margin-top:32px;
+  margin-bottom:10px;
+}
 
+.item__sell-form-group4{
+  margin-top:50px;
+  margin-bottom:10px;
+}
+
+.item__sell-form-group5{
+  margin-top:100px;
 }
 
 .item__sell-form-question2{
@@ -183,8 +251,8 @@
   text-align: center;
   text-decoration: none;
   position: relative;
-  left:150px;
-  bottom:40px;
+  left:155px;
+  bottom:14px;
 }
 
 
@@ -217,8 +285,6 @@
 .item__sell-form-groupx{
   position: relative;
   top:50px;
-
-
 }
 
 .item__sell-select-wrapx{
@@ -226,57 +292,73 @@
   top:50px;
 }
 
-
-
 .item__sell-content-low{
-  width:620px;
-  height:500px;
-  margin-top :40px;
-  padding:100px 0px 60px 20px;
+  position: relative;
+  top:95px;
+  right:37px;
+  padding:42px 0 20px 40px ;
+  width:660px;
+  height:360px;
+  border-top:2px solid rgb(245, 245, 245);
 }
 
 
-.item__sell-sub-head2{
-  color:#888;
-  padding:0 ;
-  font-size:14px;
-  width:160px;
-  height:14px;
+.item__sell-form-box3{
+  float:right;
+  padding:0 40px 0 0;
+  width:400px;
+  height:218px;
 }
 
+.item__sell-price{
+  list-style: none;
+}
 
-// .sell-form-box3{
-//   float:right;
-//   width:400px;
-//   height:218px;
-// }
+.item__sell-form-group6{
+ display:flex;
+ justify-content: space-between;
+}
 
+.l-right-input{
+  margin:0;
+  text-align: right;
+  height:48px;
+  padding:10px 16px 8px;
+  border-radius:4px;
+  border:1px solid #ccc;
+  background:#fff;
+  line-height:1.5;
+  font-size:16px;
+}
 
-// .l-left{
-//   position: relative;
-//   bottom:70px;
-// }
+.item__right-group{
+  display:flex;
+}
 
-// .l-right-input{
-//   margin:0;
-//   text-align: right;
-//   height:48px;
-//   padding:10px 16px 8px;
-//   border-radius:4px;
-//   border:1px solid #ccc;
-//   background:#fff;
-//   line-height:1.5;
-//   font-size:16px;
-//   position: relative;
-//   bottom:60px;
-//   left:50px;
-// }
-// .creafix{
-//   width:350px;
-//   height:96px;
-//   border-top:1px solid #ccc;
-//   border-bottom:1px solid #ccc;
-// }
+.item__sell-form-group7{
+  border-top:1px solid #ccc;
+  margin:30px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.l-left{
+  padding:24px 0 24px 0;
+}
+
+.l-right{
+  padding:24px 0 24px 0;
+}
+
+.l-right2{
+  padding:24px 0 24px 0;
+  font-weight: bold;
+}
+
+.l-left2{
+  padding:24px 0 24px 0;
+  font-weight: bold;
+}
 
 
 // .single-footer{
