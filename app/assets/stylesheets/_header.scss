@@ -514,6 +514,11 @@
 }
 
 //いいね一覧
+  .heart__icon1{
+    color: $header-icon-top;
+    padding-right: 8px;
+    font-size: 18px;
+  }
 
 .like-list{
   margin-right: 30px;
@@ -527,11 +532,6 @@
   }
 }
 
-.heart__icon1{
-  color: $header-icon-top;
-  padding-right: 8px;
-  font-size: 18px;
-}
 
 //お知らせ
 
