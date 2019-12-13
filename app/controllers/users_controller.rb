@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   layout'users'
-  
+
   def info
   end
 
