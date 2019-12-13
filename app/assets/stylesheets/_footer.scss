@@ -63,8 +63,6 @@
   left: 600px;
 }
 
-
-
 .footer__index {
   background-color: #222222;
   display: flex;
@@ -80,15 +78,12 @@
     justify-content: space-around;
     width: 1200px;
     
-    
-  }
-  
   .footer__index__box {
     width: 250px;
     list-style: none;
     margin: 20px 0px 50px 0px;
-    position: relative;
-  }
+    // position: relative;
+  
 
   .footer__title {
     font-size: 16px;
@@ -101,73 +96,67 @@
   .footer__comments {
     margin-top: 16px;
 
-  }
-
   .footer__comment {
     color: #d3d3d3;
     text-decoration: none;
     font-size: 12px;
-    
+
   }
-
-  .footer__icon__twitter {
-    font-size: 30px;
-    position: absolute;
-    top: 250px;
-    // text-decoration: none;
-    
-    
-  }
-
-  .footer__icon__facebook {
-    
-    position: absolute;
-    top: 250px;
-    right: 1px;
-   
-  }
-
-    .footer__btn {
-      color: white;
-      font-size: 30px;
-      margin-right: 10px;
-      text-decoration: none;
-      
-    } 
-
 }
+
+  .footer__btn{
+    margin-top: 20px;
+    display: flex;
+    &__twitter{
+
+    }
+    &__facebook{
+
+      margin-left: 20px;
+    }
+    & i{
+      color: $White;
+      font-size: 30px;
+    }
+  }
+  }
+}
+}
+
 
 .footer__bottom {
-  background-color: #e6e6fa;
+  background-color: #222222;
+  height: 100%;
   display: flex;
-  position: relative;
 
-  .footer__bottom__area {
-    width: 1200px;
-    margin: 30px auto 20px;
-    position: relative;
-    
-    .footer__bottom__fma {
-      height: 50px;
-      width: 50px;
-      padding: 50px;
-      position: absolute;
-      text-align: left;
+  &__area {
+    width: 100%;
+    text-align: center;
+      .footer__fma {
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        z-index: 30;
+        
+      }
 
+      .footer__text {
+        color: white;
+        font-size: 25px;
+        padding: 5px 1000px 5px 100px;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        
+      }
+
+      .footer__copy {
+        color: white;
+        font-size: 15px;
+        padding: 20px 500px 20px 500px;
+        font-family: Arial, Helvetica, sans-serif;
+
+      }
     }
-
   }
-    .footer__bottom__text {
-      color: blue;
-      font-size: 30px;
-      padding: 0 0 0 50px; 
-    }
 
-    .copy__comment {
-      color:blue;
-      bottom: 0;
-      text-align: center;
-      display: flex;
-    }
-
-}
+  

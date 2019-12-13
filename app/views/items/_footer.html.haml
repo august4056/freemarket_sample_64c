@@ -24,12 +24,10 @@
         %li.footer__comments
           %a.footer__comment{:href => "#", :target => "_blank"} メルカリロゴ利用ガイドライン
 
-        %li.footer__icon__twitter
-          %a#footer__btn{:href => "#"}
+        %li.footer__btn
+          %a.footer__btn__twitter{:href => "#"}
             %i.fab.fa-twitter
-
-        %li.footer__icon__facebook
-          %a#footer__btn{:href => "#"}
+          %a.footer__btn__facebook{:href => "#"}
             %i.fab.fa-facebook-square
 
 
@@ -79,8 +77,8 @@
           %a.footer__comment{:href => "#", :target => "_blank"} United States
 
 
-  .footer__bottom
-    .footer__bottom_area
-      = image_tag 'logo_white.svg', class:'footer__bottom__fma'
-      .footer__bottom__text fmarket
-    .copy__comment © 2019 Mercari,Inc
+  %ul.footer__bottom
+    .footer__bottom__area
+      = image_tag 'logo_gray.svg', class:'footer__fma'
+      %li.footer__text fmarket
+      %li.footer__copy © 2019 Mercari,Inc
