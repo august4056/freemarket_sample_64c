@@ -711,8 +711,6 @@
   font-weight: normal;
   font-family: system;
   height: 50px;
-
-
   &__link{
     text-decoration: none;
     width: 302px;
@@ -734,6 +732,7 @@
       color: rgb(100, 100, 100);
     }
   }
+}
 
 .mypage-login-buttons {
   display: flex;

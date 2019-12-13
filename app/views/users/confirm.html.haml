@@ -1,19 +1,17 @@
-.user-single-container
-  = render 'header'
-  .user-main
-    .user-member-info
-      %h2.user-member-info__title 電話番号の確認
-      = form_with model: @user do |form|
-        .user-single-content
-          .user-form-group
-            %label{:for => "telephone-field"}
-              携帯電話の番号
-              %span.required 必須
-              = form.telephone_field :text, placeholder:"携帯電話の番号を入力" ,id:"telephone-field"
-              %p.sms-text 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-              = form.submit "SMSを送信する", class:"submit-btn"
-              %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません
-          .user-form-group
-            %p
-              %a{:href => ""} 電話番号の確認が必要な理由
-  = render 'footer'
+.user-main
+  .user-member-info
+    %h2.user-member-info__title 電話番号の確認
+    = form_with model: @user do |form|
+      .user-single-content
+        .user-form-group
+          %label{for:  "telephone-field"}
+            携帯電話の番号
+            %span.required 必須
+            = form.telephone_field :text, placeholder:"携帯電話の番号を入力" ,id:"telephone-field"
+            %p.sms-text 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+            = form.submit "SMSを送信する", class:"submit-btn"
+            %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません
+        .user-form-group
+          %p
+            = link_to "" do
+              電話番号の確認が必要な理由
