@@ -1,16 +1,18 @@
-.user-single-container
-  = render 'header'
-  .user-main
-    .user-member-info
-      %h2.user-member-info__title 会員登録完了
-      = form_with model: @user do |form|
-        .user-single-content
-          .user-form-group
-            .user-thanks-message
-              %p ありがとうございます
-              %p 会員登録が完了しました
-          .user-form-group
-            = form.submit "メルカリをはじめる", class:"submit-btn"
-          / 背景画像、アプリダウンロード挿入する
-          .user-download
-  = render 'footer'
+.user-main
+  .user-member-info
+    %h2.user-member-info__title 会員登録完了
+    = form_with model: @user do |form|
+      .user-single-content
+        .user-form-group
+          .user-thanks-message
+            %p ありがとうございます
+            %p 会員登録が完了しました
+        .user-form-group
+          = form.submit "メルカリをはじめる", class:"submit-btn"
+      .smph__area
+        = image_tag 'room_image.jpeg', class:'smph__img'
+        %p.smph__text1 スマホでかんたんフリマアプリ
+        %p.smph__text2 今すぐ無料ダウンロード!
+        = image_tag 'apple_icon.svg', class:'footer__apple__img'
+        = image_tag 'google_icon.svg', class:'footer__google__img'
+        = image_tag 'free_img.png', class:'footer__free__img'
