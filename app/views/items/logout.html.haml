@@ -1,0 +1,13 @@
+.logout__page
+  %form_with.logout__page__form{:action => "#"}
+    %button.logout__page__form__btn-red{:type => "submit"}ログアウト
+
+.exhibit
+  %form_with.exhibit__form{:action => "#"}
+    %button.exhibit__form__button{:type => "sabmit"}
+      .exhibit__form__button__logo
+        出品
+      = icon('fas', 'camera', class: 'exhibit__form__button__icon1')
+
+
+= render 'users/side-ber'
