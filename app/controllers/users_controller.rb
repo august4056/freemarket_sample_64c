@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  layout'users'
-
   def info
   end
 
@@ -10,6 +8,8 @@ class UsersController < ApplicationController
 
   def login
   end
+
+  
   
   def confirm
   end

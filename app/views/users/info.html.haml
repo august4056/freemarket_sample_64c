@@ -1,71 +1,70 @@
-.user-single-container
-  = render 'header'
-  .user-main
-    .user-member-info
-      %h2.user-member-info__title 会員情報入力
-      = form_with model: @user do |form|
-        .user-single-content
-          .user-form-group-top
-            %p.nick-name
-              ニックネーム
-              %span.required 必須
-            = form.text_field :text, class:"nick-name-field"
-          .user-form-group
-            %p.mail-name
-              メールアドレス
-              %span.required 必須
-            = form.text_field :email, class:"mail-field"
-          .user-form-group-password
-            %label{:for => "password"}
-              パスワード
-              %span.required 必須
-              = form.password_field :text, placeholder:"7文字以上の半角英数字" ,class:"password-field"
-              %p.info-text
-                ※　英字と数字の両方を含めて設定して下さい
-              .display-password
-                = form.check_box :check_box, id:"reveal_password"
-                %label{:for => "reveal_password"} パスワードを表示する
-          .user-form-group
-            %h2.identification-title 本人確認
-            %p.identification-text
-              安心・安全にご利用いただくために、お客さまの本人
-              %br/
-              情報の登録にご協力ください。他のお客さまに公開さ
-              %br/
-              れることはありません。
-          .user-form-group
-            %p
-              お名前（全角）
-              %span.required 必須
-            = form.text_field :text, placeholder:"例）山田" ,class:"family-name-kanji"
-            = form.text_field :text, placeholder:"例）彩" ,class:"first-name-kanji"
-          .user-form-group
-            %p
-              お名前カナ（全角）
-              %span.required 必須
-            = form.text_field :text, placeholder:"例）ヤマダ" ,class:"family-name-kana"
-            = form.text_field :text, placeholder:"例）アヤ" ,class:"first-name-kana"
-          .user-form-group
-            %p
-              生年月日
-              %span.required 必須
-            = form.date_select :birthday, start_year: 1900, end_year:Time.current.year,use_month_numbers: true, class:"birthday-field"
-          .user-caution
-            %p ※ 本人情報は正しく入力してください。会員登録後
-            %p 修正するにはお時間を頂く場合があります。
-          .user-form-group
-            %p
-              「次へ進む」のボタンを押すことにより、
-              %a{:href => ""} 利用規約に
-            %p 同意したものとみなします
-          .user-robot-field
-            = form.check_box :check_box, id:"check_robot"
-            %label{:for => "check_robot"}
-              私はロボットではあり
-              %br>/
-              ません
-          .user-form-group
-            = form.submit "次へ進む", class:"submit-btn"
+.user-main
+  .user-member-info
+    %h2.user-member-info__title 会員情報入力
+    = form_with model: @user do |form|
+      .user-single-content
+        .user-form-group-top
+          %p.nick-name
+            ニックネーム
+            %span.required 必須
+          = form.text_field :text, class:"nick-name-field"
+        .user-form-group
+          %p.mail-name
+            メールアドレス
+            %span.required 必須
+          = form.text_field :email, class:"mail-field"
+        .user-form-group-password
+          %label{:for => "password"}
+            パスワード
+            %span.required 必須
+            = form.password_field :text, placeholder:"7文字以上の半角英数字" ,class:"password-field"
+            %p.info-text
+              ※　英字と数字の両方を含めて設定して下さい
+            .display-password
+              = form.check_box :check_box, id:"reveal_password"
+              %label{for: "reveal_password"} パスワードを表示する
+        .user-form-group
+          %h2.identification-title 本人確認
+          %p.identification-text
+            安心・安全にご利用いただくために、お客さまの本人
+            %br/
+            情報の登録にご協力ください。他のお客さまに公開さ
+            %br/
+            れることはありません。
+        .user-form-group
+          %p
+            お名前（全角）
+            %span.required 必須
+          = form.text_field :text, placeholder:"例）山田" ,class:"family-name-kanji"
+          = form.text_field :text, placeholder:"例）彩" ,class:"first-name-kanji"
+        .user-form-group
+          %p
+            お名前カナ（全角）
+            %span.required 必須
+          = form.text_field :text, placeholder:"例）ヤマダ" ,class:"family-name-kana"
+          = form.text_field :text, placeholder:"例）アヤ" ,class:"first-name-kana"
+        .user-form-group
+          %p
+            生年月日
+            %span.required 必須
+          = form.date_select :birthday, start_year: 1900, end_year:Time.current.year,use_month_numbers: true, class:"birthday-field"
+        .user-caution
+          %p ※ 本人情報は正しく入力してください。会員登録後
+          %p 修正するにはお時間を頂く場合があります。
+        .user-form-group
+          %p
+            「次へ進む」のボタンを押すことにより、
+            = link_to "" do
+              利用規約に
+          %p 同意したものとみなします
+        .user-robot-field
+          = form.check_box :check_box, id:"check_robot"
+          %label{for: "check_robot"}
+            私はロボットではあり
+            %br>/
+            ません
+        .user-form-group
+          = form.submit "次へ進む", class:"submit-btn"
+        = link_to "" do
           %p.registration-link
-            %a{:href => ""} 本人情報の登録について
-  = render 'footer'
+            本人情報の登録について

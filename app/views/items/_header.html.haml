@@ -2,316 +2,410 @@
   .header0
     .header0__body
       .heder-up
-        %a{:href => "https://www.mercari.com/jp/", class: 'header__logo'}
+        = link_to "https://www.mercari.com/jp/", class: 'header__logo' do
           = image_tag "fmarket_logo_red.svg", class: 'header__logo__image'
-        %form_with.header-form{:action => "#"}
-          %input.input-header{:mane => "keyword", :placeholder => "   何かお探しですか？", :type => "search", :value => ""}/
-          %button.header-form-button{:type => "sabmit"}
-            = icon('fas', 'search', class: 'search__icon1')
+        %form_with.header-form{action: '#'}
+          %input.header-form__input{mane: "keyword", placeholder: "   何かお探しですか？", type: "search", value: ""}/
+          %button.header-form__button{type: "sabmit"}
+            = icon('fas', 'search', class: 'header-form__search__icon1')
       .header-under
         .header-under-left
-          %a#categoly__search22{:href => "#"}
+          = link_to  '#', id: "categoly__search22" do
+
             %i.fas.fa-list-ul
             カテゴリーから探す
           #ex_out1
             %ul#ex_menu1
               %li#ladies1_list.menu1_list
-                %a.menu1_link{:href => "#"} レディース
+                = link_to 'レディース', '#', class: "menu1_link"
+                  
                 %ul#ladies_ul
                   %li#tops_list.ladies-lists
-                    %a.ladies_goods{:href => "#"} トップス
+                    = link_to 'トップス' '#', class: "ladies_goods"
+                      
                     %ul#tops_ul
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
+                        = link_to 'Tシャツ/カットソー(半袖/袖なし)', '#', class: "tops_goods"
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} Tシャツ/カットソー(七分/長袖)
+                        = link_to 'Tシャツ/カットソー(七分/長袖)', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} シャツ/ブラウス(半袖/袖なし)
+                        = link_to 'シャツ/ブラウス(半袖/袖なし)', '#', class: "tops_goods"
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} シャツ/ブラウス(七分/長袖)
+                        = link_to 'シャツ/ブラウス(七分/長袖)', '#', class: "tops_goods"
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} ポロシャツ
+                        = link_to 'ポロシャツ', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} キャミソール
+                        = link_to 'キャミソール', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} タンクトップ
+                        = link_to 'タンクトップ', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} ホルターネック
+                        = link_to 'ホルターネック', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} ニット/セーター
+                        = link_to 'ニット/セーター', '#', class: "tops_goods"
+
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} チュニック
+                        = link_to 'チュニック', '#', class: "tops_goods"
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} カーディガン/ポレロ
+                        = link_to 'カーディガン/ポレロ', '#', class: "tops_goods" 
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} アンサンブル
+                        = link_to 'アンサンブル', '#', class: "tops_goods" 
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} ベスト/ジレ
+                        = link_to 'ベスト/ジレ', '#', class: "tops_goods" 
+                          
                       %li.tops-lists
-                        %a.tops_goods{:href => "#"} パーカー
+                        = link_to 'パーカー', '#', class: "tops_goods" 
+                          
 
                     %li#jacket-outer_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} ジャケット/アウター
+                      = link_to 'ジャケット/アウター', '#', class:"ladies_goods"  
+                        
                     %ul#jacket-outer_ul
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} テラードジャケット
+                        = link_to 'テラードジャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ノーカラージャケット
+                        = link_to 'ノーカラージャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} Gジャン/デニムジャケット
+                        = link_to 'Gジャン/デニムジャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} レザージャケット
+                        = link_to 'レザージャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ダウンジャケット
+                        = link_to 'ダウンジャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ライダースジャケット
+                        = link_to 'ライダースジャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ミリタリージャケット
+                        = link_to 'ミリタリージャケット', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ダウンベスト
+                        = link_to 'ダウンベスト', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ジャンバー/ブルゾン
+                        = link_to 'ジャンバー/ブルゾン', '#', class:"jacket-outer_goods" 
+
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ポンチョ
+                        = link_to 'ポンチョ', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ロングコート
+                        = link_to 'ロングコート', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} トレンチコート
+                        = link_to 'トレンチコート', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ダッフルコート
+                        = link_to 'ダッフルコート', '#', class:"jacket-outer_goods" 
+                          
                       %li.jacket-outer_lists
-                        %a.jacket-outer_goods{:href => "#"} ピーコート
+                        = link_to 'ピーコート', '#', class:"jacket-outer_goods" 
+                          
 
                     %li#pants_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} パンツ
+                      = link_to 'パンツ', '#', class:"ladies_goods"  
+                        
                     %ul#pants_ul
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} デニム/ジーンズ
+                        = link_to 'デニム/ジーンズ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} ショートパンツ
+                        = link_to 'ショートパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} カジュアルパンツ
+                        = link_to 'カジュアルパンツ' '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} ハーフパンツ
+                        = link_to 'ハーフパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} チノパン
+                        = link_to 'チノパン', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} ワークパンツ/カーゴパンツ
+                        = link_to 'ワークパンツ/カーゴパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} クロップドパンツ
+                        = link_to 'クロップドパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} サロペット/オーバーオール
+                        = link_to 'サロペット/オーバーオール', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} オールインワン
+                        = link_to 'オールインワン', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} サルエルパンツ
+                        = link_to 'サルエルパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} ガウチョパンツ
+                        = link_to 'ガウチョパンツ', '#', class:"pants_goods" 
+                          
                       %li.pants_lists
-                        %a.pants_goods{:href => "#"} その他
+                        = link_to 'その他', '#', class:"pants_goods" 
+                          
 
                     %li#skirt_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} スカート
+                      = link_to 'スカート', '#', class:"ladies_goods"  
+                        
                     %ul#skirt_ul
                       %li.skirt_lists
-                        %a.skirt_goods{:href => "#"}ミニスカート
+                        = link_to 'ミニスカート', '#', class:"skirt_goods" 
+                          
                       %li.skirt_lists
-                        %a.skirt_goods{:href => "#"} ひざ丈スカート
+                        = link_to 'ひざ丈スカート', '#', class:"skirt_goods" 
+                          
                       %li.skirt_lists
-                        %a.skirt_goods{:href => "#"} ロングスカート
+                        = link_to 'ロングスカート', '#', class:"skirt_goods" 
+                          
                       %li.skirt_lists
-                        %a.skirt_goods{:href => "#"} キュロット
+                        = link_to 'キュロット', '#', class:"skirt_goods" 
+                          
                       %li.skirt_lists
-                        %a.skirt_goods{:href => "#"} その他
+                        = link_to 'その他', '#', class:"skirt_goods" 
+                          
 
                     %li#one-pirce_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} ワンピース
+                      = link_to 'ワンピース', '#', class:"ladies_goods"  
+                        
                     %ul#one-pirce_ul
                       %li.one-pirce_lists
-                        %a.one-pirce_goods{:href => "#"}ミニワンピース
+                        = link_to 'ミニワンピース', '#', class:"one-pirce_goods" 
+                          
                       %li.one-pirce_lists
-                        %a.one-pirce_goods{:href => "#"}ひざ丈ワンピース
+                        = link_to 'ひざ丈ワンピース', '#', class:"one-pirce_goods" 
+                          
                       %li.one-pirce_lists
-                        %a.one-pirce_goods{:href => "#"}ロングワンピース
+                        = link_to 'ロングワンピース', '#', class:"one-pirce_goods" 
+                          
                       %li.one-pirce_lists
-                        %a.one-pirce_goods{:href => "#"}その他
+                        = link_to 'その他', '#', class:"one-pirce_goods" 
+                          
 
                     %li.ladies-lists
-                      %a#ladies-boots_list.ladies_goods{:href => "#"} 靴
+                      = link_to '靴', '#', id:"ladies-boots_list", class: "ladies_goods"
+                        
                     %ul#ladies-boots_ul
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}ハイヒール/パンプス
+                        = link_to 'ハイヒール/パンプス', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}ブーツ
+                        = link_to 'ブーツ', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}サンダル
+                        = link_to 'サンダル', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}スニーカー
+                        = link_to 'スニーカー', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}ミュール
+                        = link_to 'ミュール', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}モカシン
+                        = link_to 'モカシン', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}ローファー/革靴
+                        = link_to 'ローファー/革靴', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}フラットシューズ/バレエシューズ
+                        = link_to 'フラットシューズ/バレエシューズ', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}長靴/レインシューズ
+                        = link_to '長靴/レインシューズ', '#', class:"one-pirce_goods" 
+                          
                       %li.ladies-boots_lists
-                        %a.one-pirce_goods{:href => "#"}その他
+                        = link_to 'その他', '#', class:"one-pirce_goods" 
 
                     %li#roomwear-pajamas_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} ルームウェア/パジャマ
+                      = link_to 'ルームウェア/パジャマ', '#', class:"ladies_goods"   
                     %ul#roomwear-pajamas_ul
                       %li.roomwear-pajamas_lists
-                        %a.roomwear-pajamas_goods{:href => "#"}パジャマ
+                        = link_to 'パジャマ', '#',class: "roomwear-pajamas_goods"
+                          
                       %li.roomwear-pajamas_lists
-                        %a.roomwear-pajamas_goods{:href => "#"}ルームウェア
+                        = link_to 'ルームウェア', '#',class: "roomwear-pajamas_goods"
+                          
 
                     %li#leg-wear_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} レッグウェア
+                      = link_to 'レッグウェア', '#', class:"ladies_goods"   
                     %ul#leg-wear_ul
                       %li.leg-wear_lists
-                        %a.leg-wear_goods{:href => "#"}ソックス
+                        = link_to 'ソックス', '#', class:"leg-wear_goods"
                       %li.leg-wear_lists
-                        %a.leg-wear_goods{:href => "#"}スパッツ/レギンス
+                        = link_to 'スパッツ/レギンス', '#', class:"leg-wear_goods" 
+                          
                       %li.leg-wear_lists
-                        %a.leg-wear_goods{:href => "#"}ストッキング/タイツ
+                        = link_to 'ストッキング/タイツ', '#', class:"leg-wear_goods" 
+                          
                       %li.leg-wear_lists
-                        %a.leg-wear_goods{:href => "#"}レッグウォーマー
+                        = link_to 'レッグウォーマー', '#', class:"leg-wear_goods" 
+                          
                       %li.leg-wear_lists
-                        %a.leg-wear_goods{:href => "#"}その他
+                        = link_to 'その他', '#', class:"leg-wear_goods" 
+                          
                       
                     %li#ladies-hats_list.ladies-lists
-                      %a.ladies_goods{:href => "#"} 帽子
+                      = link_to '帽子', '#', class:"ladies_goods"  
+                        
                     %ul#ladies-hats_ul
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}ニットキャップ/ビーニー
+                        = link_to 'ニットキャップ/ビーニー', '#', class:"ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}ハット
+                        = link_to 'ハット', '#', class: "ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}ハンチング/ベレー帽
+                        = link_to 'ハンチング/ベレー帽', '#', class: "ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}キャップ
+                        = link_to 'キャップ', '#', class: "ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}キャスケット
+                        = link_to 'キャスケット', '#', class: "ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}麦わら帽子
+                        = link_to 'キャスケット', '#', class: "ladies-hats_goods" 
+                          
                       %li.ladies-hats_lists
-                        %a.ladies-hats_goods{:href => "#"}その他
+                        = link_to 'その他', '#', class: "ladies-hats_goods" 
+                          
 
                     %li.ladies-lists
-                      %a.ladies_goods{:href => "#"} バッグ
+                      = link_to 'バッグ', '#', class:"ladies_goods"  
+                        
                     %li.ladies-lists
-                      %a.ladies_goods{:href => "#"} アクセサリー
+                      = link_to 'アクセサリー', '#', class:"ladies_goods"  
+                        
                     %li.ladies-lists
-                      %a.ladies_goods{:href => "#"} ヘアアクセサリー
+                      = link_to 'ヘアアクセサリー', '#', class:"ladies_goods"  
+                        
                   %li.ladies-lists
-                    %a.ladies_goods{:href => "#"} 小物
+                    = link_to '小物', '#', class:"ladies_goods"  
+                      
                   %li.ladies-lists
-                    %a.ladies_goods{:href => "#"} 時計
+                    = link_to '時計', '#', class:"ladies_goods"  
+                      
               %li.menu1_list
-                %a.menu1_link{:href => "#"} メンズ
+                = link_to 'メンズ', '#', class: "menu1_link" 
+                  
                 %ul#mens_ul-22
               %li.menu1_list
-                %a.menu1_link{:href => "#"} ベビー・キッズ
+                = link_to 'ベビー・キッズ', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} インテリア・住まい・小物
+                = link_to 'インテリア・住まい・小物', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} 本・音楽・ゲーム
+                = link_to '本・音楽・ゲーム', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} おもちゃ・ホビー・グッズ
+                = link_to 'おもちゃ・ホビー・グッズ', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} コスメ・香水・美容
+                = link_to 'コスメ・香水・美容', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} 家電・スマホ・カメラ
+                = link_to '家電・スマホ・カメラ', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} スポーツ・レジャー
+                = link_to 'スポーツ・レジャー', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} ハンドメイド
+                = link_to 'ハンドメイド', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} チケット
+                = link_to 'チケット', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} 自動車・オートバイ
+                = link_to '自動車・オートバイ', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} その他
+                = link_to 'その他', '#', class: "menu1_link" 
+                  
               %li.menu1_list
-                %a.menu1_link{:href => "#"} カテゴリ一覧
+                = link_to 'カテゴリ一覧', '#', class: "menu1_link" 
+                  
 
-          %a#brand-search{:href => "#"}
-            %i.fas.fa-tag>
-            ブランドから探す
+          %i.fas.fa-tag
+          = link_to 'ブランドから探す', '#', id:"brand-search" 
+            
           #ex_out2
             %ul#ex_menu2
               %li.menu2_list
-                %a.menu2_link{:href => "#"} シャネル
+                = link_to 'シャネル', '#', class:"menu2_link" 
+                  
               %li.menu2_list
-                %a.menu2_link{:href => "#"} ナイキ
+                = link_to 'ナイキ', '#', class:"menu2_link" 
+                  
               %li.menu2_list
-                %a.menu2_link{:href => "#"} ルイ ヴィトン
+                = link_to 'ルイ ヴィトン', '#', class:"menu2_link" 
+                  
               %li.menu2_list
-                %a.menu2_link{:href => "#"} シュプリーム
+                = link_to 'シュプリーム', '#', class:"menu2_link" 
+                  
               %li.menu2_list
-                %a.menu2_link{:href => "#"} アディダス
+                = link_to 'アディダス', '#', class:"menu2_link" 
+                  
               %li.menu2_list
-                %a.menu2_link{:href => "#"} ブランド一覧
-        - if user_signed_in?       
-          .header-under-right
-            %a.like-list{:href => "#"}
-              %i.far.fa-heart
-              いいね！一覧
-            #ex_out3
-              %a.information{:href => "#"}
-                %i.far.fa-bell
-                お知らせ
-              %ul#ex_menu3
-                %a.information__list{:href => "#"}
-                  %li.information__link
-                    = image_tag "logo_red.svg", class: 'information__logo__image'
-                    .get__message
-                      .get__message__text
-                        『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
-                    = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
-                    .information__time
-                      = icon('far', 'clock', class: 'information__time__icon')
-                      1時間46分前
+                = link_to 'ブランド一覧', '#', class:"menu2_link" 
+                  
+        .header-under-right
+          %i.far.fa-heart{class:'heart__icon1'}
+          = link_to 'いいね！一覧', '#', class: "like-list" 
+            
+          #ex_out3
+            %i.far.fa-bell
+            = link_to 'お知らせ', '#', class: "information" 
+              
+            %ul#ex_menu3
+              = link_to '#', class: "information__list" do
+                %li.information__link
+                  = image_tag "logo_red.svg", class: 'information__logo__image'
+                  .get__message
+                    .get__message__text
+                      『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
+                  = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
+                  .information__time
+                    = icon('far', 'clock', class: 'information__time__icon')
+                    1時間46分前
+
           #ex_out4
-            %a.todo-list{:href => "#"}
-              %i.fas.fa-check
-              やることリスト
-              %ul#ex_menu4
-                = image_tag "logo_gray.svg", class: 'todo__logo-image'
-                .todo__menu 明日からやるよ、やる。
-            %a#mypage{:href => "#"}
-              %i.far.fa-user-circle
-              マイページ
-            #mypage22
-              .mypage22__icon
+            %i.fas.fa-check
+            = link_to 'やることリスト', '#', class: "todo-list"
+            %ul#ex_menu4
+              = image_tag "logo_gray.svg", class: 'todo__logo-image'
+              .todo__menu 
+                明日からやるよ、やる。
+            
+          #mypage22
+            %i.far.fa-user-circle
+            = link_to 'マイページ', '#', class:"mypage"
+            #mypage__down
+              .mypage22-icon
                 じこしょーかい
-              %ul#mypage22_menu
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}いいね！一覧
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}出品した商品 - 出品中
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}出品した商品 - 取引中
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}出品した商品 - 売却済み
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}購入した商品 - 取引中
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-                %li.mypage22_list
-                  %a.mypage22_link{:href => "#"}購入した商品 - 過去の取引
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon2')
-        - else
-          .mypage-login-buttons
-            = link_to new_user_registration_path do
-              .mypage-login-buttons__registration
-                新規会員登録
-            = link_to new_user_session_path do
-              .mypage-login-buttons__login
-                ログイン
+              %ul#mypage22__menu
+                %li.mypage22__menu__list
+                  = link_to 'いいね！一覧', '#', class: "mypage22__menu__list__link"
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                %li.mypage22__menu__list
+                  = link_to '出品した商品 - 出品中', '#', class: "mypage22__menu__list__link" 
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                %li.mypage22__menu__list{class:'chevron-right-icon'}
+                  = link_to '出品した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                %li.mypage22__menu__list
+                  = link_to '出品した商品 - 売却済み', '#', class: "mypage22__menu__list__link" 
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                %li.mypage22__menu__list
+                  = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                %li.mypage22__menu__list
+                  = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link"
+                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
