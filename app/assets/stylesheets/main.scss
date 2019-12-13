@@ -9,12 +9,6 @@
 
 }
 
-// .header h1 {
-//   font-weight: normal;
-//   text-align: center;
-//   font-family: 'Sriracha', cursive;
-// }
-
 .item__area {
   height: 780px;
   width: 100%;
@@ -60,33 +54,36 @@
   
 }
 
-.ladies_items {
-  width: 1100px;
-  height: 730px;
-  margin: 10px auto 10px;
+.mainpage__items {
+  width: 1050px;
+  height: 700px;
+  margin: 10px 10px 10px 200px;
   
   
-  
-
 }
 
-// .ladies_box {
-//   width: 1100px;
-//   height: 750px;
-// }
-
-
-
-.title_name {
+.mainpage__title__name {
+  width: 300px;
   color: #202020;
   font-size: 24px;
-  font-family: arial black;
-  padding: 30px 10px 10px 10px;
+  font-family: arial ;
+  padding: 15px 0 10px 10px;
+  // display: inline-block;
+  text-align: left;
+  
 }
 
-.ladies__box {
-  list-style: none;
+.mainpage__more-look {
+  color: #1e90ff;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: arial ;
+  padding: 5px 16px 5px 0;
   
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
 }
 
 
@@ -98,7 +95,7 @@
   // align-content: stretch;
   position: relative;
   cursor: pointer;
-  
+  list-style: none;
   // &:hover {
   //   // text-decoration: underline;
   //   border: solid 1px #0095EE;
@@ -133,7 +130,6 @@
 
   .ladies__price-box {
     height: 28px;
-    
     background-color: rgba( 0, 0, 0, 0.50 );
     border-radius: 0 13px 13px 0;
     position: absolute;
