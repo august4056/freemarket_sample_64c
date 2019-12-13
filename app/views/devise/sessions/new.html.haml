@@ -1,17 +1,45 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.user-single-container
+  .user-single-header
+    %h1
+      = image_tag 'fmarket_logo_red.svg',class:"logo"
+  .user-single-main
+    .user-single-login-panel
+      .user-single-login-panel__no-account
+        %p.user-single-login-panel__no-account__account-message アカウントをお持ちでない方はこちら
+        %button.user-single-login-panel__no-account__create-account
+          新規会員登録
+      .user-single-login-panel__buttons
+        .user-single-btn
+          %button.btn.facebook
+            %i.fab.fa-facebook-square
+            Facebookでログイン
+        .user-single-btn
+          %button.btn.google
+            %i.fab.fa-google
+            Googleでログイン
+      = form_with model: @user do |form|
+        .user-login-form
+          .user-form-group
+            = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
+          .user-form-group
+            = form.password_field :text, class:"password-field", placeholder:"" 
+          .user-form-group
+            .robot
+              %button.robot-button
+                %input.check{type: "checkbox"}/
+                私はロボットではありません
+          .login-btn
+            %button.login-submit{type: "submit"}
+              ログイン
+          = link_to "" do
+            パスワードをお忘れの方
+  .footer
+    .footer__nav
+      %ul.footer__nav__messages
+        %li.message プライバシーポリシー
+        %li.message メルカリ利用規約
+        %li.message 特定商取引に関する表記
+    .footer__logo
+      = image_tag 'logo_gray.svg',class:"flogo"
+    %p.copy ©Mercari,Inc.
+

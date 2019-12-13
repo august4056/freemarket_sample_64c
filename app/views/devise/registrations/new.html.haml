@@ -1,21 +1,30 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.user-single-container
+  .user-single-header
+    %h1
+      = image_tag 'fmarket_logo_red.svg',class:"logo"
+  .user-single-main
+    .user-single-main__content
+      %h2.user-single-main__content__section
+        新規会員登録
+      .user-single-form-content
+        .user-single-forms
+          .user-form-group
+            %button.btn.mail
+              %i.far.fa-envelope
+              メールアドレスで登録する
+            %button.btn.facebook
+              %i.fab.fa-facebook-square
+              Facebookで登録する
+            %button.btn.google
+              %i.fab.fa-google
+              Googleで登録する
+  .login-footer
+    .footer__nav
+      %ul.footer__nav__messages
+        %li.message プライバシーポリシー
+        %li.message メルカリ利用規約
+        %li.message 特定商取引に関する表記
+    .footer__logo
+      = image_tag 'logo_gray.svg',class:"flogo"
+    %p.copy ©Mercari,Inc.
+
