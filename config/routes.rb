@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root "items#index"
 
+  get 'mypage', to: 'items#mypage'
+
   get 'registration', to: 'users#registration'
   get 'login', to: 'users#login'
   get 'info', to: 'users#info'
