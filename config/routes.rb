@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'confirm', to: 'users#confirm'
   get 'address', to: 'users#address'
   get 'payment', to: 'users#payment'
-  get 'logout', to: 'users#logout'
+  get 'logout', to: 'items#logout'
   
   
 resources :items, only: [:index, :show ,:new]

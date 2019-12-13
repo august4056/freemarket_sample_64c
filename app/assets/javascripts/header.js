@@ -241,20 +241,20 @@ window.addEventListener("load", function() {
   }, false);
 
   //マイページ開閉
-  document.getElementById("mypage").addEventListener("mouseover", function(){
-    document.getElementById("mypage22").style.display = 'block';
-  }, false);
-  
-  document.getElementById("mypage").addEventListener("mouseout", function(){
-    document.getElementById("mypage22").style.display = 'none';
-  }, false);
-  
   document.getElementById("mypage22").addEventListener("mouseover", function(){
-    document.getElementById("mypage22").style.display = 'block';
+    document.getElementById("mypage__down").style.display = 'block';
   }, false);
   
   document.getElementById("mypage22").addEventListener("mouseout", function(){
-    document.getElementById("mypage22").style.display = 'none';
+    document.getElementById("mypage__down").style.display = 'none';
+  }, false);
+  
+  document.getElementById("mypage__down").addEventListener("mouseover", function(){
+    document.getElementById("mypage__down").style.display = 'block';
+  }, false);
+  
+  document.getElementById("mypage__down").addEventListener("mouseout", function(){
+    document.getElementById("mypage__down").style.display = 'none';
   }, false);
   
   
