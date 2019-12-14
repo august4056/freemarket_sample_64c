@@ -1,0 +1,65 @@
+.identification
+  %section.iden__box
+    %h2.iden__box__title 本人情報ページ
+    %form.l-single-inner{:action => "#", :method => "POST", :novalidate => ""}
+      %div
+        %p.iden__text
+          お客さまの本人情報をご登録ください。
+          %br/
+          登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        %p.text-right
+          %a{:href => "#", :trget => "_blank"}
+            本人確認書類のアップロード
+            %i.icon-arrow-right
+              \::before
+      .iden__form-group
+        %label お名前
+        %p 諏訪順一
+      .iden__form-group
+        %label お名前カナ
+        %p スワ　ジュンイチ
+      .iden__form-group
+        %label{:for => "zip_code"} 郵便番号
+        %span.form-arbitrary 任意
+        %input.input-default{:name => "zip_code", :placeholder => "例）1234567", :type => "text", :value => ""}/
+      .iden__form-group
+        %label{:for => "prefecture"} 都道府県
+        %span.form-arbitrary 任意
+        .select-wrap
+          %i.icon-arrow-bottom
+            \::before
+        %select.input-defalt{:name => "prefecture"}
+          %option --
+          %option 北海道
+          %option 青森県
+          %option 岩手県
+      .iden__form-group
+        %label{:for => "city"} 市区町村
+        %span.form-arbitrary 任意
+        %input.input-default{:name => "city", :placeholder => "例）大阪市中央区", :type => "text", :value => ""}/
+      .iden__form-group
+        %label{:for => "address1_label"} 番地
+        %span.form-arbitrary 任意
+        %input.input-default{:name => "address1", :placeholder => "例）難波5丁目1-60", :type => "text", :value => ""}/
+      .iden__form-group
+        %label{:for => "address2_label"} 建物名
+        %span.form-arbitrary 任意
+        %input.input-default{:name => "address2", :placeholder => "例）なんばスカイオ15F", :type => "text", :value => ""}/
+      %button.btn-default.btn-red{:type => "submit"} 登録する
+      .iden__form-group.text-right
+        %p
+          %a{:href => "#", :target => "blank"}
+            本人情報の登録について
+            %i.icon-arrow-right
+              \::before
+   
+
+.exhibit
+  %form_with.exhibit__form{action: "#"}
+    %button.exhibit__form__button{type: "sabmit"}
+      .exhibit__form__button__logo
+        出品
+      = icon('fas', 'camera', class: 'exhibit__form__button__icon1')
+
+
+= render 'users/side-ber'

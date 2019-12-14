@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'address', to: 'users#address'
   get 'payment', to: 'users#payment'
   get 'logout', to: 'items#logout'
-  get 'identification', to: 'users#identification'
+  get 'identification', to: 'items#identification'
   
   
   
