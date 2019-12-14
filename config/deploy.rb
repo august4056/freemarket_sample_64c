@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.2"
+lock "3.11.2"
 
 set :application, "freemarket_sample_64c"
 # どのリポジトリからアプリをpullするかを指定する
@@ -26,9 +26,9 @@ set :keep_releases, 5
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    # invoke 'unicorn:restart'
-    invoke 'unicorn:stop'
-    invoke 'unicorn:start'
+    invoke 'unicorn:restart'
+    # invoke 'unicorn:stop'
+    # invoke 'unicorn:start'
 end
 
   desc 'upload secrets.yml'
