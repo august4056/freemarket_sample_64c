@@ -3,7 +3,7 @@
     = image_tag 'fmarket_logo_red.svg',class:"logo"
 .containar
   .item__sell-main-content
-    %h2{class:"item__sell-main-content-single-head"}商品の情報を入力
+    %h2{class:"item__sell-single-head"}商品の情報を入力
     .item__sell--uploadbox
       %h3.sell__upload--head
         出品画像
@@ -14,21 +14,21 @@
           %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display:none;", :type => "file"}/
           %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
     
-      .item__sell--content
+      .item__sell-content
         %label
           商品名
         %span.item__sell--uploadbox__form-require 必須
-        %input.item__input-default{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
-        .item__sell-form-group
+        %input.item__sell-content__input-default{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+        .item__sell-content__form-group
           %label
           商品の説明        
           %span.item__sell--uploadbox__form-require 必須
           %textarea.item__sell--textarea-default{:placeholder => "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
-        .style_counter  0/1000
+        .item__sell-content__style_counter  0/1000
       .item__sell-contentsub
-        .item__sell-sub-head 商品の詳細
+        .item__sell-contentsub__sub-head 商品の詳細
         .item__sell-form-box
-          .item__sell-form-group2
+          .item__sell-form-box__group2
             %label
               カテゴリー
             %span.item__sell--uploadbox__form-require 必須
@@ -50,7 +50,7 @@
                 %option{:value => "1027"} チケット
                 %option{:value => "1318"} 自動車・オートバイ
                 %option{:value => "10"} その他
-          .item__sell-form-group2
+          .item__sell-form-box__group2
             %label
               商品の状態
             %span.item__sell--uploadbox__form-require 必須
@@ -66,10 +66,10 @@
                 %option{:value => "5"} 傷や汚れあり
                 %option{:value => "6"}全体的に状態が悪い                
       .item__sell-content-sub2
-        %p.item__sell-sub-head2 配送について
-        %a.item__sell-form-question{:href => "", :target => "_blank"} ?
+        %p.item__sell-content-sub2__sub-head2 配送について
+        %a.item__sell-content-sub2__form-question{:href => "", :target => "_blank"} ?
         .item__sell-form-box2
-          .item__sell-form-group3
+          .item__sell-content-sub2__form-group3
             %label
               配送料の負担
             %span.item__sell--uploadbox__form-require 必須
@@ -80,14 +80,14 @@
                 %option{:value => ""}  選択してください
                 %option{:value => "2"} 送料込み(出品者負担)
                 %option{:value => "1"} 着払い(購入者負担)
-          .item__sell-form-group4
+          .item__sell-content-sub2__form-group4
             %label
               発送元の地域
             %span.item__sell--uploadbox__form-require 必須
-            .item__sell-select-wrapx
+            .item__sell-select-wrap
               %i.fas.fa-chevron-down
               .item__sell-fontawsome
-                %select.item__sell-select-default1
+                %select.item__sell-select-default
                   %option{:value => ""} 選択してください
                   %option{:value => "1"} 北海道
                   %option{:value => "2"} 青森県
@@ -137,7 +137,7 @@
                   %option{:value => "46"} 鹿児島県
                   %option{:value => "47"} 沖縄県
                   %option{:value => "99"} 未定
-          .item__sell-form-group5
+          .item__sell-content-sub2__form-group5
             %label.label 発送までの日数
             %span.item__sell--uploadbox__form-require 必須
             .item__sell-select-wrap
@@ -149,14 +149,14 @@
                 %option{:value => "3"} 4~7日で発送
       .item__sell-content-low
         %p.item__sell-sub-head2 販売価格(300~9,999,999)
-        %a.item__sell-form-question2{:href => "", :target => "_blank"} ?
-        .item__sell-form-box3
+        %a.item__sell-content-low__form-question2{:href => "", :target => "_blank"} ?
+        .item__sell-content-low__form-box3
           %ul.item__sell-price
-            %li.item__sell-form-group6
+            %li.item__sell-price__form-group6
               %label.l-left
                 価格
                 %span.item__sell--uploadbox__form-require 必須
-              .item__right-group
+              .item__sell-right-group
                 %p.en ￥  
                 %input.l-right-input{:placeholder => "例)300", :value => ""}/
             %li.item__sell-form-group7
@@ -177,7 +177,7 @@
           %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であ
           %p り処罰される可能性があります。
           %p また、出品をもちまして加盟店規約に同意したことになります。
-        %button.item__sell-button{:type => "submit" }
+        %button.item__sell-content-btn-box__button{:type => "submit" }
           出品する
         %a{:href => "#", class: "item__sell-btn-gray"}もどる
         .item__sell-overlay
