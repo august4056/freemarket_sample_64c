@@ -1,0 +1,53 @@
+.mypage-container{
+  display: flex;
+  justify-content: space-between;
+  width: 1020px;
+  margin: 0 auto;
+      // height: 1381px;
+      // background-color: #eeeeee;
+      padding-top: 40px;
+}
+
+.mypage-contents{
+  // background-color: #1234;
+  width: 700px;
+}
+
+.mypage-content{
+  &__header{
+    height: 200px;
+    width: 100%;
+    background:linear-gradient(34deg,
+    red,
+    orange,
+    yellow,
+    green,
+    aqua,
+    blue,
+    purple);
+    &__main{
+      height: 200px;
+      width: 100px;
+      margin: 0 auto;
+      line-height: 200px;
+      &__icon{
+        margin: 0 auto;
+        & i{
+          font-size: 40px;
+        }
+      }
+        &__name{
+          text-align: center;
+        }
+        &__bottom{
+          display: flex;
+          justify-content: space-around;
+          &__review{
+            
+          }
+        }
+      }
+    }
+
+  
+}
