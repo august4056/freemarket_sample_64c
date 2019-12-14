@@ -1,6 +1,9 @@
-!!!
+.user-single-header
+  %h1
+    = image_tag 'fmarket_logo_red.svg',class:"logo"
 .containar
   .item__sell-main--content
+    %h2{class:"item__sell-single-head"}商品の情報を入力
     .item__sell--uploadbox
       %h3.sell__upload--head
         出品画像
@@ -180,4 +183,12 @@
           出品する
         %a{:href => "#", class: "item__sell-btn-gray"}もどる
         .item__sell-overlay
-                       
+.login-footer
+  .footer__nav
+    %ul.footer__nav__messages
+      %li.message プライバシーポリシー
+      %li.message メルカリ利用規約
+      %li.message 特定商取引に関する表記
+  .footer__logo
+    = image_tag 'logo_gray.svg',class:"flogo"
+  %p.copy ©Mercari,Inc.                      
