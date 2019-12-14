@@ -2,27 +2,28 @@
   %h1
     = image_tag 'fmarket_logo_red.svg',class:"logo"
 .containar
-  .item__sell-main--content
-    %h2{class:"item__sell-single-head"}商品の情報を入力
+  .item__sell-main-content
+    %h2{class:"item__sell-main-content-single-head"}商品の情報を入力
     .item__sell--uploadbox
       %h3.sell__upload--head
         出品画像
-        %span.form-require 必須
+        %span.item__sell--uploadbox__form-require 必須
       %p 最大１０枚までアップロードできます
-      .item__sell--dropbox
-        .item__sell--dropbox-item
+      .item__sell-dropbox
+        .item__sell-dropbox-item
           %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display:none;", :type => "file"}/
-          %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード    
+          %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
+    
       .item__sell--content
         %label
           商品名
-        %span.form-require 必須
+        %span.item__sell--uploadbox__form-require 必須
         %input.item__input-default{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
-        .item__sell-formgroup
+        .item__sell-form-group
           %label
           商品の説明        
-          %span.form-require 必須
-        %textarea.item__sell--textarea-default{:placeholder => "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+          %span.item__sell--uploadbox__form-require 必須
+          %textarea.item__sell--textarea-default{:placeholder => "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
         .style_counter  0/1000
       .item__sell-contentsub
         .item__sell-sub-head 商品の詳細
@@ -30,7 +31,7 @@
           .item__sell-form-group2
             %label
               カテゴリー
-            %span.form-require 必須
+            %span.item__sell--uploadbox__form-require 必須
           .item__sell-select-wrap
             %i.fas.fa-chevron-down 
             .item__sell-fontawsome
@@ -52,11 +53,11 @@
           .item__sell-form-group2
             %label
               商品の状態
-            %span.form-require 必須
+            %span.item__sell--uploadbox__form-require 必須
           .item__sell-select-wrap
             %i.fas.fa-chevron-down
             .item__sell-fontawsome
-              %select.item__sell-select-default1
+              %select.item__sell-select-default
                 %option{:value => ""} 選択してください
                 %option{:value => "1"} 新品、未使用
                 %option{:value => "2"} 未使用に近い
@@ -71,22 +72,22 @@
           .item__sell-form-group3
             %label
               配送料の負担
-            %span.form-require 必須
+            %span.item__sell--uploadbox__form-require 必須
           .item__sell-select-wrap
             %i.fas.fa-chevron-down
             .item__sell-fontawsome
-              %select.item__sell-select-default2
+              %select.item__sell-select-default
                 %option{:value => ""}  選択してください
                 %option{:value => "2"} 送料込み(出品者負担)
                 %option{:value => "1"} 着払い(購入者負担)
           .item__sell-form-group4
             %label
               発送元の地域
-            %span.form-require 必須
+            %span.item__sell--uploadbox__form-require 必須
             .item__sell-select-wrapx
               %i.fas.fa-chevron-down
               .item__sell-fontawsome
-                %select.item__sell-select-default3
+                %select.item__sell-select-default1
                   %option{:value => ""} 選択してください
                   %option{:value => "1"} 北海道
                   %option{:value => "2"} 青森県
@@ -138,10 +139,10 @@
                   %option{:value => "99"} 未定
           .item__sell-form-group5
             %label.label 発送までの日数
-            %span.form-require 必須
+            %span.item__sell--uploadbox__form-require 必須
             .item__sell-select-wrap
               %i.fas.fa-chevron-down
-              %select.item__sell-select-default4
+              %select.item__sell-select-default
                 %option{:value => ""} 選択してください
                 %option{:value => "1"} 1~2日で発送
                 %option{:value => "2"} 2~3日で発送
@@ -154,7 +155,7 @@
             %li.item__sell-form-group6
               %label.l-left
                 価格
-                %span.form-require 必須
+                %span.item__sell--uploadbox__form-require 必須
               .item__right-group
                 %p.en ￥  
                 %input.l-right-input{:placeholder => "例)300", :value => ""}/
