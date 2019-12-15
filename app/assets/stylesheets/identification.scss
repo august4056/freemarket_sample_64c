@@ -3,8 +3,6 @@
   left: 530px;
   top: 142px;
 
-
-
 .iden__title {
   background-color: $White;
   min-width: 700px;
@@ -23,18 +21,25 @@
 }
 
 .iden__text {
-  padding-top: 8px;
+  padding-top: 10px;
   
   &__right {
     text-align: right;
     padding-top: 8px;
     
+    
     &__non {
       color: #0099e8;
       font-weight: bold;
       text-decoration: none;
+      padding-right: 25px;
+      position: relative;
+      
+      &__fa-chevron-right::after {
+        position: absolute;
+        // display: inline-block;
+        // padding-top: 10px;
 
-      &__fa-chevron-right {
         
       }
       
