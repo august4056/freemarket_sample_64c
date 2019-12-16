@@ -1,6 +1,55 @@
-
 .mypage-container
   = render "users/side-ber"
   .mypage-contents
-    かりおき
-    
+    .mypage-content
+      .mypage-content__header
+        .mypage-content__header__main
+          .mypage-content__header__main__icon
+            %i.fas.fa-user-circle
+          .mypage-content__header__main__name
+            kojikoji
+          .mypage-content__header__main__bottom
+            .mypage-content__header__main__bottom__review
+              評価
+              .mypage-content__header__main__bottom__review__num
+                10
+            .mypage-content__header__main__bottom__products
+              出品数
+              .mypage-content__header__main__bottom__products__num
+                12
+      
+      .mypage-content__body
+        .mypage-content__body--tab
+          %label.notice
+            お知らせ
+          %label.todo
+            やることリスト
+            
+            -# ここから下をrenderで繰り返し
+        .mypage-content__body--notice
+          .mypage-content__body--notice__message
+            .mypage-content__body--notice__message__icon
+              %i.fas.fa-user-circle
+            .mypage-content__body--notice__message__main
+              .mypage-content__body--notice__message__main__message
+                noticeかりおき〜〜〜〜〜
+              .mypage-content__body--notice__message__main__time
+                .mypage-content__body--notioce__message__main__time--date-icon
+                  %i.far.fa-clock
+                .mypage-content__body--notice__message__main__time--date
+                  notice12月12日
+
+
+
+        .mypage-content__body--todo
+          .mypage-content__body--todo__message
+            .mypage-content__body--todo__message__icon
+              %i.fas.fa-user-circle
+            .mypage-content__body--todo__message__main
+              .mypage-content__body--todo__message__main__message
+                todoかりおき〜〜〜〜〜
+              .mypage-content__body--todo__message__main__time
+                .mypage-content__body--todo__message__main__time--date-icon
+                  %i.far.fa-clock
+                .mypage-content__body--todo__message__main__time--date
+                  todo12月10日

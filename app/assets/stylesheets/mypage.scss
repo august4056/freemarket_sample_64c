@@ -1,0 +1,135 @@
+.mypage-container{
+  display: flex;
+  justify-content: space-between;
+  width: 1020px;
+  margin: 0 auto;
+      // height: 1381px;
+      // background-color: #eeeeee;
+      padding-top: 40px;
+}
+
+.mypage-contents{
+  // background-color: #1234;
+  width: 700px;
+}
+
+.mypage-content{
+  &__header{
+    // height: 200px;
+    // line-height: 200px;
+    width: 100%;
+    background:linear-gradient(34deg,
+    red,
+    orange,
+    yellow,
+    green,
+    aqua,
+    blue,
+    purple);
+    &__main{
+      height: 200px;
+      width: 100%;
+      margin: auto;
+      &__icon{
+        padding-top: 40px;
+        font-size: 60px;
+        text-align: center;
+      }
+      &__name{
+        text-align: center;
+        margin: 10px;
+      }
+      &__bottom{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        &__review{
+          display: flex;
+          margin: 5px;
+          align-items: center;
+          &__num{
+            margin-left: 5px;
+          }}
+          &__products{
+            display: flex;
+            margin: 5px;
+            padding: 5px;
+            align-items: center;
+            &__num{
+              margin-left: 5px;
+            }
+          }
+          
+        }
+      }
+    }
+    &__body{
+      width: 100%;
+
+  
+    &--tab{
+      background-color: #fff;
+      display: flex;
+      & label{
+        width: 50%;
+        height: 74px;
+        line-height: 74px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        border-top: $Red solid 2px;
+      }
+    }
+  }
+}
+
+
+.mypage-content__body--notice__message{
+  min-height: 48px;
+  background-color: $White;
+  border-bottom: #eee 1px solid;
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  &__icon{
+    font-size: 40px;
+    margin: auto 20px;
+  }
+  &__main{
+    width: 100%;
+    margin-left: 20px;
+    &__time{
+      display: flex;
+      color: rgb(114, 114, 114);
+      align-items: center;
+      &--date{
+        margin-left: 10px;
+      }
+    }}
+}
+
+.mypage-content__body--todo__message{
+  min-height: 48px;
+  background-color: $White;
+  border-bottom: #eee 1px solid;
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  &__icon{
+    font-size: 40px;
+    margin: auto 20px;
+  }
+  &__main{
+    width: 100%;
+    margin-left: 20px;
+    &__time{
+      display: flex;
+      color: rgb(114, 114, 114);
+      align-items: center;
+      &--date{
+        margin-left: 10px;
+      }
+    }}
+}
