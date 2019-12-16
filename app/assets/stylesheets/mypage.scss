@@ -85,7 +85,6 @@
   }
 }
 
-
 .mypage-content__body--notice__message{
   min-height: 48px;
   background-color: $White;
@@ -138,6 +137,14 @@
 
 .mypage-content__deal{
   width: 100%;
+  &--text{
+    height: 48px;
+    background-color: rgb(250, 250, 250);
+    padding: 16px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+  }
   &--tab{
     background-color: #fff;
     display: flex;
@@ -159,17 +166,6 @@
       text-align: center;
       background-color: #eee;
     }
-  }
-}
-
-.mypage-content__deal{
-  &--text{
-    height: 48px;
-    background-color: rgb(250, 250, 250);
-    padding: 16px;
-    line-height: 60px;
-    font-size: 18px;
-    font-weight: bold;
   }
   &--now{
     &__message{
@@ -198,9 +194,6 @@
     }
   }
 }
-
-
-
 
 .mypage-content__body--list{
   height: 48px;
