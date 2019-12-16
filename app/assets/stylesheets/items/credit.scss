@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+}
+
+.credit-container {
+  width: 700px;
+  height: 400px;
+  background-color:#ffffff;
+  &__title {
+    font-size: 24px;
+    padding: 8px 24px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+  }
+  &__body {
+    padding: 64px;
+    &__content {
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+      &__title {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .add_card {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #ea352d;
+        margin: 24px auto;
+        text-align: center;
+      }
+    }
+    &__bottom {
+      margin-top: 40px;
+      text-align: right;
+    }
+    & a {
+      text-decoration: none;
+      color: #0099e8;
+    }
+
+  }
+}
+
+
+
+
+.fa-credit-card {
+  color: #fff;
+}
