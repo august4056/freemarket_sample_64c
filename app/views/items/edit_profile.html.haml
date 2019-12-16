@@ -1,0 +1,33 @@
+
+  = render 'users/side-ber'
+.edit-profile
+  .edit-profile__title
+  -#   .edit-profile__title__content
+  -#     プロフィール
+  .edit-profile__myimage
+    -# %i.far.fa-user-circle{class:"user-icon2"}
+    -# %form_with.edit-profile-form{action: '#'}
+    -#   %input.edit-profile-form__input{mane: "keyword", placeholder: "  例）私、売ります。", type: "search", value: ""}/
+    -# = image_tag 'https://ord.yahoo.co.jp/o/image/RV=1/RE=1576319488/RH=b3JkLnlhaG9vLmNvLmpw/RB=/RU=aHR0cHM6Ly93d3cuaWxsdXN0LWJveC5qcC9kYl9pbWcvc296YWkvMDAwMDMvMzk3NTAvd2F0ZXJtYXJrLmpwZw--/RS=%5EADBH3PPl1f.BMvZc2IYYbYLjKPKgMY-;_ylt=A2RCL6eAaPNdHFIARjCU3uV7;_ylu=X3oDMTAyN3Vldmc1BDAD;_ylc=X3IDMgRmc3QDMQRpZHgDMARvaWQDQU5kOUdjU1hEV1M1QVlpQWQtVFBNSkJPd2JkYTBIZ2dxWjMwM0VqdU9YWl93ZWRZMlZxMnBETGZySlIzS2NrBHADNXBXajZMS2hJT09DcE9PRHFlT0N1ZU9EaUEtLQRwb3MDMTQEc2VjA3NodwRzbGsDc2ZzdAR0dXJsAw--', class: 'mypage__background'
+  
+  .edit-profile__message
+    -# .edit-profile__message__content
+    -#   %form_with.edit-profile-content___area{action: '#'}
+    -#     %textarea.edit-profile-content___area__input{placeholder: "  例）今なら○％OFF！家計を応援しますサマーセール！家計応援価格でご提供します得しちゃおう	まとめ買いで得しちゃおう！クーポン利用で、得しちゃおう！ご奉仕価格	半期に一度のご奉仕価格！３日限りのご奉仕価格！売り尽くし	大決算売り尽くしセール！リニューアルにつき売り尽くし！夏のトレンドを納得のプライスで！毎日使うものだから納得の価格で！", value: ""}
+    -#     %button.edit-profile__message__button{type: "sabmit"}
+    -#       変更する
+
+
+
+
+
+
+
+
+
+.exhibit
+  %form_with.exhibit__form{action: "#"}
+    %button.exhibit__form__button{type: "sabmit"}
+      .exhibit__form__button__logo
+        出品
+      = icon('fas', 'camera', class: 'exhibit__form__button__icon1')
