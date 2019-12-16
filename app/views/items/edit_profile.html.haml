@@ -1,0 +1,26 @@
+.top-edit__profile
+  = render 'users/side-ber'
+  .edit-profile
+    .edit-profile__title
+      .edit-profile__title__content
+        プロフィール
+    .edit-profile__myimage
+      .edit-profile__mypage__content
+        .edit-profile__mypage__content__form
+          %i.far.fa-user-circle{class:"user-icon2"}
+          %form_with.edit-profile-form{action: '#'}
+            %input.edit-profile__mypage__content__form__input{mane: "keyword", placeholder: "  例）私、売ります。", type: "search", value: ""}/
+    
+    .edit-profile__message
+      .edit-profile__message__content
+        %textarea.edit-profile-content___area{placeholder: "  例）今なら○％OFF！家計を応援しますサマーセール！家計応援価格でご提供します得しちゃおう	まとめ買いで得しちゃおう！クーポン利用で、得しちゃおう！ご奉仕価格	半期に一度のご奉仕価格！３日限りのご奉仕価格！売り尽くし	大決算売り尽くしセール！リニューアルにつき売り尽くし！夏のトレンドを納得のプライスで！毎日使うものだから納得の価格で！", value: ""}
+        %button.edit-profile__message__button{type: "sabmit"}
+          変更する
+
+
+  .exhibit
+    %form_with.exhibit__form{action: "#"}
+      %button.exhibit__form__button{type: "sabmit"}
+        .exhibit__form__button__logo
+          出品
+        = icon('fas', 'camera', class: 'exhibit__form__button__icon1')
