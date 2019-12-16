@@ -12,6 +12,9 @@ class ItemsController < ApplicationController
   def new
     render :layout  => "application"
   end
+
+  def credit
+  end
   
   def mypage
 
