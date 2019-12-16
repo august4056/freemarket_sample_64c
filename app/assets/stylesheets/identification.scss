@@ -1,7 +1,10 @@
 .identification {
-  position: absolute;
-  left: 530px;
-  top: 142px;
+  display: flex;
+  margin: 0 120px 0 100px;
+}
+
+.iden__main {
+  
 
 .iden__title {
   background-color: $White;
@@ -40,10 +43,8 @@
         // display: inline-block;
         // padding-top: 10px;
 
-        
       }
       
-
     }
   }
 }
@@ -97,8 +98,8 @@
   }
 
     .text-lower-right {
-      
       text-align: right;
+      height: 55px;
       color: #0099e8;
       padding: 20px 0 0px;
       text-decoration: none;
