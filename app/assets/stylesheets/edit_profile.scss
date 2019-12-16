@@ -15,7 +15,6 @@
       text-align: center;
       padding-top: 10px;
       font-size: 24px;
-      font-family: arial;
       font-weight: 550;
     }
   }
@@ -29,9 +28,6 @@
     }
   }
 }
-
-
-
 
 .edit-profile__mypage__content__form{
   z-index: 3;
@@ -75,6 +71,7 @@
   width: 700px;
   background-color: $White;
 }
+
 .edit-profile-content___area{
   margin: 50px 0 0 20px;
   height: 210px;  
@@ -90,9 +87,6 @@
   color: $White;
   font-size: 15px;
 }
-
-
-
 
 .exhibit__form{
   text-decoration: none;
