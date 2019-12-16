@@ -1,42 +1,47 @@
+.top-edit__profile{
+  display: flex;
+  margin: 0 auto ;
+  justify-content: center;
+}
+
 .edit-profile{
   height: 570px;
   width: 700px;
-  background-color: red;
-  // top: 143px;
-  // left: 530px;
+  background-color: $White;
   &__title{
     height: 50px;
-    background-color: blue;
+    background-color: $White;
     &__content{
       text-align: center;
       padding-top: 10px;
       font-size: 24px;
       font-family: arial;
-      font-weight: 530;
+      font-weight: 550;
     }
   }
   &__myimage{
+    background-image: url(mypage-kirakira.jpg);
     height: 156px;
-    background-color: palegreen;
+    background-color: $White;
+    z-index: 3;
+    &__content{
+      display: flex;
+    }
   }
 }
 
-.mypage__background{
-  position: fixed;
-  height: 156px;
-  width: 698px;
-  border: 1px solid $header-border;
-  z-index: 0;
-}
 
-.edit-profile-form{
-  z-index: 4;
-  top: 55px;
-  left: 200px;
+
+
+.edit-profile__mypage__content__form{
+  z-index: 3;
+  margin: 0 auto;
   background-color: transparent;
   width: 310px;
   height: 50px;
   &__input{
+    margin-top: 75px;
+    z-index: 4;
     width: 220px;
     height: 50px;
     font-size: 16px;
@@ -44,15 +49,13 @@
     -webkit-appearance: none;
     border-width: 1px;
     border-style: solid;
-    border-color: $header-border;
+    border-color: $Background;
     border-image: initial;
     border-radius: 4px;
     outline: none;
-    transition: all 0.3s ease-out 0s;
-    background-color: $Background;
+    background-color: $White;
     font-size: 16px;
     font-family: inherit;
-    position: fixed;
     &:hover{
       border: 1px solid $link-blue;
     }
@@ -60,29 +63,26 @@
 }
 
 .user-icon2{
-  position: fixed;
   z-index: 4;
-  left: 190px;
-  top: 70px;
-  font-size: 50px;
+  font-size: 80px;
   color: $header-icon-top;
 }
 
 .edit-profile__message{
+  display: flex;
+  justify-content: center;
   height: 365px;
   width: 700px;
-  background-color: burlywood;
+  background-color: $White;
 }
-.edit-profile-content___area__input{
-  top: 250px;
-  left: 18px;
+.edit-profile-content___area{
+  margin: 50px 0 0 20px;
   height: 210px;  
   width: 660px;
 }
  
 .edit-profile__message__button{
-  top: 480px;
-  left: 18px;
+  margin: 18px 0 0 20px;
   height: 48px;
   width: 660px;
   background-color: $Red;
@@ -94,35 +94,23 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .exhibit__form{
-    text-decoration: none;
-    height: 160px;
-    width: 160px;
-    background-color: $Red;
-    position: -webkit-sticky;
-    position: sticky;
-    position: fixed;
-    bottom: 30px;
-    right: 35px;
-    border-radius: 50%;
-    z-index: 6;
-    outline:0;
-    &__logo{
-      color: $White;
-      font-size: 22px;
-    }
+  text-decoration: none;
+  height: 160px;
+  width: 160px;
+  background-color: $Red;
+  position: -webkit-sticky;
+  position: sticky;
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  border-radius: 50%;
+  z-index: 6;
+  outline:0;
+  &__logo{
+    color: $White;
+    font-size: 22px;
+  }
 }
 
 .exhibit__form__button__icon1{
