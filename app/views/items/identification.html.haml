@@ -9,8 +9,7 @@
           %br/
           登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
           %p.iden__text__right
-            %a.iden__text__right__non{href: "#", trget: "_blank"}
-              本人確認書類のアップロード
+            = link_to "本人確認書類のアップロード", class: "iden__text__right__non" do
               %i.fas.fa-chevron-right
             
         .iden__form-group
@@ -93,13 +92,7 @@
           %button.btn-default{type: "submit"} 登録する
         .text-lower-right
           %p.iden__text__right
-            %a.iden__text__right__non{href: "#", trget: "_blank"}
-              本人確認書類のアップロード
+            = link_to "本人確認書類のアップロード", class:"iden__text__right__non" do
               %i.fas.fa-chevron-right
 
-  .exhibit
-    %form_with.exhibit__form{action: "#"}
-      %button.exhibit__form__button{type: "sabmit"}
-        .exhibit__form__button__logo
-          出品
-        = icon('fas', 'camera', class: 'exhibit__form__button__icon1')
+ 
