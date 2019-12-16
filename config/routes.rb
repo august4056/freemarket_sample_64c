@@ -4,18 +4,18 @@ Rails.application.routes.draw do
   root "items#index"
 
   get 'mypage', to: 'items#mypage'
+  get 'logout', to: 'items#logout'
+  get 'identification', to: 'items#identification'
 
   get 'registration', to: 'users#registration'
-  get 'login', to: 'users#login'
+  get 'login', to: 'users#login'
   get 'info', to: 'users#info'
   get 'complete', to: 'users#complete'
   get 'confirm', to: 'users#confirm'
   get 'address', to: 'users#address'
   get 'payment', to: 'users#payment'
-  get 'logout', to: 'items#logout'
-  get 'identification', to: 'items#identification'
   
-  
+
   
 resources :items, only: [:index, :show ,:new]
 resources :users, only: [:new, :edit, :create, :show]
