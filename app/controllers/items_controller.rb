@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    render :layout  => "application"
   end
 
   def credit
