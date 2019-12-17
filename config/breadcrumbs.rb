@@ -1,10 +1,16 @@
+# ルート
 crumb :root do
-  link "Home", root_path
+  link "メルカリ", root_path
 end
 
-crumb :index.html.haml do
-  link "カテゴリーから探す",
+# マイページ
+crumb :mypage do
+  link "マイページ", mypage_path
+  parent :root
 end
+
+
+
 
 
 # crumb :projects do
