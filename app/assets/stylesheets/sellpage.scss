@@ -30,11 +30,13 @@
 .item__sell-dropbox{
   width:700px;
   height:162px;
+  display: flex;
+
   &-item{
     border-bottom:solid 2px rgb(245, 245, 245);
     margin:40px 0 0 0;
     padding:40px 0 40px 0;
-    width:620px;
+    width: 100%;
     height:120px;
     border:1px dashed #ccc;
     background-color:rgb(245, 245, 245);
@@ -46,6 +48,17 @@
       }
     }
   }
+
+.item__sell-dropbox__contena{
+  display: flex;
+}
+
+.item__sell-dropbox__up-image{
+  margin-top:46px;
+  height: 172px;
+  width: 116px;
+  background-color: brown;
+}
 
 .item__sell-content{
    position: relative;
