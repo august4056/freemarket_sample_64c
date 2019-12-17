@@ -16,11 +16,13 @@
               %ul.item__sell-dropbox__up-image__ul
                 %li.item__sell-dropbox__up-image__li
                   %figure.item__sell-dropbox__up-image__figure
-                    -# %button.item__sell-dropbox__up-image__button
-                      -# = link_to "#"
-                      -#   編集
-                      -# = link_to "#"
-                      -#   削除
+                    -# = f.file_field :image
+                    -# = f.hidden_field :image_cache
+              %button.item__sell-dropbox__up-image__button
+                = link_to "#", class:"item__sell-dropbox__up-image__button__edit" do
+                  編集
+                = link_to "#", class:"item__sell-dropbox__up-image__button__delete" do
+                  削除
             .item__sell-dropbox-item
               %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display:none;", type: "file"}/
               %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
