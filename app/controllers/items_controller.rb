@@ -3,10 +3,13 @@ class ItemsController < ApplicationController
   layout "items"
 
   def index
- 
+   @items = Item.all
   end
 
   def show
+    @item = Item.find(params[:id])
+    # @item = Item.all
+
   end
 
   def new

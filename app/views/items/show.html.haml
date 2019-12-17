@@ -4,7 +4,8 @@
       売り切れ必須！驚愕のLogicool mouse 2!
     .item-detail-main
       .item-detail-main__photos
-        = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
+        -# = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
+        = @item.image
       %table.item-detail-main__table
         %tbody
           %tr
@@ -83,8 +84,7 @@
       この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
     .item-detail-description
       .item-detail-description__text
-        この商品は壊れてるので買わない方が身のためです
-        ああああ
+        = @item.detail
       .item-detail-description__bottom
         .item-detail-description__bottom__left
           .item-detail-description__bottom__left__like
