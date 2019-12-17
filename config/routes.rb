@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   get 'payment', to: 'users#payment'
   
   
-  
-resources :items, only: [:index, :show ,:new, :edit, :update]
-resources :users, only: [:new, :edit, :create, :show]
+
+  resources :items, only: [:index, :show ,:new, :edit, :update]
+  resources :users, only: [:new, :edit, :create, :show]
 
 end

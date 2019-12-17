@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
@@ -18,8 +19,8 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    render :layout  => "application"
     @item = Item.find(params[:id])
+    render :layout  => "application"
   end
 
   def update
