@@ -32,7 +32,6 @@
         font-size: 14px;
         padding-top: 40px;
         height: 14px;
-        padding-top: 40px;    
       }
       &__create-account{
         margin: 8px 0 0;
@@ -139,7 +138,7 @@
 
 //ログイン　メールボタンの色変更
 .user-login-form:first-child {
-  padding: 100px 64px 32px;
+  // padding: 100px 64px 32px;
   background-color:red;
 }
 
@@ -174,13 +173,16 @@
       border-bottom: 1px solid #eee;
     }
     .user-single-form-content{
-      width: 700px;
-      height: 287px;
+      height: 200px;
       margin: 0 auto;
       padding: 24px 16px 40px;
       .user-single-forms{
         width: 343px;
         margin: 0 auto;
+        & .form-group {
+          text-align: center;
+
+        }
       }
     }
   }
@@ -197,22 +199,30 @@
 .mail{
   background-color: #ea352d;
   color: #fff;
-}
+  }
 .facebook {
   margin-top: 16px;
   background-color: #385185;
   color: #fff;
+  & fab{
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 16px;
+    bottom: 15px;
+    font-size: 20px;
+  }
 }
 .google {
   margin-top: 16px;
   color: #333;
   border: #979797 1px solid; 
-}
-.fab{
-  position: absolute;
-  left: 10px;
-  width: 20px;
-  height: 16px;
-  bottom: 15px;
-  font-size: 20px;
+  & fab{
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 16px;
+    bottom: 15px;
+    font-size: 20px;
+  }
 }

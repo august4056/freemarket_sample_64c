@@ -1,11 +1,13 @@
+.top-logout__page{
+  display: flex;
+  margin: 0 auto ;
+  justify-content: center;
+}
+
 .logout__page{
   background-color: $White;
   height: 180px;
   width: 700px;
-  position: absolute;
-  left: 530px;
-  top: 142px;
-  z-index: 6;
   text-align:center;
   &__form{
     &__btn-red{
@@ -46,4 +48,3 @@
   font-size: 60px;
   position: relative;
 }
-

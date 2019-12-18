@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
+
+  layout "users"
   
+  def new
+
+  end
+
   def info
   end
 
@@ -8,6 +14,8 @@ class UsersController < ApplicationController
 
   def login
   end
+
+  
   
   def confirm
   end

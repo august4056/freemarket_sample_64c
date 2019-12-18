@@ -1,34 +1,32 @@
-.user-single-container
-  = render 'header'
-  .user-main
-    .user-member-info
-      %h2.user-member-info__title 支払い方法
-      = form_with model: @user do |form|
-        .user-single-content
-          .user-form-group
-            %p
-              カード番号
-              %span.required 必須
-            %p= form.number_field :text, placeholder:"半角数字のみ" ,class:"card-num-field"
-            %ul.user-cards
-              %li.user-cards__card= image_tag 'visa.gif',class:"card-logo"
-              %li.user-cards__card= image_tag 'mastercard.gif',class:"card-logo"
-              %li.user-cards__card= image_tag 'saison.gif',class:"card-logo"
-              %li.user-cards__card= image_tag 'amex.gif',class:"card-logo"
-              %li.user-cards__card= image_tag 'diners.gif',class:"card-logo"
-              %li.user-cards__card= image_tag 'discover.gif',class:"card-logo"
-          .user-form-group
-            %p
-              有効期限
-              %span.required 必須
-            = form.date_select :security, use_month_numbers: true, class:"security-field"
-          .user-form-group
-            %p
-              セキュリティコード
-              %span.required 必須
-            %p= form.number_field :text, placeholder:"カード背面4桁もしくは3桁の番号" ,class:"security-field"
-            %p
-              %a{:href => ""} カード背面の番号とは
-          .user-form-group
-            = form.submit "次へ進む", class:"submit-btn"
-  = render 'footer'
+.user-main
+  .user-member-info
+    %h2.user-member-info__title 支払い方法
+    = form_with model: @user do |form|
+      .user-single-content
+        .user-form-group
+          %p
+            カード番号
+            %span.required 必須
+          %p= form.number_field :text, placeholder:"半角数字のみ" ,class:"card-num-field"
+          %ul.user-cards
+            %li.user-cards__card= image_tag 'visa.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'mastercard.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'saison.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'amex.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'diners.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'discover.gif',class:"card-logo"
+        .user-form-group
+          %p
+            有効期限
+            %span.required 必須
+          = form.date_select :security, use_month_numbers: true, class:"security-field"
+        .user-form-group
+          %p
+            セキュリティコード
+            %span.required 必須
+          %p= form.number_field :text, placeholder:"カード背面4桁もしくは3桁の番号" ,class:"security-field"
+          %p
+            = link_to "" do
+              カード背面の番号とは
+        .user-form-group
+          = form.submit "次へ進む", class:"submit-btn"

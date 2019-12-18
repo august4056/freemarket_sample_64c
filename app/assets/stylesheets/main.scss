@@ -1,36 +1,31 @@
-
 .slider {
   width: 1309px;
-  
-
+}
   .slick__img {
+    width: 1309px;
+    height: 390px;
     max-width: 100%;
+    background-color: lightblue;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 390px;
   }
 
-}
 
-// .header h1 {
-//   font-weight: normal;
-//   text-align: center;
-//   font-family: 'Sriracha', cursive;
-// }
+.item__area {
+  height: 780px;
+  width: 100%;
+}
 
 .popular_category {
   height: 500px;
-}
-
-.category_title_area {
-  height: 100%;
-  background-color: #ffffff;
-  padding: 0 0 0 0;
-  
 }
 
 .category_title {
   color: #202020;
   text-align: center;
   font-size: 30px;
-  padding:10px;
+  padding:20px 0 20px;
   font-family: arial black;
 
 }
@@ -40,11 +35,7 @@
   display: flex;
   font-family: arial black;
   margin: 0 auto;
-  
-  
-
-  
-  
+    
 }
 
 .items_content {
@@ -52,45 +43,88 @@
   font-size: 14px;
   padding: 8px 16px 8px 16px;
   border-radius: 17px;
-  background-color: #f0f0f0;
-  margin: 5px 10px 5px 10px;
+  background-color: #fffacd;
+  margin: 5px 10px 20px 10px;
+  text-decoration: none;
   
 }
 
-.ladies_items {
-  width: 1100px;
-  height: 100%;
-  margin: 0 auto;
-
+.mainpage__items {
+  width: 1050px;
+  height: 700px;
+  margin: 10px auto;
 }
 
-.ladies_box {
-  width: 1100px;
-  
+.mainpage__title {
+  display: flex;
+  justify-content: space-between;
+
+
+  &__name {
+    color: #202020;
+    font-size: 24px;
+    padding: 0 0 0 10px;
+    
+  }
+
+  &__look {
+    color: #1e90ff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px 20px 0 0;
+
+  }
 }
 
-.title_name {
-}
-
-.items_box {
-  list-style: none;
-}
-
-.items_img {
-  background-color: #ffffff;
+.ladies__box__photo {
   height: 252px;
   width: 188px;
   margin: 10px;
-	float: left;
+  float: left;
+  position: relative;
+  cursor: pointer;
   list-style: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .5s;
-}
+  
+  .ladies-photo {
+    height: 188px;
+    width: 188px;
+    background: none;
 
-.items_img:hover {
-  text-decoration: underline;
-  border: solid 1px #0095EE;
+  }
+
+  .ladies__comment-box {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top:188px;
+    
+    &__text {
+      color: #202020;
+      font-size: 16px;
+      padding: 5px;
+      word-wrap: break-word;
+      text-align: center;
+  
+    }
+
+  }
+
+  .ladies__price-box {
+    height: 28px;
+    background-color: rgba( 0, 0, 0, 0.50 );
+    border-radius: 0 13px 13px 0;
+    position: absolute;
+    top:150px;
+    
+    &__price {
+      color: white;
+      font-size: 16px;
+      padding: 5px 15px 5px 10px;
+      text-align: left;
+  
+    }
+  }
+
 }

@@ -10,6 +10,7 @@
 .header0{
   margin: 0 auto;
   border-bottom: 1px solid $header-icon;
+  margin-bottom: 40px;
   &__body {
     width: 1020px;
     margin: 0px auto;
@@ -514,6 +515,11 @@
 }
 
 //いいね一覧
+  .heart__icon1{
+    color: $header-icon-top;
+    padding-right: 8px;
+    font-size: 18px;
+  }
 
 .like-list{
   margin-right: 30px;
@@ -522,16 +528,11 @@
   &:hover{
     color: $link-blue;
   }
-  &:hover .far.fa-heart{
+  &:hover .heart__icon1{
     color: $link-blue;
   }
 }
 
-.far.fa-heart{
-  color: $header-icon-top;
-  padding-right: 8px;
-  font-size: 18px;
-}
 
 //お知らせ
 
@@ -645,7 +646,6 @@
   color: inherit;
   text-decoration: none;
   color: black;
-  display: block;
   &:hover{
     color: $link-blue;
   }
@@ -669,12 +669,28 @@
 
 
 //マイページ
-#mypage{
+.mypage{
   color: black;
   text-decoration: none;
   &:hover{
     color: $link-blue;
   }
+}
+
+#mypage__down{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: 190px;
+    background: #fff;
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    border: 0.1px solid $header-border;
+    list-style-type:none;
+    font-weight: normal;
+    z-index: 10;
 }
 
 .mypage22-icon{
@@ -683,24 +699,6 @@
   padding: 0;
   margin: 0;
 }
-
-#mypage22{
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-  display: none;
-  position: absolute;
-  top: 44px;
-  left: 190px;
-  background: #fff;
-  width: 320px;
-  padding: 0;
-  margin: 0;
-  border: 0.1px solid $header-border;
-  list-style-type:none;
-  font-weight: normal;
-  font-family: system;
-  z-index: 10;
-}
-
 
 .mypage22__menu__list{
   background: #fff;
@@ -712,7 +710,13 @@
   font-family: system;
   height: 50px;
 
-
+  .chevron-right-icon{
+    color: $header-icon;
+    position: relative;
+    left: 290px;
+    bottom: 38px;
+    font-size: 20px;
+  }
   &__link{
     text-decoration: none;
     width: 302px;
@@ -726,7 +730,14 @@
     color: rgb(80, 80, 80);
     &:hover{
       background-color: $Background;
+      &:hover + .chevron-right-icon{
+        font-size: 25px;
+        left: 295px;
+        bottom: 36px;
+        color: rgb(100, 100, 100);
+      }
     }
+
     &:hover + .chevron-right__icon2{
       font-size: 25px;
       left: 295px;
@@ -734,45 +745,38 @@
       color: rgb(100, 100, 100);
     }
   }
+}
 
-  .chevron-right__icon2{
-    color: $header-icon;
-    position: relative;
-    left: 290px;
-    bottom: 38px;
-    font-size: 20px;
+.mypage-login-buttons {
+  display: flex;
+  &__registration {
+    background-color: rgb(234, 53, 45);
+    font-size: 14px;
+    line-height: 14px;
+    border:1px solod rgb(234, 53, 45) ;
+    border-radius: 4px;
+    color: #fff;
+    padding: 9px 10px;
+  }
+  &__login {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(0, 149, 238);
+    border:1px solid rgb(0, 149, 238);
+    border-radius:4px ;
+    padding: 8px 10px;
+    margin-left: 11px;
+  }
+  & a {
+    text-decoration: none;
+
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #mens_ul-22{
-//   list-style-type: none;
-//   background-color: rgb(255, 255, 255);
-//   bottom: 0px;
-//   border: 0.1px solid rgb(240, 240, 240);
-//   box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.18);
-//   display: none;
-//   left: 220px;
-//   position: absolute;
-//   top: 0px;
-//   width: 300px;
-//   padding-inline-start: 0;
-//}
+.chevron-right__icon2{
+  color: $header-icon;
+  position: relative;
+  left: 290px;
+  bottom: 38px;
+  font-size: 20px;
+}

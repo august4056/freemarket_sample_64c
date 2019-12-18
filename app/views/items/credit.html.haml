@@ -1,0 +1,24 @@
+.wrapper
+  = render "items/side-ber"
+  .credit-container
+    %h2.credit-container__title
+      支払い方法
+    .credit-container__body
+      .credit-container__body__content
+        %p.credit-container__body__content__title
+          クレジットカード一覧
+        .add_card
+          = link_to "" do
+            %i.far.fa-credit-card 
+              %span クレジットカードを追加する
+        //カード情報がある場合
+        .credit-container__body__content__info
+          .credit-container__body__content__info__visa
+          .credit-container__body__content__info__num
+          .credit-container__body__content__info__deadline
+          
+      .credit-container__body__bottom
+        = link_to "" do
+          %p 支払い方法について
+
+

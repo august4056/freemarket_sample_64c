@@ -1,0 +1,73 @@
+- breadcrumb :mypage
+= render "layouts/breadcrumbs"
+.mypage-container
+  = render "items/side-ber"
+  .mypage-contents
+    .mypage-content
+      .mypage-content__header
+        .mypage-content__header__main
+          .mypage-content__header__main__icon
+            %i.fas.fa-user-circle
+          .mypage-content__header__main__name
+            kojikoji
+          .mypage-content__header__main__bottom
+            .mypage-content__header__main__bottom__review
+              評価
+              .mypage-content__header__main__bottom__review__num
+                10
+            .mypage-content__header__main__bottom__products
+              出品数
+              .mypage-content__header__main__bottom__products__num
+                12
+      
+      .mypage-content__body
+        .mypage-content__body--tab
+          %label.mypage-content__body--tab--notice
+            お知らせ
+          %label.mypage-content__body--tab--todo
+            やることリスト
+            
+            -# ここから下をrenderで繰り返し
+        .mypage-content__body--notice
+          .mypage-content__body--notice__message
+            .mypage-content__body--notice__message__icon
+              %i.fas.fa-user-circle
+            .mypage-content__body--notice__message__main
+              .mypage-content__body--notice__message__main__message
+                noticeかりおき〜〜〜〜〜
+              .mypage-content__body--notice__message__main__time
+                .mypage-content__body--notioce__message__main__time--date-icon
+                  %i.far.fa-clock
+                .mypage-content__body--notice__message__main__time--date
+                  notice12月12日
+
+        .mypage-content__body--list
+          .mypage-content__body--list--btn
+            一覧を見る
+        
+      .mypage-content__deal
+        .mypage-content__deal--text
+          購入した商品
+        .mypage-content__deal--tab
+          %label.mypage-content__deal--tab--now
+            取引中
+          %label.mypage-content__deal--tab--end
+            過去の取引
+
+
+        .mypage-content__deal--now
+          .mypage-content__deal--now__message
+            .mypage-content__deal--now__message__icon
+              %i.fas.fa-user-circle
+            .mypage-content__deal--now__message__main
+              .mypage-content__deal--now__message__main__message
+                dealかりおき〜〜〜〜〜
+              .mypage-content__deal--now__message__main__time
+                .mypage-content__deal--now__message__main__time--date-icon
+                  %i.far.fa-clock
+                .mypage-content__deal--now__message__main__time--date
+                  deal 12月10日
+
+        .mypage-content__body--list
+          .mypage-content__body--list--btn
+            一覧を見る
