@@ -10,9 +10,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @items = Item.all
     @images = @item.images.all
-    # @user = User.find(params[:id]).items.all
-    # @category = Category.find(params[:id]).items
-    # @bland = Bland.find(params[:id]).items
   end
 
   def new
