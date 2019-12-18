@@ -8,7 +8,9 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find(params[:id])
+    # @user = @item.includes(:user)
     @items = Item.all
+    @images = @item.images.find(params[:id])
   end
 
   def new

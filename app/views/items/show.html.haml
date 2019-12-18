@@ -5,14 +5,14 @@
     .item-detail-main
       .item-detail-main__photos
         -# = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
-        = @item.image
+        = @images
       %table.item-detail-main__table
         %tbody
           %tr
             %th
               出品者
             %td
-              こじこじ
+              = @item.user.name
               .item-user
                 .item-user__laugh
                   %i.fas.fa-laugh
@@ -36,13 +36,13 @@
               ブランド
             %td
               =@item.category
-          -# -if @item.size.present?
-          %tr
-            %th
-              -# もし商品のサイズがあれば表示するようif分岐させる
-              商品のサイズ
-            %td
-              -# =@item.size
+          -# もし商品のサイズがあれば表示するようif分岐させる
+          -if @item.size.present?
+            %tr
+              %th
+                商品のサイズ
+              %td
+                =@item.size
           %tr
             %th
               商品の状態
@@ -69,7 +69,7 @@
               発送日の目安
             %td
               =@item.delivery_date
-              
+
     .item-detail-price
       .item-detail-price__yen
         ¥
