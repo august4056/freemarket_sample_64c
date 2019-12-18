@@ -3,14 +3,16 @@ class ItemsController < ApplicationController
   layout "items"
 
   def index
-   @items = Item.all
+    @items = Item.all
   end
   
   def show
     @item = Item.find(params[:id])
-    # @user = @item.includes(:user)
     @items = Item.all
-    @images = @item.images.find(params[:id])
+    @images = @item.images.all
+    # @user = User.find(params[:id]).items.all
+    # @category = Category.find(params[:id]).items
+    # @bland = Bland.find(params[:id]).items
   end
 
   def new
