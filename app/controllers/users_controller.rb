@@ -20,4 +20,6 @@ class UsersController < ApplicationController
 
   def complete
   end  
+
+  end
 end

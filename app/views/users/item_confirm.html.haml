@@ -1,0 +1,52 @@
+%main.item_confirm
+  %section.item_confirm__content
+    %h2.item_confirm__content__head
+      購入内容の確認
+    %section.item_confirm__content__buy-item
+      .item_confirm__content__buy-item__inner
+        .item_confirm__content__buy-item__inner__box
+          .item_confirm__content__buy-item__inner__box__img
+            = image_tag "ko-ti.png",class:"item-image"
+          .item_confirm__content__buy-item__inner__box__detail
+            %p.item_confirm__content__buy-item__inner__box__detail__name
+              バック
+            %p.item_confirm__content__buy-item__inner__box__detail__price
+              %span ¥10000
+              %span.item-confiem__fee （税込込み）送料込み
+    .item_confirm__content__buy-container
+      .item_confirm__content__buy-container-inner
+        .item_confirm__content__buy-container-inner__price
+          %ul.item_confirm__content__buy-container-inner__price__detail
+            %li.item__price
+              支払い金額
+            %li.inner__price
+              ¥100
+          .item-confirm__points
+            %input.inner-box{:type => "checkbox"}/
+            %p.inner-point ポイントを使用
+        .item_confirm__content__buy-container-inner__credit
+          %ul.item_confirm__content__buy-container-inner__credit__lists
+            %li.inner__method
+              支払い方法
+            %li.inner__option
+              変更する
+          .item_confirm__content__buy-container-inner__credit__cards
+            %p.tem_confirm__content__buy-container-inner__credit__cards__info
+              クレジットカード
+              %br/
+              ************1032
+              %br/
+              有効期限 09 / 26
+            = image_tag "visa.gif",class:"item_confirm__credit-card"
+        .item_confirm__content__buy-container-inner__address
+          %ul.item_confirm__content__buy-container-inner__address__info
+            %li.address-info 配送先
+            %li.section-info 変更する
+        .item_confirm__content__buy-container-inner__form
+          %p.item_confirm__content__buy-container-inner__form__content
+            この商品は、ゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+          %button.item_confirm__content__buy-container-inner__form__btn
+            購入する
+          %p.item_confirm__content__buy-container-inner__form__app
+            アプリをお持ち出ない方は以下よりインストールしてご利用いただけます。
+          %br/
