@@ -13,53 +13,53 @@
       text-align: center;
       font-weight: bold;
     }
-  &__buy-item{
-    width: 668px;
-    height: 113px;
-    padding: 32px 16px;
-    border-top: 1px solid #EEE;
-    &__inner{
-      width: 343px;
-      height: 80px;
-      margin: 0 auto;
-      &__box{
+    &__buy-item{
+      width: 668px;
+      height: 113px;
+      padding: 32px 16px;
+      border-top: 1px solid #EEE;
+      &__inner{
         width: 343px;
         height: 80px;
-        display: flex;
-      &__img{
-        width: 80px;
-        height: 80px;
-        justify-content: center;
-        display: flex;
-        .item-image{
-          width: 80px;
+        margin: 0 auto;
+        &__box{
+          width: 343px;
           height: 80px;
+          display: flex;
+          &__img{
+            width: 80px;
+            height: 80px;
+            justify-content: center;
+            display: flex;
+            .item-image{
+              width: 80px;
+              height: 80px;
+            }
+          }
+          &__detail{
+            width: 247px;
+            height: 80px;
+            margin-left: 16px;
+            &__name{
+              width: 247px;
+              height: 28px;
+              padding:0 0 8px;
+              font-size: 14px;
+              line-height: 1.5;
+              text-align: left;
+            }
+            &__price{
+              width: 247px;
+              height: 15px;
+              text-align: left;
+              font-size: 15px;
+              font-weight: 600;
+            }
+          }
         }
-      }
-      &__detail{
-        width: 247px;
-        height: 80px;
-        margin-left: 16px;
-        &__name{
-          width: 247px;
-          height: 28px;
-          padding:0 0 8px;
-          font-size: 14px;
-          line-height: 1.5;
-          text-align: left;
-        }
-        &__price{
-          width: 247px;
-          height: 15px;
-          text-align: left;
-          font-size: 15px;
-          font-weight: 600;
-        }
-      }
       }
     }
-    }
-
+    
     &__buy-container{
       width: 668px;
       height: 730px;
@@ -83,35 +83,35 @@
         .item-confirm__points{
           display: flex;
           margin:24px 0 32px;
-            .inner-box{
-              color: #ccc;
-              background-color: #ccc;
-              width: 22px;
-              height: 22px;
-            }
-            .inner-point{
-              font-size: 15px;
-              color: #ccc;
-            }
+          .inner-box{
+            color: #ccc;
+            background-color: #ccc;
+            width: 22px;
+            height: 22px;
           }
-          &__credit{
-           height: 115px;
-           padding: 32px 0;
-           width: 343px;
-           border-top: 1px solid #EEE;
-            &__lists{
-              display: flex;
+          .inner-point{
+            font-size: 15px;
+            color: #ccc;
+          }
+        }
+        &__credit{
+          height: 115px;
+          padding: 32px 0;
+          width: 343px;
+          border-top: 1px solid #EEE;
+          &__lists{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            .inner__method{
+              font-size: 14px;
+              font-weight: bold;
               justify-content: space-between;
-              list-style-type: none;
-           .inner__method{
-             font-size: 14px;
-             font-weight: bold;
-             justify-content: space-between;
-           }
-           .inner__option{
-             font-size: 14px;
-             color:#0099E8;
-           }
+            }
+            .inner__option{
+              font-size: 14px;
+              color:#0099E8;
+            }
           }
           &__cards{
             width: 343px;
@@ -132,57 +132,52 @@
           width: 343px;
           height: 108px;
           padding: 32px 0 ;
-            &__info{
-              list-style: none;
-              display: flex;
-              justify-content: space-between;
-          .address-info{
-            font-size: 14px;
-            font-weight: bold;
-          }
-          .section-info{
-            font-size: 12px;
-            color: #0099E8;
-          }
-        }
-      }
-      &__form{
-        width: 343px;
-        height: 229px;
-        padding: 24px 0 0;
-        text-align: left;
-        border-top: 1px solid #eee;
-        &__content{
-          padding-bottom: 24px;
-          line-height: 1.5;
-          color: red;
-          font-size: 14px;
-          height: 42px;
-        }
-        &__btn{
-          border: 1px solid #888;
-          background-color: #888;
-          color: #FFF;
-          display: block;
-          height: 48px;
-          width: 100%;
-          line-height: 48px;
-          text-align: center;
-          font-size: 14px;
-        }
-        &__app{
-          margin-top: 40px;
-          line-height: 1.5;
-          height: 42px;
-          font-size: 14px;
-        }
-      
-      }
-
-
-
-        
+          &__info{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            .address-info{
+              font-size: 14px;
+              font-weight: bold;
+            }
+            .section-info{
+              font-size: 12px;
+              color: #0099E8;
             }
           }
         }
+        &__form{
+          width: 343px;
+          height: 229px;
+          padding: 24px 0 0;
+          text-align: left;
+          border-top: 1px solid #eee;
+          &__content{
+            padding-bottom: 24px;
+            line-height: 1.5;
+            color: red;
+            font-size: 14px;
+            height: 42px;
+          }
+          &__btn{
+            border: 1px solid #888;
+            background-color: #888;
+            color: #FFF;
+            display: block;
+            height: 48px;
+            width: 100%;
+            line-height: 48px;
+            text-align: center;
+            font-size: 14px;
+          }
+          &__app{
+            margin-top: 40px;
+            line-height: 1.5;
+            height: 42px;
+            font-size: 14px;
+          } 
+        }    
       }
+    }
+  }
+}
