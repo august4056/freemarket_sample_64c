@@ -3,5 +3,5 @@ class Item < ApplicationRecord
   has_many :likes, dependent: :destroy
   belongs_to :category
   belongs_to :brand
-  belongs_to :user
+  belongs_to :user, foreign_key: 'user_id'
 end
