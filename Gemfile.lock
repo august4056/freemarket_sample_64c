@@ -54,7 +54,7 @@ GEM
     ast (2.4.0)
     bcrypt (3.1.13)
     bindex (0.8.1)
-    bootsnap (1.4.5)
+    bootsnap (1.4.4)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
@@ -347,7 +347,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
-  bootsnap (>= 1.1.0)
+  bootsnap (= 1.4.4)
   byebug
   capistrano
   capistrano-bundler
