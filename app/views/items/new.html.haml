@@ -11,9 +11,12 @@
         %p 最大１０枚までアップロードできます
         .item__sell-dropbox
           .item__sell-dropbox-item
+
             = f.fields_for :images do |image|
               = f.label :image do
                 = image.file_field :image,class:"sell-upload-drop-file", type: 'file', name: "item[images_attributes][][image]", value:"", id:"img-file"
+
+          
       .item__sell-content
         %label
           商品名
@@ -23,6 +26,7 @@
         %label 商品の説明        
         %span.item__sell--uploadbox__form-require 必須
         = f.text_field :detail, class: "item__sell--textarea-default", placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+
         .item__sell-content__style_counter  0/1000
         
 

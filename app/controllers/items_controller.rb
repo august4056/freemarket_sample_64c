@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
     
     @item=Item.new
     @images = @item.images.build
+
     render :layout  => "application"
   end
 
@@ -25,6 +26,7 @@ class ItemsController < ApplicationController
     if @item.save
         redirect_to root_path
     end 
+
   end
 
   def credit
@@ -36,6 +38,7 @@ class ItemsController < ApplicationController
   def mypage
 
   end
+
 
   def edit
     render :layout  => "application"
@@ -59,6 +62,7 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id]) 
   end
+
 
 
 end
