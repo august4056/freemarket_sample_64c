@@ -2,9 +2,13 @@
   width:700px;
   height:2600px;
   margin:0 auto;
+  padding:0 40px 0 40px;
   background-color:#fff;
   .item__sell-single-head{
+    width:750px;
     padding:32px 16px;
+    position: relative;
+    right:40px;
     font-size:22px;
     line-height:1.5;
     text-align: center;
@@ -12,11 +16,11 @@
   }
 }
 
-.item__sell--uploadbox {
-  width:620px;
-  height:240px;
-  padding:40px;
-  &__form-require{
+.sell__upload--head{
+  padding-top:40px;
+}
+
+.item__sell--uploadbox__form-require{
     background-color:#ea352d;
     margin:0 0 0 8px;
     padding:2px 4px;
@@ -25,7 +29,6 @@
     font-size:12px;
     vertical-align:top;
   }
-}
 
 .item__sell-dropbox{
   width:700px;
@@ -37,14 +40,13 @@
     margin:40px 0 0 10px;
     padding:40px 0 40px 0;
     width: calc(100% - 300px);
+    padding:40px 0 40px 0;
     height:120px;
     border:1px dashed #ccc;
     background-color:rgb(245, 245, 245);
-      .visible-pc{
+      .drop-message{
         text-align: center;
-        font-size:14px;
-        position: relative;
-        top:46px;
+        font-size:18px;
       }
     }
   }
@@ -87,8 +89,6 @@
 }
 
 .item__sell-content{
-   position: relative;
-   right:40px;
    border-top:solid 2px rgb(245, 245, 245);
     width:620px;
     height:300px;
@@ -103,18 +103,17 @@
       background:#fff;
       line-height:1.5;
       font-size:16px;}
-    &__form-group{ 
-      position: relative;
-      top:20px; }
+    &__form-group{
+      margin-top:40px;}
     &__style_counter{
-      margin-top:16px;
-      margin-right:80px;
-      text-align: right;
-    }
+      position: relative;
+      left:580px;
+    }  
 }
     
 
 .item__sell--textarea-default{
+  height:120px;
   margin:8px 0 0;
   width:600px;
   padding:10px;
@@ -125,12 +124,10 @@
 }
 
 .item__sell-contentsub{
-  position: relative;
-  right:40px;
   padding:40px 40px 40px 40px;
+  margin-top:40px;
   width:620px;
   height:300px;
-  border-top:solid 2px rgb(245, 245, 245);
   &__sub-head{
     margin-bottom:20px;
     width:620px;
@@ -155,21 +152,24 @@
   }
 }
 
-.item__sell-select-wrap{
-  background:#fff;
-  height:42px;
-  width:400px;
-}
-
 
 .item__sell-select-default{
+  position: relative;
+  overflow: hidden;
+  display:inline-block;
+  z-index: 2;
   padding:0 16px;
+  border-radius: 4px;
+  border:1px solid #ccc;
   background:0;
   font-size:16px;
   line-height:1.5;
   cursor:pointer;
+  background-color: transparent;
+  background-image: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   height:48px;
   width:620px;
 }
