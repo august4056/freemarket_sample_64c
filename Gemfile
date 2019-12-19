@@ -94,3 +94,8 @@ gem 'font-awesome-sass'
 gem 'ancestry'
 
 gem 'active_hash'
+
+gem "gretel"
+
+gem "payjp"
+

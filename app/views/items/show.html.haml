@@ -1,17 +1,18 @@
 .item-detail-cotainer
   .item-detail-contents
     .item-detail-name
-      売り切れ必須！驚愕のLogicool mouse 2!
+      =@item.name
     .item-detail-main
       .item-detail-main__photos
-        = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
+        -# = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
+        = @images
       %table.item-detail-main__table
         %tbody
           %tr
             %th
               出品者
             %td
-              こじこじ
+              = @item.user.name
               .item-user
                 .item-user__laugh
                   %i.fas.fa-laugh
@@ -26,49 +27,54 @@
                 .item-user__rating
                   12
           %tr
+            -# カテゴリーGEM:アンセストリーが実装できたらblandともに実装、今は仮置き
             %th
               カテゴリー
             %td
-              ふく
+              =@item.category
           %tr
             %th
               ブランド
             %td
-              ごふく
-          %tr
-            %th
-              -# もし商品のサイズがあれば表示するようif分岐させる
-              商品のサイズ
-            %td
-              ちいさい
+              =@item.category
+          -# もし商品のサイズがあれば表示するようif分岐させる
+          -if @item.size.present?
+            %tr
+              %th
+                商品のサイズ
+              %td
+                =@item.size
           %tr
             %th
               商品の状態
             %td
-              きれい？
+              =@item.state
           %tr
             %th
               配送料の負担
             %td
-              送料込み（出品者負担）
+              =@item.delivery_fee
           %tr
             %th
               配送の方法
             %td
               ゆうゆうメルカリ便
+              -# =@item.delivery_method
           %tr
             %th
               配送元地域
             %td
-              ギリシャ
+              =@item.delivery_area
           %tr
             %th
               発送日の目安
             %td
-              1週間程
+              =@item.delivery_date
+
     .item-detail-price
       .item-detail-price__yen
-        ¥ 12,121,212
+        ¥
+        =@item.price
       .item-detail-price__tax
         (税込)
       .item-detail-price__postage
@@ -77,14 +83,14 @@
     %label.item-detail-buy
       %button
       購入画面に進む
+      -# = link_to ('name', {})
 
     .item-detail-caution
       -# もしこれがスマホからしか買い物できなかったらここを表示
       この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
     .item-detail-description
       .item-detail-description__text
-        この商品は壊れてるので買わない方が身のためです
-        ああああ
+        = simple_format @item.detail
       .item-detail-description__bottom
         .item-detail-description__bottom__left
           .item-detail-description__bottom__left__like
@@ -136,16 +142,19 @@
   .item-detail-user
     .item-detail-other
       .item-detail-other__header
-        こじこじさんのその他の出品
+        =@item.user.name
+        さんのその他の出品
         -# ここから下をrenderで繰り返し
-      .item-detail-other__product
+      .item-detail-other__product  
+        .item-detail-other__product__picture
         = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-other__product__picture"
         .item-detail-other__product__info
           .item-detail-other__product__info__name
-            Logicool Mouse 4
+            -# = @item.name
           .item-detail-other__product__info__bottom
             .item-detail-other__product__info__bottom__price
-              ¥1,234
+              ¥
+              =@item.price
             .item-detail-other__product__info__bottom__like
               %i.far.fa-heart
               3
@@ -153,9 +162,11 @@
   .item-detail-related
     .item-detail-other
       .item-detail-other__header
-        Logicool Mouse 2 その他の商品
+        =@item.name
+        その他の商品
         -# ここから下をrenderで繰り返し
       .item-detail-other__product
+        -# - @items.each do 
         = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-other__product__picture"
         .item-detail-other__product__info
           .item-detail-other__product__info__name

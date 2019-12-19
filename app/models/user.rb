@@ -12,5 +12,8 @@ class User < ApplicationRecord
       validate :fi_name_kana
       validates :year, presence: true
       validates :month, presence: true
-      validates :day, presence: true     
+      validates :day, presence: true   
+
+  has_many :items, dependent: :destroy
+  
 end

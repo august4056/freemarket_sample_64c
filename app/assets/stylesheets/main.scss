@@ -1,11 +1,16 @@
 .slider {
   width: 1309px;
-
+}
   .slick__img {
+    width: 1309px;
+    height: 390px;
     max-width: 100%;
+    background-color: lightblue;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 390px;
   }
 
-}
 
 .item__area {
   height: 780px;
@@ -47,8 +52,7 @@
 .mainpage__items {
   width: 1050px;
   height: 700px;
-  margin: 10px 10px 10px 200px;
-   
+  margin: 10px auto;
 }
 
 .mainpage__title {
