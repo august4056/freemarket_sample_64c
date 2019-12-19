@@ -4,27 +4,28 @@
 .containar
   .item__sell-main-content
     %h2{class:"item__sell-single-head"}商品の情報を入力
-    .item__sell--uploadbox
+    = form_for @item do |f|
       %h3.sell__upload--head
         出品画像
         %span.item__sell--uploadbox__form-require 必須
-      %p 最大１０枚までアップロードできます
-      .item__sell-dropbox
-        .item__sell-dropbox-item
-          %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display:none;", type: "file"}/
-          %pre.visible-pc ドラッグアンドドロップまたはクリックしてファイルをアップロード
-    
+        %p 最大１０枚までアップロードできます
+        .item__sell-dropbox
+          .item__sell-dropbox-item
+            = f.file_field :image,class:"sell-upload-drop-file"
+            %p.drop-message ドラッグアンドドロップ 
+            %p.drop-message またはクリックしてファイルをアップロード
       .item__sell-content
         %label
           商品名
         %span.item__sell--uploadbox__form-require 必須
-        %input.item__sell-content__input-default{placeholder: "商品名（必須 40文字まで)", value: ""}/
+        = f.text_field :name, class: "item__sell-content__input-default",  placeholder: "商品名（必須 40文字まで)"
         .item__sell-content__form-group
-          %label
-          商品の説明        
-          %span.item__sell--uploadbox__form-require 必須
-          %textarea.item__sell--textarea-default{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"}
+        %label 商品の説明        
+        %span.item__sell--uploadbox__form-require 必須
+        = f.text_area :detail, class: "item__sell--textarea-default", placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
         .item__sell-content__style_counter  0/1000
+        
+
       .item__sell-contentsub
         .item__sell-contentsub__sub-head 商品の詳細
         .item__sell-form-box
@@ -32,39 +33,22 @@
             %label
               カテゴリー
             %span.item__sell--uploadbox__form-require 必須
-          .item__sell-select-wrap
-            %i.fas.fa-chevron-down 
-            .item__sell-fontawsome
-              %select.item__sell-select-default
-                %option{value: "0"} 選択してください
-                %option{value: "1"} レディース
-                %option{value: "2"} メンズ
-                %option{value: "3"} ベビー・キッズ
-                %option{value: "4"} インテリア・住まい・小物
-                %option{value: "5"} 本・音楽・ゲーム
-                %option{value: "1328"} おもちゃ・ホビー・グッズ
-                %option{value: "6"} コスメ・香水・美容
-                %option{value: "7"} 家電・スマホ・カメラ
-                %option{value: "8"} スポーツ・レジャー
-                %option{value: "9"} ハンドメイド
-                %option{value: "1027"} チケット
-                %option{value: "1318"} 自動車・オートバイ
-                %option{value: "10"} その他
+            .item__sell-select-wrap 
+              %i.fas.fa-chevron-down
+                .item__sell-select-default            
+                  = f.select :category,[["選択してください"],["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自動車・オートバイ"],["その他"]]
+              
+
           .item__sell-form-box__group2
             %label
               商品の状態
             %span.item__sell--uploadbox__form-require 必須
-          .item__sell-select-wrap
-            %i.fas.fa-chevron-down
-            .item__sell-fontawsome
-              %select.item__sell-select-default
-                %option{value: ""} 選択してください
-                %option{value: "1"} 新品、未使用
-                %option{value: "2"} 未使用に近い
-                %option{value: "3"} 目立った傷や汚れなし
-                %option{value: "4"} やや傷や汚れあり
-                %option{value: "5"} 傷や汚れあり
-                %option{value: "6"}全体的に状態が悪い                
+            .item__sell-select-wrap 
+              %i.fas.fa-chevron-down
+                .item__sell-select-default
+                  = f.select :state,[["選択してください"],["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]]
+              
+
       .item__sell-content-sub2
         %p.item__sell-content-sub2__sub-head2 配送について
         %a.item__sell-content-sub2__form-question{href: "", target: "_blank"} ?
@@ -75,18 +59,15 @@
             %span.item__sell--uploadbox__form-require 必須
           .item__sell-select-wrap
             %i.fas.fa-chevron-down
-            .item__sell-fontawsome
-              %select.item__sell-select-default
-                %option{value: ""}  選択してください
-                %option{value: "2"} 送料込み(出品者負担)
-                %option{value: "1"} 着払い(購入者負担)
+              .item__sell-select-default
+                = f.select :delivery_fee,[["選択してください"],["送料込み(出品者負担)"],["着払い(購入者負担)"]]
+                
           .item__sell-content-sub2__form-group4
             %label
               発送元の地域
             %span.item__sell--uploadbox__form-require 必須
             .item__sell-select-wrap
               %i.fas.fa-chevron-down
-              .item__sell-fontawsome
                 %select.item__sell-select-default
                   %option{value: ""} 選択してください
                   %option{value: "1"} 北海道
@@ -142,11 +123,9 @@
             %span.item__sell--uploadbox__form-require 必須
             .item__sell-select-wrap
               %i.fas.fa-chevron-down
-              %select.item__sell-select-default
-                %option{value: ""} 選択してください
-                %option{value: "1"} 1~2日で発送
-                %option{value: "2"} 2~3日で発送
-                %option{value: "3"} 4~7日で発送
+              .item__sell-select-default
+                = f.select :delivery_date,[["選択してください"],["1~2日で発送"],["2~3日で発送"],["4~7日で発送"]]
+                
       .item__sell-content-low
         %p.item__sell-sub-head2 販売価格(300~9,999,999)
         %a.item__sell-content-low__form-question2{href: "", target: "_blank"} ?
@@ -177,8 +156,7 @@
           %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であ
           %p り処罰される可能性があります。
           %p また、出品をもちまして加盟店規約に同意したことになります。
-        %button.item__sell-content-btn-box__button{type: "submit" }
-          出品する
+        = f.submit "出品する",class:"item__sell-content-btn-box__button"
         %a{href: "#", class: "item__sell-btn-gray"}もどる
         .item__sell-overlay
 .login-footer
@@ -189,4 +167,4 @@
       %li.message 特定商取引に関する表記
   .footer__logo
     = image_tag 'logo_gray.svg',class:"flogo"
-  %p.copy ©Mercari,Inc.                      
+  %p.copy ©Mercari,Inc. 

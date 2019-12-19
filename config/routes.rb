@@ -26,3 +26,4 @@ Rails.application.routes.draw do
   get 'item_confirm', to: 'users#item_confirm'
 
 end
+
