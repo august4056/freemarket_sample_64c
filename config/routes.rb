@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   get 'payment', to: 'users#payment'
   get 'logout', to: 'users#logout'
   
-resources :items, only: [:index, :show ,:new]
+resources :items, only: [:index, :show ,:new, :create]
 resources :users, only: [:new, :edit, :create, :show]
 
 end
+
