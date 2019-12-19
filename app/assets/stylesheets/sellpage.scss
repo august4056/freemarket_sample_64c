@@ -47,9 +47,21 @@
       .drop-message{
         text-align: center;
         font-size:18px;
+  height:202px;  
+  border:1px dashed #ccc;
+  background-color:rgb(245, 245, 245);
+  z-index: 3;
+  .sell-upload-drop-file{
+      width:700px;
+      height:202px;  
+     
+      
+    
+
       }
+
     }
-  }
+  
 
 .item__sell-dropbox__contena{
   display: flex;
