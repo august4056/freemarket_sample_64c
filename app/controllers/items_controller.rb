@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   def new
     
     @item=Item.new
+    @images = @item.images.build
     render :layout  => "application"
   end
 
@@ -39,12 +40,9 @@ class ItemsController < ApplicationController
 
 private
 def item_params
-  params.require(:item).permit(:name, :detail, :category, :state, :delivery_fee, :delivery_area, :delivery_date, :price, :fee, :gross_profit, )
+  params.require(:item).permit(:name, :detail, :category, :state, :delivery_fee, :delivery_area, :delivery_date, :price, :fee, :gross_profit, images_attributes:[:image])
 end
 
-def image_params
-  params.require(:image).permit(image).merge(item_id: current_item.id)
-end
 
   def edit
     render :layout  => "application"
