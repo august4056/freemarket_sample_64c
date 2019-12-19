@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   get 'mypage', to: 'items#mypage'
   get 'logout', to: 'items#logout'
+  get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
   get 'show', to: 'items#show'
+  get 'credit', to: 'items#credit'
   
   get 'registration', to: 'users#registration'
-  get 'login', to: 'users#login'
+  get 'login', to: 'users#login'
   get 'info', to: 'users#info'
   get 'complete', to: 'users#complete'
   get 'confirm', to: 'users#confirm'
@@ -20,5 +22,8 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index, :show ,:new, :create, :edit, :update]
   resources :users, only: [:new, :edit, :create, :show]
+
+  get 'logout', to: 'users#logout'
+  get 'item_confirm', to: 'users#item_confirm'
 
 end
