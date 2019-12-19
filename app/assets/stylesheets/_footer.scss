@@ -1,22 +1,25 @@
 
 .smph__area {
   height: 300px;
-  width: 2500px;
-  // display: flex;
+  width: 100%;
+  display: flex;
   overflow: hidden;
+  z-index: 0;
+
 
   .smph__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: 1;
   }
 
   .smph__box {
-    width: 500px;
+    width: 1000px;
     margin: 0 auto;
-    
+    z-index: 2;
     position:relative;
-  }    
+  
     .smph__text1 {
       font-size: 25px;
       color: #ffffff;
@@ -69,7 +72,7 @@
     }
   }
 
-
+}
 .footer__index {
   background-color: #222222;
   width: 100%;
@@ -77,8 +80,6 @@
   &__top{
     
     display: flex;
-    
-    
     
     .footer__index__contaner {
       margin: 0 auto;
@@ -89,7 +90,7 @@
     .footer__index__box {
       width: 250px;
       list-style: none;
-      margin: 20px 50px 50px 0px;
+      margin: 30px 50px 50px 0px;
       text-align: left;
       
       
@@ -127,8 +128,8 @@
   
   }
 }
-  
-}
+}  
+
 
 
 

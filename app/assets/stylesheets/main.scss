@@ -1,6 +1,6 @@
 
 .item__area {
-  height: 780px;
+  height: 100%;
   width: 100%;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .mainpage__items{
-  width: 1040px;
-  height: 700px;
+  width: 1050px;
+  height: 600px;
   margin: 10px auto;
 }
 
@@ -72,6 +72,10 @@
     position: relative;
     cursor: pointer;
     list-style: none;
+    background-color: powderblue;
+    transition: background-color .5s;
+
+    
     
     .ladies-photo {
       height: 188px;

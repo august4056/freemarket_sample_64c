@@ -1,136 +1,98 @@
 .identification {
   display: flex;
-  margin: 0 120px 0 100px;
-}
-
-.iden__main {
   
-
-.iden__title {
-  background-color: $White;
-  min-width: 700px;
-  font-size: 24px;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0 10px 0;
-  
-}
-
-.iden__box {
-  background-color: $White;
-  height: 100%;
-  min-width: 700px;
-  padding: 64px;
-}
-
-.iden__text {
-  padding-top: 10px;
-  
-  &__right {
-    text-align: right;
-    padding-top: 8px;
+  .iden__main {
+    margin-left: 40px;
+    margin:0 auto;
+  .iden__title {
+    background-color: $White;
+    min-width: 700px;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 10px 0;
     
-    
-    &__non {
-      color: #0099e8;
-      font-weight: bold;
-      text-decoration: none;
-      padding-right: 25px;
-      position: relative;
+  }
+
+  .iden__box {
+    background-color: $White;
+    height: 100%;
+    min-width: 700px;
+    padding: 64px;
+  }
+
+    .iden__text {
+      padding-top: 10px;
       
-      &__fa-chevron-right::after {
-        position: absolute;
+      &__right {
+        text-align: right;
+        padding: 8px 25px;
         
+        &__non {
+          color: #0099e8;
+          font-weight: bold;
+          text-decoration: none;
+          padding: 25px;
+          position: relative;
+          
+          &__fa-chevron-right::after {
+            position: absolute;
+            
+          }
+          
+        }
       }
+    }
+
+    .iden__form-group {
+      padding-top :40px;
+      
+
+      .form-arbitrary{
+        background-color:#ccc;
+        margin:0 0 0 8px;
+        padding:2px 4px;
+        border-radius:2px;
+        color:#fff;
+        font-size:12px;
+        vertical-align:top;
+      }
+
+      .iden__input-default {
+        height: 35px;
+        width: 100%;
+        margin: 8px 0 0;
+        padding: 30px 16px 30px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        line-height:1.5;
+        background: #fff;
+        font-size: 16px;
+        box-sizing: border-box;
+
+      }
+
+      .btn-default {
+        outline:0;
+        margin-top: 65px;
+        height: 50px;
+        width: 100%;
+        background-color: $Red;
+        color: $Lightgray;
+        font-size: 14px;
+      }
+
+      .iden__select-wrap {
+        position: relative;
+        background:#fff;
+        height:42px;
+        width:394px;
+
+      }
+
       
     }
-  }
-}
-
-  .iden__form-group {
-    padding-top :40px;
-    
-
-    .form-arbitrary{
-      background-color:#ccc;
-      margin:0 0 0 8px;
-      padding:2px 4px;
-      border-radius:2px;
-      color:#fff;
-      font-size:12px;
-      vertical-align:top;
-    }
-
-    .iden__input-default {
-      height: 35px;
-      width: 100%;
-      margin: 8px 0 0;
-      padding: 10px 16px 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      line-height:1.5;
-      background: #fff;
-      font-size: 16px;
 
     }
 
-    .btn-default {
-      outline:0;
-      margin-top: 65px;
-      height: 50px;
-      width: 100%;
-      background-color: $Red;
-      color: $Lightgray;
-      font-size: 14px;
-    }
-
-    .iden__select-wrap {
-      position: relative;
-      background:#fff;
-      height:42px;
-      width:394px;
-
-    }
-
-    
-  }
-
-    .text-lower-right {
-      text-align: right;
-      height: 55px;
-      color: #0099e8;
-      padding: 20px 0 0px;
-      text-decoration: none;
-    }
-
-  
-  }
-
-
-
-.exhibit__form{
-  &__button{
-    text-decoration: none;
-    height: 160px;
-    width: 160px;
-    background-color: $Red;
-    position: -webkit-sticky;
-    position: sticky;
-    position: fixed;
-    bottom: 30px;
-    right: 35px;
-    border-radius: 50%;
-    z-index: 6;
-    outline:0;
-    &__logo{
-      color: $White;
-      font-size: 22px;
-    }
-  }
-}
-
-.exhibit__form__button__icon1{
-  color: $White;
-  font-size: 60px;
-  position: relative;
 }
