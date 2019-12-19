@@ -1,16 +1,3 @@
-.slider {
-  width: 1309px;
-}
-  .slick__img {
-    width: 1309px;
-    height: 390px;
-    max-width: 100%;
-    background-color: lightblue;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 390px;
-  }
-
 
 .item__area {
   height: 780px;
@@ -49,8 +36,8 @@
   
 }
 
-.mainpage__items {
-  width: 1050px;
+.mainpage__items{
+  width: 1040px;
   height: 700px;
   margin: 10px auto;
 }
@@ -77,54 +64,54 @@
   }
 }
 
-.ladies__box__photo {
-  height: 252px;
-  width: 188px;
-  margin: 10px;
-  float: left;
-  position: relative;
-  cursor: pointer;
-  list-style: none;
-  
-  .ladies-photo {
-    height: 188px;
+  .ladies__box__photo {
+    height: 252px;
     width: 188px;
-    background: none;
-
-  }
-
-  .ladies__comment-box {
-    height: 64px;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top:188px;
+    margin: 10px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
     
-    &__text {
-      color: #202020;
-      font-size: 16px;
-      padding: 5px;
-      word-wrap: break-word;
-      text-align: center;
-  
+    .ladies-photo {
+      height: 188px;
+      width: 188px;
+      background: none;
+    }
+
+    .ladies__comment-box {
+      height: 64px;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      top:188px;
+      
+      &__text {
+        color: #202020;
+        font-size: 16px;
+        padding: 5px;
+        word-wrap: break-word;
+        text-align: center;
+    
+      }
+
+    }
+
+    .ladies__price-box {
+      height: 28px;
+      background-color: rgba( 0, 0, 0, 0.50 );
+      border-radius: 0 13px 13px 0;
+      position: absolute;
+      top:150px;
+      
+      &__price {
+        color: white;
+        font-size: 16px;
+        padding: 5px 15px 5px 10px;
+        text-align: left;
+    
+      }
     }
 
   }
 
-  .ladies__price-box {
-    height: 28px;
-    background-color: rgba( 0, 0, 0, 0.50 );
-    border-radius: 0 13px 13px 0;
-    position: absolute;
-    top:150px;
-    
-    &__price {
-      color: white;
-      font-size: 16px;
-      padding: 5px 15px 5px 10px;
-      text-align: left;
-  
-    }
-  }
-
-}
