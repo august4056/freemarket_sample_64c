@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   get 'item_confirm', to: 'users#item_confirm'
 
   
-resources :items, only: [:index, :show ,:new]
+resources :items, only: [:index, :show ,:new, :create]
 resources :users, only: [:new, :edit, :create, :show]
 
 end
+
