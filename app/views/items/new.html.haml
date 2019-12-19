@@ -12,9 +12,8 @@
         .item__sell-dropbox
           .item__sell-dropbox-item
             = f.fields_for :images do |image|
-              = image.file_field :image,class:"sell-upload-drop-file"
-              %p.drop-message ドラッグアンドドロップ 
-              %p.drop-message またはクリックしてファイルをアップロード
+              = f.label :image do
+                = image.file_field :image,class:"sell-upload-drop-file", type: 'file', name: "item[images_attributes][][image]", value:"", id:"img-file"
       .item__sell-content
         %label
           商品名
