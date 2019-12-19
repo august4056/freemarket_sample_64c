@@ -92,3 +92,5 @@ gem 'fog-aws'
 gem 'font-awesome-sass'
 
 gem 'ancestry'
+
+gem 'active_hash'
