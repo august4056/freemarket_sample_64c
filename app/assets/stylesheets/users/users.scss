@@ -54,7 +54,6 @@
   }
 }
 
-
 //メイン
 .user-main {
   display: flex;
@@ -173,7 +172,7 @@
       font-size: 16px;
       padding: 10px 16px 8px;
     }
-  }   
+  }
 }
 
 .registration-link a {
@@ -291,8 +290,6 @@
   border-radius: 3px;
 }
 
-
-
 .submit-btn {
   width: 341px;
   height: 48px;
@@ -307,9 +304,7 @@
   margin-bottom: 30px;
 }
 
-
 //フッター
-
 .login-footer {
   height:140px;
   background-color: $Background;
@@ -317,7 +312,6 @@
   text-align: center;
   padding-top: 110px;
 }
-
 
 .footer {
   height:140px;
