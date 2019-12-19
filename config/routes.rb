@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'mypage', to: 'items#mypage'
   get 'logout', to: 'items#logout'
   get 'edit_profile', to: 'items#edit_profile'
-  get 'show', to: 'items#show'
   
   get 'registration', to: 'users#registration'
   get 'login', to: 'users#login'

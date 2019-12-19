@@ -90,21 +90,16 @@
                   %p.l-left 販売手数料(10%)
                   .item__right-group
                     %p.l-right
-                      -x = @item.price
-                      -y = 0.1
-                      %p #{(x * y).floor}
                 %li.item__sell-form-group7
                   %p.l-left2 販売利益
                   .item__right-group
                     %p.l-right2
-                      -x = @item.price
-                      -y = 0.1
-                      %p #{x - (x * y).floor}
           .item__sell-content-btn-box
             .item__sell-content-btn-box__message
             %button.item__sell-content-btn-box__button{type: "submit" }
               変更する
-            %a{href: "#", class: "item__sell-btn-gray"}キャンセル
+            = link_to 'キャンセル', '#', class: "item__sell-btn-gray"
+
             .item__sell-overlay
   .login-footer
     .footer__nav
