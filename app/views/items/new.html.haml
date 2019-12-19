@@ -11,7 +11,7 @@
         %p 最大１０枚までアップロードできます
         .item__sell-dropbox
           .item__sell-dropbox-item
-            = f.file_field :image,class:"sell-upload-drop-file"
+            -# = @image.file_field :image,class:"sell-upload-drop-file"
             %p.drop-message ドラッグアンドドロップ 
             %p.drop-message またはクリックしてファイルをアップロード
       .item__sell-content
@@ -22,7 +22,7 @@
         .item__sell-content__form-group
         %label 商品の説明        
         %span.item__sell--uploadbox__form-require 必須
-        = f.text_area :detail, class: "item__sell--textarea-default", placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        = f.text_field :detail, class: "item__sell--textarea-default", placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
         .item__sell-content__style_counter  0/1000
         
 
@@ -136,8 +136,8 @@
                 価格
                 %span.item__sell--uploadbox__form-require 必須
               .item__sell-right-group
-                %p.en ￥  
-                %input.l-right-input{placeholder: "例)300", value: ""}/
+                %p.en ￥   
+              = f.text_field :price,placeholder:"例）300"
             %li.item__sell-form-group7
               %p.l-left 販売手数料(10%)
               .item__right-group
