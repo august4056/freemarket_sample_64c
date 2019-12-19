@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   def new
     
     @item=Item.new
+    @images = @item.images.build
     render :layout  => "application"
   end
 
