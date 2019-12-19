@@ -103,88 +103,88 @@
     font-weight: bold;
     margin: 30px 0;
     & label{
-      // font-size: 14px;
-      // font-weight: bold;
-      // margin: 30px 0;
-    }
-  }
-
-    
-    .mail-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .identification-title {
+      font-size: 14px;
       font-weight: bold;
-    }
-    .identification-text {
-      font-weight: normal;
-      font-size: 12px;
-    }
-    .family-name-kanji {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .first-name-kanji {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      margin-left: 10px;
-      padding: 10px 16px 8px;
-    }
-    .family-name-kana {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .first-name-kana {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      margin-left: 10px;
-      padding: 10px 16px 8px;
-    }
-    .birthday-field {
-      width: 100px;
-      height: 48px;
-    }
-    #telephone-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
+      margin: 30px 0;
     }
   }
-  .user-form-group-password {
-    font-size: 14px;
+  
+  
+  .mail-field {
+    width: 341px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+  .identification-title {
     font-weight: bold;
-    margin: 30px 0;
-    .password-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
   }
+  .identification-text {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .family-name-kanji {
+    width: 130px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+  .first-name-kanji {
+    width: 130px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 16px 8px;
+  }
+  .family-name-kana {
+    width: 130px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+  .first-name-kana {
+    width: 130px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 16px 8px;
+  }
+  .birthday-field {
+    width: 100px;
+    height: 48px;
+  }
+  #telephone-field {
+    width: 341px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+}
+.user-form-group-password {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 30px 0;
+  .password-field {
+    width: 341px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+}
 
 
 .registration-link a {
@@ -298,17 +298,17 @@
 
 .fa-chevron-down.select_arrow{
   &__month{
-  position: absolute;
-  top:13px;
-  left:75px;
-  background: $White;
-}
-&__year{
-  position: absolute;
-  top:13px;
-  left:75px;
-  background: $White;
-  
+    position: absolute;
+    top:13px;
+    left:75px;
+    background: $White;
+  }
+  &__year{
+    position: absolute;
+    top:13px;
+    left:75px;
+    background: $White;
+    
   }
 }
 
