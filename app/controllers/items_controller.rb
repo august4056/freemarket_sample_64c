@@ -2,12 +2,13 @@ class ItemsController < ApplicationController
 
   layout "items"
 
+  before_action :set_item, only: [:show, :edit]
+
   def index
     @items = Item.all
   end
 
   def show
-    @item = Item.find(params[:id])
     @items = Item.all
     @images = @item.images.all
   end
@@ -20,7 +21,6 @@ class ItemsController < ApplicationController
   end
   
   def create
-    Item.create(item_params)
   end
 
   def mypage
@@ -28,20 +28,27 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
     render :layout  => "application"
   end
 
   def update
     item = Item.find(params[:id])
-    item.update(item_params)
-    redirect_to item_path(item.id)
+    if item.update(item_params)
+      redirect_to item_path(item.id)
+    else
+      redirect_to edit_item_path(item.id)
+    end
   end
 
   private
   
   def item_params
-    params.require(:item).permit(:name, :image, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit)
+    params.require(:item).permit(:name, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit, :user_id, :size)
   end
+  
+  def set_item
+    @item = Item.find(params[:id]) 
+  end
+
 
 end
