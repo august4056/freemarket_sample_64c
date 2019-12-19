@@ -11,9 +11,10 @@
         %p 最大１０枚までアップロードできます
         .item__sell-dropbox
           .item__sell-dropbox-item
-            -# = @image.file_field :image,class:"sell-upload-drop-file"
-            %p.drop-message ドラッグアンドドロップ 
-            %p.drop-message またはクリックしてファイルをアップロード
+            = f.fields_for :images do |image|
+              = image.file_field :image,class:"sell-upload-drop-file"
+              %p.drop-message ドラッグアンドドロップ 
+              %p.drop-message またはクリックしてファイルをアップロード
       .item__sell-content
         %label
           商品名
