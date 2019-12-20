@@ -104,6 +104,21 @@
     margin: 30px 0;
     & label{
       font-size: 14px;
+      // font-weight: bold;
+      // margin: 30px 0;
+    }
+  }
+
+    
+    .mail-field {
+      width: 341px;
+      height: 28px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+    }
+    .identification-title {
       font-weight: bold;
       margin: 30px 0;
     }
@@ -171,7 +186,7 @@
     font-size: 16px;
     padding: 10px 16px 8px;
   }
-}
+
 .user-form-group-password {
   font-size: 14px;
   font-weight: bold;
@@ -273,6 +288,17 @@
   margin: 10px 0;
 }
 
+.security-field--cvv {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+  display: block;
+  margin: 10px 0;
+}
+
 
 .user-cards {
   display: flex;
@@ -309,6 +335,17 @@
     left:75px;
     background: $White;
     
+  position: absolute;
+  top:6px;
+  left:70px;
+  background: $White;
+}
+&__year{
+  position: absolute;
+  top:6px;
+  left:70px;
+  background: $White;
+  
   }
 }
 

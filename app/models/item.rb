@@ -3,8 +3,6 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_many :images, dependent: :destroy
-  # belongs_to :category
-  belongs_to :user
   # belongs_to :category_id
 
 end
