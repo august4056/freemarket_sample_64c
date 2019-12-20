@@ -24,5 +24,7 @@ Rails.application.routes.draw do
 
   get 'logout', to: 'users#logout'
   get 'item_confirm', to: 'users#item_confirm'
+
+
 end
 
