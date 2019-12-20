@@ -20,8 +20,6 @@ Rails.application.routes.draw do
   get 'address', to: 'users#address'
   get 'payment', to: 'signup#payment'
   
-  
-  
   resources :items
   resources :users, only: [:new, :edit, :create, :show]
   
@@ -30,9 +28,7 @@ Rails.application.routes.draw do
   get 'item_edit_delete', to: 'items#item_edit_delete'
   get 'item_confirm', to: 'purchase#item_confirm'
 
-
-
-  resources :signup do
+  resources :signup, except:[:index,:show] do
     collection do
       get 'step1'
       post 'save_step1'

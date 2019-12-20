@@ -1,6 +1,6 @@
 class PurchaseController < ApplicationController
   require 'payjp'
-  
+
   before_action :set_card
   before_action :set_item
 
@@ -16,5 +16,4 @@ private
   
   def set_item
     @item = Item.find(params[:id])
-  end
 end

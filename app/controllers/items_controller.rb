@@ -19,24 +19,16 @@ class ItemsController < ApplicationController
     render :layout  => "application"
     
   end
-  
+
+
   def credit
-    # @item = Item.find(params[:id])
+    @item = Item.find(params[:id])
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
-    # Payjp::Charge.create(
-    #   amount: @item.price
-    #   card: params['payjp-token']
-    #   currency: 'jpy'
-    # )
-
-  def credit
-    Payjp.api_key = "秘密鍵"
     Payjp::Charge.create(
-      amount: 
-      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
-      currency: 'jpy'
+      amount: @item.price
+      # card: params['payjp-token']
+      # currency: 'jpy'
     )
-
   end
   
   def create
