@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   get 'address', to: 'users#address'
   get 'payment', to: 'users#payment'
   
-  
-
   resources :items, only: [:index, :show ,:new, :create, :edit, :update]
   resources :users, only: [:new, :edit, :create, :show]
 
   get 'logout', to: 'users#logout'
   get 'item_confirm', to: 'users#item_confirm'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
 end

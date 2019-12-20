@@ -15,5 +15,11 @@ class User < ApplicationRecord
       validates :day, presence: true   
 
   has_many :items, dependent: :destroy
+
+  has_many :sns_credentials, dependent: :destroy
+
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :validatable,
+          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
   
 end
