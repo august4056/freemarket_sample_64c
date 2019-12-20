@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.all
-    @images = @item.images.all
+    # @images = @item.images.all
   end
 
   def new
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
   private
   
   def item_params
-    params.require(:item).permit(:name, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit, :user_id, :size)
+    params.require(:item).permit(:name, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit, :user_id, :size, :image)
   end
   
   def set_item
