@@ -31,6 +31,7 @@
               支払い方法
             %li.inner__option
               変更する
+
           .item_confirm__content__buy-container-inner__credit__cards
             %p.tem_confirm__content__buy-container-inner__credit__cards__info
               クレジットカード
@@ -46,6 +47,7 @@
         .item_confirm__content__buy-container-inner__form
           %p.item_confirm__content__buy-container-inner__form__content
             この商品は、ゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+          = form_with url: "purchase_item_path"
           %button.item_confirm__content__buy-container-inner__form__btn
             購入する
           %p.item_confirm__content__buy-container-inner__form__app

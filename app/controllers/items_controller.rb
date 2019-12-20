@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+  require 'payjp'
   layout "items"
 
   before_action :set_item, only: [:show, :edit, :destroy]
@@ -19,6 +19,16 @@ class ItemsController < ApplicationController
     
   end
 
+  def credit
+    Payjp.api_key = "秘密鍵"
+    Payjp::Charge.create(
+      amount: 
+      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      currency: 'jpy'
+    )
+
+  end
+  
   def create
     @item=Item.new(item_params)
     if @item.save

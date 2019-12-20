@@ -16,6 +16,12 @@ class UsersController < ApplicationController
 
   def item_confirm
     render :layout  => "application"
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp::Charge.create(
+      amount: 809, # 決済する値段
+      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      currency: 'jpy'
+    )
   end
 
   
