@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
 
   def new
     render :layout  => "application"
+    
   end
 
   def credit
@@ -26,6 +27,7 @@ class ItemsController < ApplicationController
   def mypage
 
   end
+
 
   def edit
     render :layout  => "application"
