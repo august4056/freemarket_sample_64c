@@ -7,32 +7,17 @@
       .credit-container__body__content
         %p.credit-container__body__content__title
           クレジットカード一覧
-        .add_card
-          = link_to "" do
-            %i.far.fa-credit-card 
-              %span クレジットカードを追加する
-              %script{src: "https://js.pay.jp/", type: "text/javascript"}
+      %form{:action => "/pay", :method => "post"}
+        %script.payjp-button{"data-key" => ENV['PAYJP_PRIVATE_KEY'], :src => "https://checkout.pay.jp/"}
+        -# .add_card
+        -#   = link_to "" do
+        -#     %i.far.fa-credit-card 
+        -#       %span クレジットカードを追加する
+        -#       %script{src: "https://js.pay.jp/", type: "text/javascript"}
 
-      %form
-        .form-group
-          %label{:for => "inputCardNumber"} カード番号
-          %input#card_number.form-control{:placeholder => "カード番号", :type => "text"}/
-        .form-group
-          %label{:for => "inputCVV"} CVV/セキュリティコード
-          %input#cvv.form-control{:placeholder => "CVV", :type => "text"}/
-        .form-group
-          %label{:for => "inputExp"} 有効期限
-          .row
-            .col-md-6
-              %input#exp_year.form-control{:placeholder => "年", :type => "text"}/
-            .col-md-6
-              %input#exp_month.form-control{:placeholder => "月", :type => "text"}/
-        %button#token トークン化
-      / 今回はHTML上に結果を表示します
-      = form_with url: "purchase_item_path"
 
-      生成されたトークン：
-      #card_token
+
+
 
         //カード情報がある場合
         .credit-container__body__content__info

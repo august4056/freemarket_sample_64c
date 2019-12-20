@@ -20,13 +20,13 @@ class ItemsController < ApplicationController
   end
   
   def credit
-    @item = Item.find(params[:id])
+    # @item = Item.find(params[:id])
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
-    Payjp::Charge.create(
-      amount: @item.price
-      # card: params['payjp-token']
-      # currency: 'jpy'
-    )
+    # Payjp::Charge.create(
+    #   amount: @item.price
+    #   card: params['payjp-token']
+    #   currency: 'jpy'
+    # )
 
   end
   
