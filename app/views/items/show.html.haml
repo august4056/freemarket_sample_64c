@@ -5,7 +5,7 @@
     .item-detail-main
       .item-detail-main__photos
         -# = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
-        = @images
+        = image_tag "#{@item.image}",  class: "item-detail-main__photos__photo"
       %table.item-detail-main__table
         %tbody
           %tr
@@ -31,12 +31,12 @@
             %th
               カテゴリー
             %td
-              =@item.category
+              =@item.category.name
           %tr
             %th
               ブランド
             %td
-              =@item.category
+              =@item.category.name
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr
@@ -64,7 +64,7 @@
             %th
               配送元地域
             %td
-              =@item.delivery_area
+              =@item.prefecture_id
           %tr
             %th
               発送日の目安
@@ -84,10 +84,14 @@
       %button
       購入画面に進む
       -# = link_to ('name', {})
-
     .item-detail-caution
-      -# もしこれがスマホからしか買い物できなかったらここを表示
-      この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+      - if @item.user_id == current_user.id
+        .item-detail-delete
+          = link_to "出品者として商品を削除する", item_path(@item.id), method: :delete, class: "item-detail-delete__link"
+      - else
+        .item-detail-caution
+          この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+
     .item-detail-description
       .item-detail-description__text
         = simple_format @item.detail

@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   layout "items"
 
-  before_action :set_item, only: [:show, :edit]
+  before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
     @items = Item.all
@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.all
-    @images = @item.images.all
+    # @images = @item.images.all
   end
 
   def new
@@ -24,7 +24,6 @@ class ItemsController < ApplicationController
   end
 
   def mypage
-
   end
 
   def edit
@@ -38,6 +37,11 @@ class ItemsController < ApplicationController
     else
       redirect_to edit_item_path(item.id)
     end
+  end
+
+  def destroy
+    @item.destroy if @item.user_id == current_user.id
+    redirect_to root_path
   end
 
   private

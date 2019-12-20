@@ -18,11 +18,12 @@ Rails.application.routes.draw do
   get 'payment', to: 'users#payment'
   
   
-
-  resources :items, only: [:index, :show ,:new, :create, :edit, :update]
+  
+  resources :items
   resources :users, only: [:new, :edit, :create, :show]
-
+  
   get 'logout', to: 'users#logout'
   get 'item_confirm', to: 'users#item_confirm'
+  get 'item_edit_delete', to: 'items#item_edit_delete'
 
 end
