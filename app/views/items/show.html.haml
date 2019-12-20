@@ -4,8 +4,7 @@
       =@item.name
     .item-detail-main
       .item-detail-main__photos
-        -# = image_tag "https://images-na.ssl-images-amazon.com/images/I/71irY23ij4L._AC_SL1500_.jpg", class: "item-detail-main__photos__photo"
-        = @images
+        = image_tag "#{@item.image}",  class: "item-detail-main__photos__photo"
       %table.item-detail-main__table
         %tbody
           %tr
@@ -31,12 +30,12 @@
             %th
               カテゴリー
             %td
-              =@item.category
+              =@item.category_id
           %tr
             %th
               ブランド
             %td
-              =@item.category
+              =@item.category_id
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr
@@ -64,7 +63,7 @@
             %th
               配送元地域
             %td
-              =@item.delivery_area
+              =@item.prefecture_id
           %tr
             %th
               発送日の目安
