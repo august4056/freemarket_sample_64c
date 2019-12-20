@@ -29,6 +29,14 @@ class ItemsController < ApplicationController
     #   currency: 'jpy'
     # )
 
+  def credit
+    Payjp.api_key = "秘密鍵"
+    Payjp::Charge.create(
+      amount: 
+      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      currency: 'jpy'
+    )
+
   end
   
   def create
