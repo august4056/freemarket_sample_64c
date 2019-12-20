@@ -11,10 +11,8 @@
         %p 最大１０枚までアップロードできます
         .item__sell-dropbox
           .item__sell-dropbox-item
-
-            = f.fields_for :images do |image|
-              = f.label :image do
-                = image.file_field :image,class:"sell-upload-drop-file", type: 'file', name: "item[images_attributes][][image]", value:"", id:"img-file"
+            = f.label :image do
+              = f.file_field :image,class:"sell-upload-drop-file"
 
           
       .item__sell-content
@@ -40,7 +38,7 @@
             .item__sell-select-wrap 
               %i.fas.fa-chevron-down
                 .item__sell-select-default            
-                  = f.select :category,[["選択してください"],["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自動車・オートバイ"],["その他"]]
+                  = f.select :category_id,[["選択してください"],["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自動車・オートバイ"],["その他"]]
               
 
           .item__sell-form-box__group2

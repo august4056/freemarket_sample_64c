@@ -14,9 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    
     @item=Item.new
-    @images = @item.images.build
     render :layout  => "application"
   end
 
@@ -27,20 +25,10 @@ class ItemsController < ApplicationController
     end 
   end
 
-  def credit
-  end
-  
-  def create
-  end
 
   def mypage
 
   end
-
-private
-def item_params
-  params.require(:item).permit(:name, :detail, :category, :state, :delivery_fee, :delivery_area, :delivery_date, :price, :fee, :gross_profit, images_attributes:[:image,:item_id])
-end
 
 
   def edit
