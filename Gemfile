@@ -99,3 +99,5 @@ gem "gretel"
 
 gem "payjp"
 
+gem "omniauth-facebook"
+
