@@ -21,7 +21,7 @@
             %span.required 必須
           .row
             %select#exp_year.security-field{:placeholder => "年", :type => "text"}
-              %option{value: ""} --
+              %option{value: "--"} --
               %option{value: "01"} 01
               %option{value: "02"} 02
               %option{value: "03"} 03
@@ -38,7 +38,7 @@
             %p 月
           .row
             %select#exp_month.security-field{:placeholder => "月", :type => "text"}
-              %option{value: ""} --
+              %option{value: "--"} --
               %option{value: "2019"} 19
               %option{value: "2020"} 20
               %option{value: "2021"} 21
@@ -52,7 +52,7 @@
           %label{for: "inputCVV"}
             CVV/セキュリティコード
             %span.required 必須
-          = form.text_field "cvc", id: "cvv", class: "security-field--cvv", placeholder: "CVV(カード背面4桁もしくは3桁の番号)", type: "text"
+          = form.text_field "cvc", id: "cvv", class: "security-field--cvv", placeholder: "CVV（カード背面4桁もしくは3桁の番号）", type: "text"
           = link_to "" do
             カード背面の番号とは
         .user-form-group#card_token

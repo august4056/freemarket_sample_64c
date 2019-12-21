@@ -260,6 +260,7 @@
   padding: 10px 16px 8px;
   display: block;
   margin: 5px 0;
+  
 }
 .security-field--cvv {
   width: 100%;
@@ -289,6 +290,7 @@
   display: flex;
   position: relative;
   margin: 5px 0;
+  line-height: 40px;
   & p{
     margin-left: 20px;
   }
@@ -297,14 +299,14 @@
 .fa-chevron-down.select_arrow{
   &__month{
   position: absolute;
-  top:6px;
-  left:70px;
+  top:13px;
+  left:75px;
   background: $White;
 }
 &__year{
   position: absolute;
-  top:6px;
-  left:70px;
+  top:13px;
+  left:75px;
   background: $White;
   
   }
