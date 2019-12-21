@@ -1,5 +1,6 @@
 class SignupController < ApplicationController
   require 'payjp'
+  layout 'users'
   
   before_action :set_card
   before_action :set_item
