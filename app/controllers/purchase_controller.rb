@@ -4,9 +4,6 @@ class PurchaseController < ApplicationController
   before_action :set_card
   before_action :set_item
 
-  before_action :set_card
-  before_action :set_item
-
   def item_confirm
 
   end
@@ -19,4 +16,6 @@ private
   
   def set_item
     @item = Item.find(params[:id])
+  end
+
 end
