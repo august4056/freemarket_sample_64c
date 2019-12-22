@@ -13,7 +13,8 @@ private
   def set_card
     @card = Card.where(user_id: current_user).first
   end
+  
   def set_item
-    @item = Item.find(params[:item_id])
+    # @item = Item.find(params[:id])
   end
 end
