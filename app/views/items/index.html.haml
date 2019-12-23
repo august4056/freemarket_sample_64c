@@ -4,9 +4,9 @@
     %p.category_title 人気のカテゴリー
     .category_items
       %p
-        =link_to "レディース", { anchor: "" }, class: "items_content"
+        =link_to "レディース", user_google_oauth2_omniauth_authorize_path, class: "items_content"
       %p
-        =link_to "メンズ", { anchor: "" }, class: "items_content"
+        =link_to "メンズ",user_facebook_omniauth_authorize_path, class: "items_content"
       %p
         =link_to "家電・スマホ・カメラ", { anchor: "" }, class: "items_content"
       %p
@@ -15,7 +15,7 @@
   .mainpage__items
     .mainpage__title
       %p.mainpage__title__name レディース新着アイテム
-      =link_to "もっと見る＞", user_google_oauth2_omniauth_authorize_path,class: "mainpage__title__look"
+      =link_to "もっと見る＞", { anchor: "" }, class: "mainpage__title__look"
     
     %li.ladies__box__photo
       - @items.each do |item|
