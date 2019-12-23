@@ -7,10 +7,10 @@
       .item_confirm__content__buy-item__inner
         .item_confirm__content__buy-item__inner__box
           .item_confirm__content__buy-item__inner__box__img
-            = image_tag "ko-ti.png",class:"item-image"
+            = image_tag "#{@item.image}",class:"item-image"
           .item_confirm__content__buy-item__inner__box__detail
             %p.item_confirm__content__buy-item__inner__box__detail__name
-              バック
+              = image_tag "#{@item.category}"
             %p.item_confirm__content__buy-item__inner__box__detail__price
               %span ¥10000
               %span.item-confiem__fee （税込）送料込み
