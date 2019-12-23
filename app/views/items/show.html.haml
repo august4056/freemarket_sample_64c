@@ -89,6 +89,8 @@
     .item-detail-caution
       -# - if @item.user_id == current_user.id
       .item-detail-delete
+        = link_to "出品者として商品を編集する", edit_item_path(@item.id), class: "item-detail-delete__link"
+      .item-detail-delete
         = link_to "出品者として商品を削除する", item_path(@item.id), method: :delete, class: "item-detail-delete__link"
       -# - else
       .item-detail-caution
