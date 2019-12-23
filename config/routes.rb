@@ -23,9 +23,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :edit, :create, :show]
   
   get 'logout', to: 'users#logout'
-  get 'item_confirm', to: 'users#item_confirm'
   get 'item_edit_delete', to: 'items#item_edit_delete'
-  get 'item_confirm', to: 'purchase#item_confirm'
+  get 'item_confirm/:id', to: 'purchase#item_confirm'
 
   resources :signup, except:[:index,:show] do
     collection do

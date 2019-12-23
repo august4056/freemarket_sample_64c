@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.all
-    @images = @item.images.all
+    @images = @item.image
   end
   
   def new
@@ -64,7 +64,8 @@ class ItemsController < ApplicationController
       flash[:danger] = '商品情報の削除に失敗しました'
     end
   end
-  
+
+
   private
   
   def item_params

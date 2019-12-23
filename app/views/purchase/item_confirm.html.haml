@@ -10,9 +10,11 @@
             = image_tag "#{@item.image}",class:"item-image"
           .item_confirm__content__buy-item__inner__box__detail
             %p.item_confirm__content__buy-item__inner__box__detail__name
-              = image_tag "#{@item.category}"
+              =@item.name
             %p.item_confirm__content__buy-item__inner__box__detail__price
-              %span ¥10000
+              %span 
+                ¥ 
+                =@item.price
               %span.item-confiem__fee （税込）送料込み
     .item_confirm__content__buy-container
       .item_confirm__content__buy-container-inner
@@ -21,7 +23,8 @@
             %li.item__price
               支払い金額
             %li.inner__price
-              ¥100
+              ¥
+              =@item.price
           .item-confirm__points
             %input.inner-box{type: "checkbox"}
             %p.inner-point ポイントを使用
