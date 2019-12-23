@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   get 'item_confirm', to: 'users#item_confirm'
   get 'item_edit_delete', to: 'items#item_edit_delete'
 
+
 end
+

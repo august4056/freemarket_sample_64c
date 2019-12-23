@@ -26,3 +26,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/secrets.yml
+public/uploads/item/image/1/angler.png
+public/uploads/tmp/1576813631-950433693613773-0001-5458/angler.png
+public/uploads/tmp/1576813715-710485714653995-0002-5024/angler.png

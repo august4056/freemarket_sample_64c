@@ -1,90 +1,131 @@
-.slick
-  .slick__img
-    スマホでかんたんフリマアプリ
 
 .item__area
   .category_title_area
     %p.category_title 人気のカテゴリー
     .category_items
       %p
-        %a.items_content{:href => ".ladies_items"} レディース
+        =link_to "レディース", { anchor: "" }, class: "items_content"
       %p
-        %a.items_content{:href => "#"} メンズ
+        =link_to "メンズ", { anchor: "" }, class: "items_content"
       %p
-        %a.items_content{:href => "#"} 家電・スマホ・カメラ
+        =link_to "家電・スマホ・カメラ", { anchor: "" }, class: "items_content"
       %p
-        %a.items_content{:href => "#"} おもちゃ・ホビー・グッズ
+        =link_to "おもちゃ・ホビー・グッズ", { anchor: "" }, class: "items_content"
 
   .mainpage__items
     .mainpage__title
       %p.mainpage__title__name レディース新着アイテム
-      %a.mainpage__title__look{:href => "#"} もっと見る＞
+      =link_to "もっと見る＞", { anchor: "" },class: "mainpage__title__look"
+    
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
-        
-    %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
+    
+    %li.ladies__box__photo
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
+    
+    %li.ladies__box__photo
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
 
     %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+      - @items.each do |item|
+        = image_tag "#{item.image}", class: "ladies-photo"
+        .ladies__comment-box
+          .ladies__comment-box__text
+            = simple_format(item.name)
+        .ladies__price-box
+          .ladies__price-box__price
+            ¥
+            = item.price
+      
 
-    %li.ladies__box__photo
-      = image_tag "ladies_coat.jpg", class: "ladies-photo"
-      .ladies__comment-box
-        .ladies__comment-box__text ページボーイ BIGチェックステンカラーコート
-      .ladies__price-box
-        .ladies__price-box__price ¥9,000
+    
