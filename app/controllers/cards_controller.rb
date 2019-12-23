@@ -1,16 +1,16 @@
-class SignupController < ApplicationController
+class CardsController < ApplicationController
   require "payjp"
   before_action :set_card
 
-  def payment # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    # card = Card.where(user_id: current_user.id).first
-    # redirect_to action: "index" if card.present?
+  def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
+    card = Card.where(user_id: current_user.id).first
+    redirect_to action: "index" if card.present?
   end
 
  # indexアクションはここでは省略
 
   def create #PayjpとCardのデータベースを作成
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = '秘密鍵'
 
     if params['payjp-token'].blank?
       redirect_to action: "new"

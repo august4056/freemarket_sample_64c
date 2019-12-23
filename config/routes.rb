@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
-  get 'credit', to: 'items#credit'
-
+  get 'credit', to: 'cards#credit'
   
   get 'registration', to: 'users#registration'
   get 'login', to: 'users#login'
