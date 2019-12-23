@@ -2,7 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+          :recoverable, :rememberable, :validatable
+          :omniauthable, omniauth_providers: %i[facebook]
 
       validates :nickname, presence: { message: "入力してください" }, length: { maximum: 12, message: "ニックネームが長すぎます" }, uniqueness: { message: "既に存在するニックネームです" }
       validates :email, presence: true
@@ -15,5 +16,6 @@ class User < ApplicationRecord
       validates :day, presence: true   
 
   has_many :items, dependent: :destroy
+            :sns_credentials, dependent: :destroy
   
 end
