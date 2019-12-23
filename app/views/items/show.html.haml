@@ -14,7 +14,8 @@
             %th
               出品者
             %td
-              = @item.user.name
+              こじこじ
+              -# = @item.user.name
               .item-user
                 .item-user__laugh
                   %i.fas.fa-laugh
@@ -33,12 +34,12 @@
             %th
               カテゴリー
             %td
-              =@item.category.name
+              =@item.category_id
           %tr
             %th
               ブランド
             %td
-              =@item.category.name
+              =@item.category_id
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr
@@ -149,7 +150,8 @@
   .item-detail-user
     .item-detail-other
       .item-detail-other__header
-        =@item.user.name
+        -# =@item.user.name
+        こじこじ
         さんのその他の出品
         -# ここから下をrenderで繰り返し
       .item-detail-other__product  
