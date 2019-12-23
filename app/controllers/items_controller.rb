@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy if @item.user_id == current_user.id
+    @item.destroy  # if @item.user_id == current_user.id（ログイン機能実装待ち）
     redirect_to root_path
   end
 
