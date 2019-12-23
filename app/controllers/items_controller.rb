@@ -14,17 +14,22 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @item=Item.new
     render :layout  => "application"
+    
   end
 
-  def credit
-  end
-  
   def create
+    @item=Item.new(item_params)
+    if @item.save
+        redirect_to root_path
+    end 
   end
+
 
   def mypage
   end
+
 
   def edit
     render :layout  => "application"
@@ -47,12 +52,13 @@ class ItemsController < ApplicationController
   private
   
   def item_params
-    params.require(:item).permit(:name, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit, :user_id, :size)
+    params.require(:item).permit(:name, :detail, :category_id, :state, :delivery_fee, :prefecture_id, :delivery_date, :price, :fee, :gross_profit, :user_id, :size, :image)
   end
   
   def set_item
     @item = Item.find(params[:id]) 
   end
+
 
 
 end
