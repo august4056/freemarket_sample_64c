@@ -45,13 +45,22 @@
             = image_tag "visa.gif",class:"item_confirm__credit-card"
         .item_confirm__content__buy-container-inner__address
           %ul.item_confirm__content__buy-container-inner__address__info
-            %li.address-info 配送先
+            %li.address-info 
+              配送先
+              %br/
+              〒000-0001
+              %br/
+              北海道 夕張市
+              〇〇町0-0-3
+              %br/
+              kojikoji
+              -# = @item.user.name
             %li.section-info 変更する
         .item_confirm__content__buy-container-inner__form
           %p.item_confirm__content__buy-container-inner__form__content
             この商品は、ゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
-          = form_with url: "purchase_item_path"
-          %button.item_confirm__content__buy-container-inner__form__btn
+          = form_tag(action: :pay, method: :post) do
+            %button.btn{type:"submit",class:"item_confirm__content__buy-container-inner__form__btn"}
             購入する
           %p.item_confirm__content__buy-container-inner__form__app
             アプリをお持ち出ない方は以下よりインストールしてご利用いただけます。
