@@ -8,17 +8,21 @@ Rails.application.routes.draw do
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
   get 'credit', to: 'items#credit'
-  
-  get 'registration', to: 'users#registration'
-  get 'login', to: 'users#login'
-  get 'info', to: 'users#info'
-  get 'complete', to: 'users#complete'
-  get 'confirm', to: 'users#confirm'
-  get 'address', to: 'users#address'
-  get 'payment', to: 'users#payment'
-  get 'logout', to: 'users#logout'
-  
-resources :items, only: [:index, :show ,:new]
-resources :users, only: [:new, :edit, :create, :show]
 
+  resources :items, only: [:index, :show ,:new]
+  resources :users, only: [:new, :edit, :create, :show]
+
+  resources :signup, except:[:index,:show] do
+    collection do
+      get 'step1'
+      get 'save_step1'
+      get 'step2'
+      get 'save_step2'
+      get 'step3'
+      get 'save_step3'
+      # get 'payment'
+      # post 'session_payment'
+      get 'complete' # 登録完了後のページ
+    end
+  end
 end

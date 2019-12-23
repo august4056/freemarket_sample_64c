@@ -1,13 +1,13 @@
 .user-main
   .user-member-info
     %h2.user-member-info__title 会員情報入力
-    = form_with model: @user do |form|
+    = form_for @user ,method: :post do |form|
       .user-single-content
         .user-form-group-top
           %p.nick-name
             ニックネーム
             %span.required 必須
-          = form.text_field :text, class:"nick-name-field"
+          = form.text_field :nickname, class:"nick-name-field"
         .user-form-group
           %p.mail-name
             メールアドレス
@@ -17,12 +17,12 @@
           %label{:for => "password"}
             パスワード
             %span.required 必須
-            = form.password_field :text, placeholder:"7文字以上の半角英数字" ,class:"password-field"
+            = form.password_field :password, placeholder:"7文字以上の半角英数字" ,class:"password-field"
             %p.info-text
               ※　英字と数字の両方を含めて設定して下さい
-            .display-password
-              = form.check_box :check_box, id:"reveal_password"
-              %label{for: "reveal_password"} パスワードを表示する
+            -# .display-password
+            -#   = form.check_box :check_box, id:"reveal_password"
+            -#   %label{for: "reveal_password"} パスワードを表示する
         .user-form-group
           %h2.identification-title 本人確認
           %p.identification-text
@@ -35,19 +35,19 @@
           %p
             お名前（全角）
             %span.required 必須
-          = form.text_field :text, placeholder:"例）山田" ,class:"family-name-kanji"
-          = form.text_field :text, placeholder:"例）彩" ,class:"first-name-kanji"
+          = form.text_field :family_name_kanji, placeholder:"例）山田" ,class:"family-name-kanji"
+          = form.text_field :first_name_kanji, placeholder:"例）彩" ,class:"first-name-kanji"
         .user-form-group
           %p
             お名前カナ（全角）
             %span.required 必須
-          = form.text_field :text, placeholder:"例）ヤマダ" ,class:"family-name-kana"
-          = form.text_field :text, placeholder:"例）アヤ" ,class:"first-name-kana"
+          = form.text_field :family_name_kana, placeholder:"例）ヤマダ" ,class:"family-name-kana"
+          = form.text_field :first_name_kana, placeholder:"例）アヤ" ,class:"first-name-kana"
         .user-form-group
           %p
             生年月日
             %span.required 必須
-          = form.date_select :birthday, start_year: 1900, end_year:Time.current.year,use_month_numbers: true, class:"birthday-field"
+          -# = form.date_select :birthday, start_year: 1900, end_year:Time.current.year,use_month_numbers: true, class:"birthday-field"
         .user-caution
           %p ※ 本人情報は正しく入力してください。会員登録後
           %p 修正するにはお時間を頂く場合があります。
@@ -57,12 +57,12 @@
             = link_to "" do
               利用規約に
           %p 同意したものとみなします
-        .user-robot-field
-          = form.check_box :check_box, id:"check_robot"
-          %label{for: "check_robot"}
-            私はロボットではあり
-            %br>/
-            ません
+        -# .user-robot-field
+        -#   -# = form.check_box :check_box, id:"check_robot"
+        -#   %label{for: "check_robot"}
+        -#     私はロボットではあり
+        -#     %br>/
+        -#     ません
         .user-form-group
           = form.submit "次へ進む", class:"submit-btn"
         = link_to "" do
