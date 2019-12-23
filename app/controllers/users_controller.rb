@@ -27,4 +27,8 @@ class UsersController < ApplicationController
   def complete
   end  
 
+  def item_confirm
+    render :layout  => "application"
+  end
+
 end
