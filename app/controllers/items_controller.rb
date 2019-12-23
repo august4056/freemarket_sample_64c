@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   layout "items"
 
-  before_action :set_item, only: [:show, :edit]
+  before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
     @items = Item.all
@@ -28,7 +28,6 @@ class ItemsController < ApplicationController
 
 
   def mypage
-
   end
 
 
@@ -45,6 +44,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    if @item.destroy # @item.user_id == current_user.id
+      redirect_to root_path
+      flash[:success] = '商品情報を削除しました'
+    else
+      redirect_to item_path(item.id)
+      flash[:danger] = '商品情報の削除に失敗しました'
+    end
+  end
+  
   private
   
   def item_params
@@ -54,7 +63,5 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id]) 
   end
-
-
 
 end

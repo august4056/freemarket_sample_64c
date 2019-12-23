@@ -1,4 +1,6 @@
-
+.notifications
+  - flash.each do |key, value|
+    = content_tag(:div, value, class: key)
 .item__area
   .category_title_area
     %p.category_title 人気のカテゴリー
