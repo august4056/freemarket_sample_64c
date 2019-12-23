@@ -1,3 +1,6 @@
+.notifications
+  - flash.each do |key, value|
+    = content_tag(:div, value, class: key)
 .item-detail-cotainer
   .item-detail-contents
     .item-detail-name
@@ -30,12 +33,12 @@
             %th
               カテゴリー
             %td
-              =@item.category_id
+              =@item.category.name
           %tr
             %th
               ブランド
             %td
-              =@item.category_id
+              =@item.category.name
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr
@@ -85,8 +88,13 @@
         購入画面に進む
 
     .item-detail-caution
-      -# もしこれがスマホからしか買い物できなかったらここを表示
-      この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+      -# - if @item.user_id == current_user.id
+      .item-detail-delete
+        = link_to "出品者として商品を削除する", item_path(@item.id), method: :delete, class: "item-detail-delete__link"
+      -# - else
+      .item-detail-caution
+        この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+
     .item-detail-description
       .item-detail-description__text
         = simple_format @item.detail

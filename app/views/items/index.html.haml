@@ -1,3 +1,7 @@
+.notifications
+  - flash.each do |key, value|
+    = content_tag(:div, value, class: key)
+
 .slick
   = image_tag src="morningcoffee150528-w1280.jpg"
   = image_tag src="nww-coffetop-thumb-720xauto-160871.jpg"
