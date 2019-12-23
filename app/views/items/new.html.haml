@@ -11,10 +11,12 @@
         %p 最大１０枚までアップロードできます
         .item__sell-dropbox
           .item__sell-dropbox-item
+          %label{class:"image-upload-box"}
+            %p ドラッグアンドドロップ
+            %p またはクリックしてファイルをアップロード
             = f.label :image do
               = f.file_field :image,class:"sell-upload-drop-file"
-
-          
+    
       .item__sell-content
         %label
           商品名
@@ -35,20 +37,19 @@
             %label
               カテゴリー
             %span.item__sell--uploadbox__form-require 必須
-            .item__sell-select-wrap 
+            .item__sell-select
               %i.fas.fa-chevron-down
-                .item__sell-select-default            
-                  = f.select :category_id,[["選択してください"],["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自動車・オートバイ"],["その他"]]
-              
+              .item__sell-select__default            
+                = f.select :category_id,[["---"],["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自動車・オートバイ"],["その他"]]
 
           .item__sell-form-box__group2
-            %label
+            %label 
               商品の状態
             %span.item__sell--uploadbox__form-require 必須
-            .item__sell-select-wrap 
-              %i.fas.fa-chevron-down
-                .item__sell-select-default
-                  = f.select :state,[["選択してください"],["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]]
+            .item__sell-select
+              %i.fas.fa-chevron-down 
+              .item__sell-select__default
+                = f.select :state,[["---"],["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]]
               
 
       .item__sell-content-sub2
@@ -59,31 +60,31 @@
             %label
               配送料の負担
             %span.item__sell--uploadbox__form-require 必須
-          .item__sell-select-wrap
-            %i.fas.fa-chevron-down
-              .item__sell-select-default
-                = f.select :delivery_fee,[["選択してください"],["送料込み(出品者負担)"],["着払い(購入者負担)"]]
+            .item__sell-select
+              %i.fas.fa-chevron-down
+              .item__sell-select__default
+                = f.select :delivery_fee,[["---"],["送料込み(出品者負担)"],["着払い(購入者負担)"]]
                 
           .item__sell-content-sub2__form-group4
             %label
               発送元の地域
             %span.item__sell--uploadbox__form-require 必須
-            .item__sell-select-wrap
+            .item__sell-select
               %i.fas.fa-chevron-down
-                = f.collection_select :prefecture_id, Prefecture.all, :id, :name , {}, {class: "item__sell-select-default"}
+              .item__sell-select__default
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name , {}
 
-                
-                  
           .item__sell-content-sub2__form-group5
-            %label.label 発送までの日数
+            %label
+              発送までの日数
             %span.item__sell--uploadbox__form-require 必須
-            .item__sell-select-wrap
+            .item__sell-select
               %i.fas.fa-chevron-down
-              .item__sell-select-default
-                = f.select :delivery_date,[["選択してください"],["1~2日で発送"],["2~3日で発送"],["4~7日で発送"]]
-                
-      .item__sell-content-low
-        %p.item__sell-sub-head2 販売価格(300~9,999,999)
+              .item__sell-select__default
+                = f.select :delivery_date,[["---"],["1~2日で発送"],["2~3日で発送"],["4~7日で発送"]]
+           
+      .item__sell-content-low        
+        %p.item__sell-sub-head2 販売価格(300~9,999,999)    
         %a.item__sell-content-low__form-question2{href: "", target: "_blank"} ?
         .item__sell-content-low__form-box3
           %ul.item__sell-price
@@ -93,7 +94,7 @@
                 %span.item__sell--uploadbox__form-require 必須
               .item__sell-right-group
                 %p.en ￥   
-              = f.text_field :price,placeholder:"例）300"
+                = f.text_field :price,placeholder:"例）300"
             %li.item__sell-form-group7
               %p.l-left 販売手数料(10%)
               .item__right-group
