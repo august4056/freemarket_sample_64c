@@ -80,9 +80,9 @@
         送料込み
 
     %label.item-detail-buy
-      %button
-      購入画面に進む
-      -# = link_to ('name', {})
+      %button 
+      = link_to 'item_confirm' do
+        購入画面に進む
 
     .item-detail-caution
       -# もしこれがスマホからしか買い物できなかったらここを表示
