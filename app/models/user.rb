@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,:recoverable, :rememberable, :validatable
 
+
       # validates :nickname, presence: { message: "入力してください" }, length: { maximum: 12, message: "ニックネームが長すぎます" }, uniqueness: { message: "既に存在するニックネームです" }
       # validates :email, presence: true
       # validate :family_name_kanji
@@ -18,4 +19,5 @@ class User < ApplicationRecord
       # validates :address_family_name_kana, null: false
       # validates :address_first_name_kana, null: false
       # validates :address_number, null: false
+
 end

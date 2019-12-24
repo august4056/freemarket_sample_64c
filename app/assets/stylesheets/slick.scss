@@ -14,6 +14,13 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
+
+.slick img{
+    height: 390px;
+    width: 100%;
+    margin: 20px auto;
+}
+
 .slick-list {
     position: relative;
     overflow: hidden;

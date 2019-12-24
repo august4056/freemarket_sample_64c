@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   get 'edit_profile', to: 'items#edit_profile'
   get 'credit', to: 'items#credit'
 
-  resources :items, only: [:index, :show ,:new]
+  resources :items
+  resources :users, only: [:new, :edit, :create, :show]
+  
+  get 'logout', to: 'users#logout'
+  get 'item_confirm', to: 'users#item_confirm'
+  get 'item_edit_delete', to: 'items#item_edit_delete'
+
   resources :users, only: [:new, :edit, :create, :show]
 
 
@@ -28,3 +34,4 @@ Rails.application.routes.draw do
     end
   end
 end
+

@@ -105,8 +105,27 @@
       cursor: pointer;
       & button{
         display: none;
+      } 
+      & a{
+        color: #fff;
       }
     }
+
+    .item-detail-delete{
+      line-height: 60px;
+      background-color: $header-icon-top;
+      display: block;
+      margin-top: 16px;
+      text-align: center;
+      cursor: pointer;
+      &__link{
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+
     .item-detail-caution{
       margin-top: 16px;
       color: $Red;

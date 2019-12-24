@@ -1,0 +1,113 @@
+.body4
+  .user-single-header
+    %h1
+      = image_tag 'fmarket_logo_red.svg',class:"logo"
+  .containar
+    .item__sell-main-content
+      %h2{class:"item__sell-single-head"}商品の情報を入力
+      = form_for @item do |f|
+        %h3.sell__upload--head
+          出品画像
+          %span.item__sell--uploadbox__form-require 必須
+          %p 最大１０枚までアップロードできます
+          .item__sell-dropbox
+            .item__sell-dropbox-item
+            %label{class:"image-upload-box"}
+              %p ドラッグアンドドロップ
+              %p またはクリックしてファイルをアップロード
+              = f.label :image do
+                = f.file_field :image,class:"sell-upload-drop-file"
+            .item__sell-content
+              %label
+                商品名
+              %span.item__sell--uploadbox__form-require 必須
+              = f.text_field :name, placeholder: "商品名（必須 40文字まで)", class: "item__sell-content__input-default"
+              .item__sell-content__form-group
+                %label
+                商品の説明        
+                %span.item__sell--uploadbox__form-require 必須
+                = f.text_area :detail, rows: "5", placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "item__sell--textarea-default"
+              .item__sell-content__style_counter  0/1000
+            .item__sell-contentsub
+              .item__sell-contentsub__sub-head 商品の詳細
+              .item__sell-form-box
+                .item__sell-form-box__group2
+                  %label
+                    カテゴリー
+                  %span.item__sell--uploadbox__form-require 必須
+                .item__sell-select-wrap
+                  %i.fas.fa-chevron-down 
+                  .item__sell-fontawsome
+                    = f.select :category_id, [["選択してください", 0],[ "レディース", 1],["メンズ", 196],["ベビー・キッズ", 341],["インテリア・住まい・小物", 477],["本・音楽・ゲーム", 618],["おもちゃ・ホビー・グッズ", 677],["コスメ・香水・美容", 790],["家電・スマホ・カメラ", 890],["スポーツ・レジャー", 975],["ハンドメイド", 1083],["チケット", 1134],["自動車・オートバイ", 1193],["その他", 1255],], {}, {class: "item__sell-select-default"}
+                      
+                .item__sell-form-box__group2
+                  %label
+                    商品の状態
+                  %span.item__sell--uploadbox__form-require 必須
+                .item__sell-select-wrap
+                  %i.fas.fa-chevron-down
+                  .item__sell-fontawsome
+                    = f.select :state, [["選択してください","選択してください"],["新品、未使用","新品、未使用"],["未使用に近い","未使用に近い"],["目立った傷や汚れなし","目立った傷や汚れなし"],["やや傷や汚れあり","やや傷や汚れあり"],["傷や汚れあり","傷や汚れあり"],["全体的に状態が悪い","全体的に状態が悪い"]], {}, {class: "item__sell-select-default"}         
+            .item__sell-content-sub2
+              %p.item__sell-content-sub2__sub-head2 配送について
+              %a.item__sell-content-sub2__form-question{href: "", target: "_blank"} ?
+              .item__sell-form-box2
+                .item__sell-content-sub2__form-group3
+                  %label
+                    配送料の負担
+                  %span.item__sell--uploadbox__form-require 必須
+                .item__sell-select-wrap
+                  %i.fas.fa-chevron-down
+                  .item__sell-fontawsome
+                    = f.select :delivery_fee, [["選択してください", 0],["送料込み(出品者負担)", 1],["着払い(購入者負担)", 2]], {}, {class: "item__sell-select-default"}
+
+                .item__sell-content-sub2__form-group4
+                  %label
+                    発送元の地域
+                  %span.item__sell--uploadbox__form-require 必須
+                  .item__sell-select-wrap
+                    %i.fas.fa-chevron-down
+                    .item__sell-fontawsome
+                      = f.collection_select :prefecture_id, Prefecture.all, :id, :name , {}, {class: "item__sell-select-default"}
+                .item__sell-content-sub2__form-group5
+                  %label.label 発送までの日数
+                  %span.item__sell--uploadbox__form-require 必須
+                  .item__sell-select-wrap
+                    %i.fas.fa-chevron-down
+                    = f.select :delivery_date, [["選択してください", 0],["1~2日で発送", 1],["2~3日で発送", 2],["4~7日で発送", 3]], {}, {class: "item__sell-select-default"}
+            .item__sell-content-low
+              %p.item__sell-sub-head2 販売価格(300~9,999,999)
+              %a.item__sell-content-low__form-question2{href: "", target: "_blank"} ?
+              .item__sell-content-low__form-box3
+                %ul.item__sell-price
+                  %li.item__sell-price__form-group6
+                    %label.l-left
+                      価格
+                      %span.item__sell--uploadbox__form-require 必須
+                    .item__sell-right-group
+                      %p.en ￥  
+                      = f.text_field :price, placeholder: "例)300", class: "l-right-input"
+                  %li.item__sell-form-group7
+                    %p.l-left 販売手数料(10%)
+                    .item__right-group
+                      %p.l-right
+                  %li.item__sell-form-group7
+                    %p.l-left2 販売利益
+                    .item__right-group
+                      %p.l-right2
+            .item__sell-content-btn-box
+              .item__sell-content-btn-box__message
+              %button.item__sell-content-btn-box__button{type: "submit" }
+                変更する
+              = link_to 'キャンセル', '#', class: "item__sell-btn-gray"
+
+              .item__sell-overlay
+    .login-footer
+      .footer__nav
+        %ul.footer__nav__messages
+          %li.message プライバシーポリシー
+          %li.message メルカリ利用規約
+          %li.message 特定商取引に関する表記
+      .footer__logo
+        = image_tag 'logo_gray.svg',class:"flogo"
+      %p.copy ©Mercari,Inc.                      

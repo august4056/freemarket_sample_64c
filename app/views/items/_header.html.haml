@@ -2,7 +2,7 @@
   .header0
     .header0__body
       .heder-up
-        = link_to "https://www.mercari.com/jp/", class: 'header__logo' do
+        = link_to "/", class: 'header__logo' do
           = image_tag "fmarket_logo_red.svg", class: 'header__logo__image'
         %form_with.header-form{action: '#'}
           %input.header-form__input{mane: "keyword", placeholder: "   何かお探しですか？", type: "search", value: ""}/
@@ -376,6 +376,7 @@
                       = icon('far', 'clock', class: 'information__time__icon')
                       1時間46分前
 
+
             #ex_out4
               %i.fas.fa-check
               = link_to 'やることリスト', '#', class: "todo-list"
@@ -418,3 +419,4 @@
             = link_to new_user_session_path do
               .mypage-login-buttons__login
                 ログイン
+        
