@@ -15,7 +15,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  protected
+  
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :family_name_kanji,:first_name_kanji, :family_name_kana, :first_name_kana, :address_family_name_kanji,:address_first_name_kanji,:address_family_name_kana,:address_first_name_kana, :address_number, :address_prefecture, :address_city, :address_block, :address_phone_number, :address_building ])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:address_phone_numbe,:phone_number,:nickname,:email, :family_name_kanji,:first_name_kanji, :family_name_kana, :first_name_kana, :address_family_name_kanji,:address_first_name_kanji,:address_family_name_kana,:address_first_name_kana, :address_number, :address_prefecture, :address_city, :address_block, :address_phone_number, :address_building ])
   end
 end

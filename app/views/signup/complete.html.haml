@@ -7,7 +7,8 @@
           %p ありがとうございます
           %p 会員登録が完了しました
       .user-form-group
-        %p.submit-btn "メルカリをはじめる"
+        =link_to root_path do
+          %p.submit-btn メルカリをはじめる
     .smph__area
       = image_tag 'room_image.jpg', class:'smph__img'
       %p.smph__text1 スマホでかんたんフリマアプリ

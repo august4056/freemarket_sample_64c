@@ -387,6 +387,7 @@
             #mypage22
               %i.far.fa-user-circle
               = link_to 'マイページ', '#', class:"mypage"
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
               #mypage__down
                 .mypage22-icon
                   じこしょーかい

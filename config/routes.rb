@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations'
+  }
 
   root "items#index"
 
@@ -12,16 +14,16 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show ,:new]
   resources :users, only: [:new, :edit, :create, :show]
 
+
+
   resources :signup, except:[:index,:show] do
     collection do
       get 'step1'
-      get 'save_step1'
+      post 'save_step1'
       get 'step2'
-      get 'save_step2'
+      post 'save_step2'
       get 'step3'
-      get 'save_step3'
-      # get 'payment'
-      # post 'session_payment'
+      post 'save_step3'
       get 'complete' # 登録完了後のページ
     end
   end
