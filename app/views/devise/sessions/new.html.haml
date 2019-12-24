@@ -6,8 +6,9 @@
     .user-single-login-panel
       .user-single-login-panel__no-account
         %p.user-single-login-panel__no-account__account-message アカウントをお持ちでない方はこちら
-        %button.user-single-login-panel__no-account__create-account
-          新規会員登録
+        = link_to new_user_registration_path do
+          %button.user-single-login-panel__no-account__create-account
+            新規会員登録
       .user-single-login-panel__buttons
         .user-single-btn
           %button.btn.facebook

@@ -9,15 +9,18 @@
       .user-single-form-content
         .user-single-forms
           .user-form-group
-            %button.btn.mail
-              %i.far.fa-envelope
-              メールアドレスで登録する
-            %button.btn.facebook
-              %i.fab.fa-facebook-square
-              Facebookで登録する
-            %button.btn.google
-              %i.fab.fa-google
-              Googleで登録する
+            = link_to step1_signup_index_path do
+              %button.btn.mail
+                %i.far.fa-envelope
+                メールアドレスで登録する
+            = link_to "" do
+              %button.btn.facebook
+                %i.fab.fa-facebook-square
+                Facebookで登録する
+            = link_to "" do
+              %button.btn.google
+                %i.fab.fa-google
+                Googleで登録する
   .login-footer
     .footer__nav
       %ul.footer__nav__messages
