@@ -389,7 +389,11 @@
             = link_to 'マイページ', "mypage" , class:"mypage"
             #mypage__down
               .mypage22-icon
-                じこしょーかい
+                .header23
+                  .header23__login
+                    = link_to 'ログイン', './users/sign_in', class:"header23__login__color"
+                  .header23__new
+                    = link_to '新規登録', './users/sign_up', class:"header23__new__color"
               %ul#mypage22__menu
                 %li.mypage22__menu__list
                   = link_to 'いいね！一覧', '#', class: "mypage22__menu__list__link"
