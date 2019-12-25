@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 
   def login
   end
-
   def confirm
   end
 
