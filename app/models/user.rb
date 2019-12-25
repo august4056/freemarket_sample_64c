@@ -5,21 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable,omniauth_providers: [:facebook, :google_oauth2]
 
-      validates :nickname, presence: { message: "入力してください" }, length: { maximum: 12, message: "ニックネームが長すぎます" }, uniqueness: { message: "既に存在するニックネームです" }
-      validates :email, presence: true
-      validate :fa_name_kanji
-      validate :fa_name_kana
-      validate :fi_name_kanji
-      validate :fi_name_kana
-      validates :year, presence: true
-      validates :month, presence: true
-      validates :day, presence: true   
-
   has_many :items, dependent: :destroy
   has_many :users
   
-
-
   def self.find_oauth(auth)
     uid = auth.uid
     provider = auth.provider
@@ -39,7 +27,6 @@ class User < ApplicationRecord
           name: auth.info.name,
           email:    auth.info.email,
           password: Devise.friendly_token[0, 20],
-          # telephone: "08000000000"
           )
         SnsCredential.create(
           uid: uid,
