@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
+  get 'mypage/:id/credit', to: 'cards#credit'
   get 'credit', to: 'cards#credit'
+  get 'registration', to: 'cards#registration'
   
   get 'registration', to: 'users#registration'
   get 'login', to: 'users#login'
@@ -18,6 +20,9 @@ Rails.application.routes.draw do
   get 'confirm', to: 'users#confirm'
   get 'address', to: 'users#address'
   get 'payment', to: 'signup#payment'
+
+
+  post 'pay', to: 'cards#pay'  
   
   resources :items
   resources :users, only: [:new, :edit, :create, :show]

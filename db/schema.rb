@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(version: 2019_12_19_121744) do
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
-  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "customer_id", null: false
-    t.string "card_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_cards_on_user_id"
-  end
-
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "ancestry"
@@ -98,7 +89,7 @@ ActiveRecord::Schema.define(version: 2019_12_19_121744) do
     t.string "address_block", null: false
     t.string "address_building"
     t.integer "address_phone_number"
-    t.string "reset_password_token", default: ""
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false

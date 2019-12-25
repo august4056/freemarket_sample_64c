@@ -1,4 +1,3 @@
-<script type="text/javascript">
 (function() {
   var form = $("#charge-form"),
       number = form.find('input[name="number"]'),
@@ -34,4 +33,3 @@
     });
   });
 })();
-</script>
