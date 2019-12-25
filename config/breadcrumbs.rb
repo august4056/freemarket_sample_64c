@@ -1,11 +1,11 @@
 # ルート
 crumb :root do
-  link "メルカリ", root_path
+  link "メルカリ", "root_path"
 end
 
 # マイページ
 crumb :mypage do
-  link "マイページ", mypage_path
+  link "マイページ", "mypage_path"
   parent :root
 end
 
