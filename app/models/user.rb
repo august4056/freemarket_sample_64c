@@ -20,5 +20,5 @@ class User < ApplicationRecord
       # validates :address_first_name_kana, null: false
       # validates :address_number, null: false
 
-      has_many :items
+      # has_many :items
 end

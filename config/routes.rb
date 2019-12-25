@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :signup, except:[:index,:show] do
+  resources :signup do
     collection do
       get 'step1'
       post 'save_step1'
