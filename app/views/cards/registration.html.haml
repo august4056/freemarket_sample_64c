@@ -1,7 +1,7 @@
 .user-main
   .user-member-info
     %h2.user-member-info__title 支払い方法
-    -# = form_for @user, url: complete_signup_index_path, method: :post do |form|
+    = form_for @user, url: complete_signup_index_path, method: :post do |form|
       .user-single-content
         .user-form-group
           %p

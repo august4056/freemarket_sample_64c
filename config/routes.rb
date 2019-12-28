@@ -9,15 +9,16 @@ Rails.application.routes.draw do
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
-  get 'credit', to: 'items#credit'
-
+  
   resources :items
   resources :users, only: [:new, :edit, :create, :show]
   
   get 'logout', to: 'users#logout'
   get 'item_confirm', to: 'users#item_confirm'
   get 'item_edit_delete', to: 'items#item_edit_delete'
-
+  
+  get 'credit', to: 'cards#credit'
+  get 'registration', to: 'cards#registration'
 
 
   resources :signup do
