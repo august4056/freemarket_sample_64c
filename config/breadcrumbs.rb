@@ -9,6 +9,13 @@ crumb :mypage do
   parent :root
 end
 
+crumb :logout do
+  link "ログアウト", logout_path
+  parent :mypage
+end
+
+
+
 
 
 
