@@ -1,39 +1,109 @@
 class SignupController < ApplicationController
-  require "payjp"
-  before_action :set_card
+  before_action :save_step1, only: :step2
+  before_action :save_step2, only: :step3
+  before_action :save_step3, only: :create
 
-  def payment # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    # card = Card.where(user_id: current_user.id).first
-    # redirect_to action: "index" if card.present?
+  
+  def step1
+    @user = User.new
   end
 
- # indexアクションはここでは省略
+  def save_step1
+    session[:nickname] = user_params[:nickname]
+    session[:email] = user_params[:email]
+    session[:encrypted_password] = user_params[:encrypted_password]
+    session[:password] = user_params[:password]
+    session[:password] = user_params[:password]
+    session[:family_name_kanji] = user_params[:family_name_kanji]
+    session[:first_name_kanji] = user_params[:first_name_kanji]
+    session[:family_name_kana] = user_params[:family_name_kana]
+    session[:first_name_kana] = user_params[:first_name_kana]
+  end
 
-  def create #PayjpとCardのデータベースを作成
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+  def step2
+    @user = User.new
+  end
 
-    if params['payjp-token'].blank?
-      redirect_to action: "new"
+  def save_step2
+    session[:phone_number] = user_params[:phone_number]
+  end
+
+  def step3
+    @user = User.new
+  end
+
+  def save_step3
+    session[:address_family_name_kanji] = user_params[:address_family_name_kanji]
+    session[:address_first_name_kanji] = user_params[:address_first_name_kanji]
+    session[:address_family_name_kana] = user_params[:address_family_name_kana]
+    session[:address_first_name_kana] = user_params[:address_first_name_kana]
+    session[:address_number] = user_params[:address_number]
+    session[:address_prefecture] = user_params[:address_prefecture]
+    session[:address_city] = user_params[:address_city]
+    session[:address_block] = user_params[:address_block]
+    session[:address_building] = user_params[:address_building]
+    session[:address_phone_number] = user_params[:address_phone_number]
+  end
+    
+  def create
+    @user = User.new(
+      nickname: session[:nickname],
+      email: session[:email],
+      encrypted_password: session[:encrypted_password],
+      password: session[:password],
+      family_name_kanji: session[:family_name_kanji],
+      first_name_kanji: session[:first_name_kanji],
+      family_name_kana: session[:family_name_kana],
+      first_name_kana: session[:first_name_kana],
+      phone_number: session[:phone_number],
+      address_family_name_kanji: session[:address_family_name_kanji],
+      address_first_name_kanji: session[:address_first_name_kanji],
+      address_family_name_kana: session[:address_family_name_kana],
+      address_first_name_kana: session[:address_first_name_kana],
+      address_number: session[:address_number],
+      address_prefecture: session[:address_prefecture],
+      address_city: session[:address_city],
+      address_block: session[:address_block],
+      address_building: session[:address_building],
+      address_phone_number: session[:address_phone_number]
+    )
+    if @user.save!
+      session[:id] = @user.id
+      redirect_to complete_signup_index_path
     else
-      # トークンが正常に発行されていたら、顧客情報をPAY.JPに登録します。
-      customer = Payjp::Customer.create(
-        description: 'test', # 無くてもOK。PAY.JPの顧客情報に表示する概要です。
-        email: current_user.email,
-        card: params['payjp-token'], # 直前のnewアクションで発行され、送られてくるトークンをここで顧客に紐付けて永久保存します。
-        metadata: {user_id: current_user.id} # 無くてもOK。
-      )
-      # @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
-      if @card.save
-        redirect_to action: "index"
-      else
-        redirect_to action: "create"
-      end
+      render 'signup/step1'
     end
   end
 
-  private
+  def complete 
+    sign_in User.find(session[:id]) unless user_signed_in?
+  end
 
-  def set_card
-    # @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+
+  private 
+
+  def user_params
+    params.require(:user).permit(
+      :nickname,
+      :email,
+      :encrypted_password,
+      :password,
+      :family_name_kanji,
+      :first_name_kanji,
+      :family_name_kana,
+      :first_name_kana,
+      :phone_number,
+      :address_family_name_kanji,
+      :address_first_name_kanji,
+      :address_family_name_kana,
+      :address_first_name_kana,
+      :address_number,
+      :address_prefecture,
+      :address_city,
+      :address_block,
+      :address_building,
+      :address_phone_number
+  )
   end
 end
+
