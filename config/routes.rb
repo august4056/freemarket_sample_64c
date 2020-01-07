@@ -9,18 +9,29 @@ Rails.application.routes.draw do
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
-  get 'credit', to: 'items#credit'
+  get 'mypage/:id/credit', to: 'cards#credit'
+  get 'credit/:id', to: 'cards#credit'
+  get 'registration', to: 'cards#registration'
+  
+  get 'registration', to: 'users#registration'
+  get 'login', to: 'users#login'
+  get 'info', to: 'users#info'
+  get 'complete', to: 'users#complete'
+  get 'confirm', to: 'users#confirm'
+  get 'address', to: 'users#address'
+  get 'payment', to: 'signup#payment'
 
+
+  post 'pay', to: 'cards#pay'  
+  
   resources :items
   resources :users, only: [:new, :edit, :create, :show]
   
   get 'logout', to: 'users#logout'
-  get 'item_confirm', to: 'users#item_confirm'
   get 'item_edit_delete', to: 'items#item_edit_delete'
+  get 'item_confirm/:id', to: 'purchase#item_confirm'
 
-
-
-  resources :signup do
+  resources :signup, except:[:index,:show] do
     collection do
       get 'step1'
       post 'save_step1'

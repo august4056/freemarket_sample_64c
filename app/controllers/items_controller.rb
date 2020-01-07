@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+  require 'payjp'
   layout "items"
 
   before_action :set_item, only: [:show, :edit, :destroy]
@@ -10,19 +10,32 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.all
-    # @images = @item.images.all
+    @images = @item.image
   end
-
+  
   def new
     @item=Item.new
     render :layout  => "application"
     
   end
 
+
+  def credit
+    # @item = Item.find(params[:id])
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp::Charge.create(
+      amount: @item.price
+      # card: params['payjp-token']
+      # currency: 'jpy'
+    )
+  end
+  
   def create
     @item=Item.new(item_params)
     if @item.save
         redirect_to root_path
+    else
+      render "items/new"
     end 
   end
 
@@ -53,7 +66,8 @@ class ItemsController < ApplicationController
       flash[:danger] = '商品情報の削除に失敗しました'
     end
   end
-  
+
+
   private
   
   def item_params
@@ -61,7 +75,7 @@ class ItemsController < ApplicationController
   end
   
   def set_item
-    @item = Item.find(params[:id]) 
+    @item = Item.find(params[:id])
   end
 
 end

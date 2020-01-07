@@ -7,13 +7,15 @@
       .item_confirm__content__buy-item__inner
         .item_confirm__content__buy-item__inner__box
           .item_confirm__content__buy-item__inner__box__img
-            = image_tag "ko-ti.png",class:"item-image"
+            = image_tag "#{@item.image}",class:"item-image"
           .item_confirm__content__buy-item__inner__box__detail
             %p.item_confirm__content__buy-item__inner__box__detail__name
-              バック
+              =@item.name
             %p.item_confirm__content__buy-item__inner__box__detail__price
-              %span ¥10000
-              %span.item-confiem__fee （税込込み）送料込み
+              %span 
+                ¥ 
+                =@item.price
+              %span.item-confiem__fee （税込）送料込み
     .item_confirm__content__buy-container
       .item_confirm__content__buy-container-inner
         .item_confirm__content__buy-container-inner__price
@@ -21,7 +23,8 @@
             %li.item__price
               支払い金額
             %li.inner__price
-              ¥100
+              ¥
+              =@item.price
           .item-confirm__points
             %input.inner-box{type: "checkbox"}
             %p.inner-point ポイントを使用
@@ -31,6 +34,7 @@
               支払い方法
             %li.inner__option
               変更する
+
           .item_confirm__content__buy-container-inner__credit__cards
             %p.tem_confirm__content__buy-container-inner__credit__cards__info
               クレジットカード
@@ -41,12 +45,22 @@
             = image_tag "visa.gif",class:"item_confirm__credit-card"
         .item_confirm__content__buy-container-inner__address
           %ul.item_confirm__content__buy-container-inner__address__info
-            %li.address-info 配送先
+            %li.address-info 
+              配送先
+              %br/
+              〒000-0001
+              %br/
+              北海道 夕張市
+              〇〇町0-0-3
+              %br/
+              kojikoji
+              -# = @item.user.name
             %li.section-info 変更する
         .item_confirm__content__buy-container-inner__form
           %p.item_confirm__content__buy-container-inner__form__content
             この商品は、ゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
-          %button.item_confirm__content__buy-container-inner__form__btn
+          = form_tag(action: :pay, method: :post) do
+            %button.btn{type:"submit",class:"item_confirm__content__buy-container-inner__form__btn"}
             購入する
           %p.item_confirm__content__buy-container-inner__form__app
             アプリをお持ち出ない方は以下よりインストールしてご利用いただけます。
