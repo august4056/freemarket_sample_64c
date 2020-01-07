@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eeeeee;
+  background-color: $Background;
   margin-top: -20px;
   &__left {
     .logo {
@@ -68,7 +68,7 @@
       padding: 32px;
       font-size: 22px;
       font-weight: bold;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid $Background;
     }
   }
 }
@@ -271,7 +271,7 @@
   margin-top: 24px;
 }
 
-//赤字　必須
+//赤字 必須
 .required {
   font-size: 12px;
   color: #fff;
@@ -296,8 +296,11 @@
 .submit-btn {
   width: 341px;
   height: 48px;
+  line-height: 48px;
   background-color: #e62017;
   color: #fff;
+  text-align: center;
+
 }
 
 .sms-text {

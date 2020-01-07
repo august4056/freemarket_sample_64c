@@ -1,6 +1,6 @@
 //ページ全体を含む
 .user-single-container{
-  background-color: #EEEEEE;
+  background-color: $Background;
 }
 
 //共通ヘッダー
@@ -27,7 +27,7 @@
       width: 456px;
       height: 144px;
       text-align: center;
-      border-bottom: 1px solid #EEEEEE;
+      border-bottom: 1px solid $Background;
       &__account-message {
         font-size: 14px;
         padding-top: 40px;
