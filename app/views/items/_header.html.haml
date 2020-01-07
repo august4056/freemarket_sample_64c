@@ -355,61 +355,68 @@
                   
               %li.menu2_list
                 = link_to 'ブランド一覧', '#', class:"menu2_link" 
-                  
-        .header-under-right
-          %i.far.fa-heart{class:'heart__icon1'}
-          = link_to 'いいね！一覧', '#', class: "like-list" 
-            
-          #ex_out3
-            %i.far.fa-bell
-            = link_to 'お知らせ', '#', class: "information" 
+        - if user_signed_in?             
+          .header-under-right
+            %i.far.fa-heart{class:'heart__icon1'}
+            = link_to 'いいね！一覧', '#', class: "like-list" 
               
-            %ul#ex_menu3
-              = link_to '#', class: "information__list" do
-                %li.information__link
-                  = image_tag "logo_red.svg", class: 'information__logo__image'
-                  .get__message
-                    .get__message__text
-                      『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
-                  = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
-                  .information__time
-                    = icon('far', 'clock', class: 'information__time__icon')
-                    1時間46分前
-
-          #ex_out4
-            %i.fas.fa-check
-            = link_to 'やることリスト', '#', class: "todo-list"
-            %ul#ex_menu4
-              = image_tag "logo_gray.svg", class: 'todo__logo-image'
-              .todo__menu 
-                明日からやるよ、やる。
-            
-          #mypage22
-            %i.far.fa-user-circle
-            = link_to 'マイページ', "mypage" , class:"mypage"
-            #mypage__down
-              .mypage22-icon
-                .header23
-                  .header23__login
-                    = link_to 'ログイン', "./users/sign_in", class:"header23__login__color"
-                  .header23__new
-                    = link_to '新規登録', "./users/sign_up", class:"header23__new__color"
-              %ul#mypage22__menu
-                %li.mypage22__menu__list
-                  = link_to 'いいね！一覧', '#', class: "mypage22__menu__list__link"
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
-                %li.mypage22__menu__list
-                  = link_to '出品した商品 - 出品中', '#', class: "mypage22__menu__list__link" 
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
-                %li.mypage22__menu__list{class:'chevron-right-icon'}
-                  = link_to '出品した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
-                %li.mypage22__menu__list
-                  = link_to '出品した商品 - 売却済み', '#', class: "mypage22__menu__list__link" 
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
-                %li.mypage22__menu__list
-                  = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
-                %li.mypage22__menu__list
-                  = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link"
-                  %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+            #ex_out3
+              %i.far.fa-bell
+              = link_to 'お知らせ', '#', class: "information" 
+                
+              %ul#ex_menu3
+                = link_to '#', class: "information__list" do
+                  %li.information__link
+                    = image_tag "logo_red.svg", class: 'information__logo__image'
+                    .get__message
+                      .get__message__text
+                        『これであなたも億万長者!!』 100万円振り込むだけ!!ホントホントあっという間に億万長者！信じれば救われる詳しくはここをクリック！！
+                    = icon('fas', 'chevron-right', class: 'chevron-right__icon1')
+                    .information__time
+                      = icon('far', 'clock', class: 'information__time__icon')
+                      1時間46分前
+            #ex_out4
+              %i.fas.fa-check
+              = link_to 'やることリスト', '#', class: "todo-list"
+              %ul#ex_menu4
+                = image_tag "logo_gray.svg", class: 'todo__logo-image'
+                .todo__menu 
+                  明日からやるよ、やる。
+            #mypage22
+              %i.far.fa-user-circle
+              = link_to 'マイページ', "/mypage/#{current_user.id}", class:"mypage"
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+              #mypage__down
+                .mypage22-icon
+                  .header23
+                    .header23__login
+                      = link_to 'ログイン', "./users/sign_in", class:"header23__login__color"
+                    .header23__new
+                      = link_to '新規登録', "./users/sign_up", class:"header23__new__color"
+                %ul#mypage22__menu
+                  %li.mypage22__menu__list
+                    = link_to 'いいね！一覧', '#', class: "mypage22__menu__list__link"
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                  %li.mypage22__menu__list
+                    = link_to '出品した商品 - 出品中', '#', class: "mypage22__menu__list__link" 
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                  %li.mypage22__menu__list{class:'chevron-right-icon'}
+                    = link_to '出品した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                  %li.mypage22__menu__list
+                    = link_to '出品した商品 - 売却済み', '#', class: "mypage22__menu__list__link" 
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                  %li.mypage22__menu__list
+                    = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link" 
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+                  %li.mypage22__menu__list
+                    = link_to '購入した商品 - 取引中', '#', class: "mypage22__menu__list__link"
+                    %i.fas.fa-chevron-right{class:'chevron-right-icon'}
+        - else
+          .mypage-login-buttons
+            = link_to new_user_registration_path do
+              .mypage-login-buttons__registration
+                新規会員登録
+            = link_to new_user_session_path do
+              .mypage-login-buttons__login
+                ログイン
