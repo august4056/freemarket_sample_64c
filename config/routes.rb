@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
   get 'mypage/:id/credit', to: 'cards#credit'
-  get 'credit', to: 'cards#credit'
+  get 'credit/:id', to: 'cards#credit'
   get 'registration', to: 'cards#registration'
   
   get 'registration', to: 'users#registration'
