@@ -23,7 +23,7 @@ class CardsController < ApplicationController
     # else
       customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
         description: 'test~~~~',                    # なくてもいいです
-        # email: current_user.email,              # なくてもいいです
+        email: current_user.email,              # なくてもいいです
         card: params[:payjp_token],            # 必須です
         metadata: {user_id: current_user.id}    # なくてもいいです
       )

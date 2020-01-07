@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   root "items#index"
 
-  get 'mypage', to: 'items#mypage'
+  get 'mypage/:id', to: 'items#mypage'
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
