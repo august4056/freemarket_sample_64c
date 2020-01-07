@@ -13,29 +13,28 @@
         .user-single-btn
           %button.btn.facebook
             %i.fab.fa-facebook-square
-            Facebookでログイン
+            = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post
         .user-single-btn
           %button.btn.google
             %i.fab.fa-google
-            Googleでログイン
-      
-
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |form|
-        = render "devise/shared/error_messages", resource: resource
-        .user-login-form
-          .user-form-group
-            = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
-          .user-form-group
-            = form.password_field :password, class:"password-field", placeholder:"" 
-          .user-form-group
-            .robot
-              %button.robot-button
-                %input.check{type: "checkbox"}/
-                私はロボットではありません
-          .login-btn
-            = form.submit "ログイン",class:"login-submit"
-          = link_to "" do
-            パスワードをお忘れの方
+            = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
+  .login-footer
+    = form_with model: @user do |form|
+      .user-login-form
+        .user-form-group
+          = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
+        .user-form-group
+          = form.password_field :text, class:"password-field", placeholder:"" 
+        .user-form-group
+          .robot
+            %button.robot-button
+              %input.check{type: "checkbox"}/
+              私はロボットではありません
+        .login-btn
+          %button.login-submit{type: "submit"}
+            ログイン
+        = link_to "#" do
+          パスワードをお忘れの方
   .footer
     .footer__nav
       %ul.footer__nav__messages

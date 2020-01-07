@@ -375,8 +375,6 @@
                     .information__time
                       = icon('far', 'clock', class: 'information__time__icon')
                       1時間46分前
-
-
             #ex_out4
               %i.fas.fa-check
               = link_to 'やることリスト', '#', class: "todo-list"
@@ -384,14 +382,17 @@
                 = image_tag "logo_gray.svg", class: 'todo__logo-image'
                 .todo__menu 
                   明日からやるよ、やる。
-              
             #mypage22
               %i.far.fa-user-circle
               = link_to 'マイページ', "/mypage/#{current_user.id}", class:"mypage"
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
               #mypage__down
                 .mypage22-icon
-                  じこしょーかい
+                  .header23
+                    .header23__login
+                      = link_to 'ログイン', "./users/sign_in", class:"header23__login__color"
+                    .header23__new
+                      = link_to '新規登録', "./users/sign_up", class:"header23__new__color"
                 %ul#mypage22__menu
                   %li.mypage22__menu__list
                     = link_to 'いいね！一覧', '#', class: "mypage22__menu__list__link"
@@ -419,4 +420,3 @@
             = link_to new_user_session_path do
               .mypage-login-buttons__login
                 ログイン
-        

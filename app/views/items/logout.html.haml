@@ -3,8 +3,9 @@
 .top-logout__page
   = render 'items/side-ber'
   .logout__page
-    %form_with.logout__page__form{action: "#"}
-      %button.logout__page__form__btn-red{type: "submit"}ログアウト
+    .logout__page__form
+      %button.logout__page__form__btn-red
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
 
   .exhibit
     %form_with.exhibit__form{action: "#"}
