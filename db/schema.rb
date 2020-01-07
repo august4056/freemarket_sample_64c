@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_113022) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname", null: false
+    t.string "nickname"
     t.string "email", null: false
     t.string "password", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(version: 2019_12_24_113022) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "telephone"
-    t.string "nickname"
     t.string "uid"
     t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
