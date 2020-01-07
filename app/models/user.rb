@@ -48,6 +48,6 @@ class User < ApplicationRecord
 
   has_many :items, dependent: :destroy
   has_many :users
-
   has_many :sns_credentials
+
 end
