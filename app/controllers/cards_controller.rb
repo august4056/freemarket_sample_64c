@@ -2,25 +2,12 @@ class CardsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   require "payjp"
-
+  before_action :set_card
+  
   def pay
-    # Payjp.api_key = 'sk_test_464a839cdfdcdb8b0ad6a778'   #秘密鍵なので定義した環境変数を入れています。
-    # customer = Payjp::Customer.create(description: 'test', card: params[:payjp_token])   #まずは顧客を作成します。 descriptionは無くても顧客は作成出来ます。カードの作成です
-    
-    # card = Card.create
-    
-    # (
-    #   # pay_id: params[:pay_id],
-    #   # customer_id: customer.id,
-    #   # user_id: current_user.id
-    # )
-    # card.save
-    # redirect_to credit_path
     sign_in User.find(params[:id]) unless user_signed_in?
     Payjp.api_key = 'sk_test_464a839cdfdcdb8b0ad6a778' # APIキーの呼び出し
-    # if params['payjp_token'].blank? # ここはJavaScriptの.append()内のname属性です
-    #   render '/signup/step4'
-    # else
+
       customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
         description: 'test~~~~',                    # なくてもいいです
         # email: current_user.email,              # なくてもいいです
@@ -48,6 +35,11 @@ class CardsController < ApplicationController
   def registration
 
   end
-  
+
+  private
+
+  def set_card
+    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+  end
 
   end
