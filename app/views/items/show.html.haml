@@ -28,17 +28,17 @@
                   %i.fas.fa-frown
                 .item-user__rating
                   12
-          %tr
-            -# カテゴリーGEM:アンセストリーが実装できたらblandともに実装、今は仮置き
-            %th
-              カテゴリー
-            %td
-              =@item.category_id
-          %tr
-            %th
-              ブランド
-            %td
-              =@item.category_id
+          -if @item.category_id.present?
+            %tr
+              %th
+                カテゴリー
+              %td
+                =@item.category_id
+            %tr
+              %th
+                ブランド
+              %td
+                =@item.category_id
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr

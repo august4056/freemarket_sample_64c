@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   
   def pay
     sign_in User.find(params[:id]) unless user_signed_in?
-    Payjp.api_key = 'sk_test_464a839cdfdcdb8b0ad6a778' # APIキーの呼び出し
+    Payjp.api_key = 'pk_test_e62349859c2f9a2db51bfa9c' # APIキーの呼び出し
 
       customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
         description: 'test~~~~',                    # なくてもいいです
