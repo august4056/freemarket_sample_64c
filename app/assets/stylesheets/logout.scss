@@ -5,19 +5,22 @@
 }
 
 .logout__page{
+  margin-top: 35px;
   background-color: $White;
+  text-align:center;
   height: 180px;
   width: 700px;
-  text-align:center;
   &__form{
+    margin: 50px 0 0 180px;
+    height: 80px;
+    width: 320px;
+    background-color: $Red;
     &__btn-red{
+      display: block;
+      line-height: 80px;
       outline:0;
-      margin-top: 65px;
-      height: 50px;
-      width: 320px;
-      background-color: $Red;
       color: $Lightgray;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }
