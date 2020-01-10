@@ -14,10 +14,10 @@
               メールアドレスで登録する
             %button.btn.facebook
               %i.fab.fa-facebook-square
-              = link_to 'Facebookで登録する', user_facebook_omniauth_authorize_path, method: :post
+              = link_to 'Facebookで登録する', user_facebook_omniauth_authorize_path, method: :post, class:"facebook-signin"
             %button.btn.google
               %i.fab.fa-google
-              = link_to 'Googleで登録する', user_google_oauth2_omniauth_authorize_path, method: :post
+              = link_to 'Googleで登録する', user_google_oauth2_omniauth_authorize_path, method: :post, class:"google-signin"
   .login-footer
     .footer__nav
       %ul.footer__nav__messages
