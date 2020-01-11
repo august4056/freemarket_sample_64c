@@ -23,8 +23,10 @@ Rails.application.routes.draw do
   get 'registration', to: 'cards#registration'
 
   get 'item_confirm/:id', to: 'purchase#item_confirm'
+  post 'item_confirm/:id', to: 'purchase#item_confirm'
   post 'pay', to: 'purchase#pay'
   get 'done/:id', to: 'purchase#done'
+  post 'done/:id', to: 'purchase#done'
   
   resources :items
   resources :users, only: [:new, :edit, :create, :show]

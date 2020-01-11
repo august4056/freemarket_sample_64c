@@ -2,7 +2,7 @@ class PurchaseController < ApplicationController
   require 'payjp'
   
   before_action :set_card
-  before_action :set_item
+  before_action :set_item, except: :done
 
   def item_confirm
 
