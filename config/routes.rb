@@ -5,22 +5,14 @@ Rails.application.routes.draw do
   
   root "items#index"
 
-  get 'mypage/:id', to: 'items#mypage'
+  resources :items
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
+  get 'item_edit_delete', to: 'items#item_edit_delete'
+
+  # get 'mypage/:id', to: 'items#mypage'
   
-  get 'registration', to: 'users#registration'
-  get 'login', to: 'users#login'
-  get 'info', to: 'users#info'
-  get 'complete', to: 'users#complete'
-  get 'confirm', to: 'users#confirm'
-  get 'address', to: 'users#address'
-  get 'logout', to: 'users#logout'
-  
-  get 'mypage/:id/credit', to: 'cards#credit'
-  get 'credit/:id', to: 'cards#credit'
-  get 'registration', to: 'cards#registration'
 
   get 'item_confirm/:id', to: 'purchase#item_confirm'
   post 'item_confirm/:id', to: 'purchase#item_confirm'
@@ -28,10 +20,13 @@ Rails.application.routes.draw do
   get 'done/:id', to: 'purchase#done'
   post 'done/:id', to: 'purchase#done'
   
-  resources :items
-  resources :users, only: [:new, :edit, :create, :show]
   
-  get 'item_edit_delete', to: 'items#item_edit_delete'
+  resources :users, only: [:new, :edit, :create, :show] do
+    collection do
+      get 'mypage' 
+    end
+  end  
+  
 
   resources :signup, except:[:index,:show] do
     collection do
@@ -42,6 +37,18 @@ Rails.application.routes.draw do
       get 'step3'
       post 'save_step3'
       get 'complete' # 登録完了後のページ
+    end
+  end
+
+
+  get 'mypage/credit/:id', to: 'cards#credit'
+  get 'registration', to: 'cards#registration'
+
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
     end
   end
 end
