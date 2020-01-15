@@ -384,7 +384,7 @@
                   明日からやるよ、やる。
             #mypage22
               %i.far.fa-user-circle
-              = link_to 'マイページ', "/mypage/#{current_user.id}", class:"mypage"
+              = link_to 'マイページ', mypage_path, class:"mypage"
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
               #mypage__down
                 .mypage22-icon

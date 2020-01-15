@@ -1,22 +1,24 @@
 $(document).on('turbolinks:load', function() {
+  console.log(1)
   var form = $("#charge-form");
-  Payjp.setPublicKey("pk_test_e62349859c2f9a2db51bfa9c"); //(自身の公開鍵)
+  Payjp.setPublicKey("pk_test_be40fbe98c439737c85c3f9f"); //(自身の公開鍵)
 
-  $("#charge-form").on("click", "#submit-button", function(e) {
+  $("#charge-form").on("click", "#token_submit", function(e) {
     e.preventDefault();
     form.find("input[type=submit]").prop("disabled", true);
     var card = {
-        number: parseInt($("#payment_card_no").val()),
-        cvc: parseInt($("#cvc_code").val()),
-        exp_month: parseInt($("#card_expire_mm").val()),
-        exp_year: parseInt($("#card_expire_yy").val())
+        number: parseInt($("#card_number").val()),
+        cvc: parseInt($("#cvc").val()),
+        exp_month: parseInt($("#card_exp_month").val()),
+        exp_year: parseInt($("#card_exp_year").val())
     };
     Payjp.createToken(card, function(status, response) {
-      if (stauts == 200) {
-        $(".number").removeAttr("name");
-        $(".cvc").removeAttr("name");
-        $(".exp_month").removeAttr("name");
-        $(".exp_year").removeAttr("name");
+      console.log(response)
+      if (status == 200) {
+        $("#card_number").removeAttr("name");
+        $("#cvc").removeAttr("name");
+        $("#card_exp_month").removeAttr("name");
+        $("#card_exp_year").removeAttr("name");
 
         var token = response.id;
         $("#charge-form").append($('<input type="hidden" name="payjp_token" class="payjp-token" />').val(token));

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get 'edit_profile', to: 'items#edit_profile'
   get 'item_edit_delete', to: 'items#item_edit_delete'
 
-  # get 'mypage/:id', to: 'items#mypage'
+  get 'identification', to: 'items#identification'
+  get 'identification', to: 'items#identification'
+  get 'mypage', to: 'items#mypage'
   
 
   get 'item_confirm/:id', to: 'purchase#item_confirm'
@@ -21,11 +23,7 @@ Rails.application.routes.draw do
   post 'done/:id', to: 'purchase#done'
   
   
-  resources :users, only: [:new, :edit, :create, :show] do
-    collection do
-      get 'mypage' 
-    end
-  end  
+  resources :users, only: [:new, :edit, :create, :show]
   
 
   resources :signup, except:[:index,:show] do
@@ -44,12 +42,6 @@ Rails.application.routes.draw do
   get 'mypage/credit/:id', to: 'cards#credit'
   get 'registration', to: 'cards#registration'
 
-  resources :card, only: [:new, :show] do
-    collection do
-      post 'show', to: 'card#show'
-      post 'pay', to: 'card#pay'
-      post 'delete', to: 'card#delete'
-    end
-  end
+  resources :cards, only: [:new, :create, :show, :destroy]
 end
 

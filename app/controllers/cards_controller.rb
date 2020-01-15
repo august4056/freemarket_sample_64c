@@ -1,10 +1,21 @@
-class CardController < ApplicationController
+class CardsController < ApplicationController
 
   require "payjp"
 
-  def credit
-    card = Card.where(user_id: current_user.id)
-    redirect_to action: "show" if card.exists?
+  def new
+    @card = Card.new
+  end
+
+  def create
+    Payjp.api_key = 'sk_test_608b28bb0addb6bcaa776aa4'
+    customer = Payjp::Customer.create(
+      description: 'test',
+      card: params["payjp_token"]
+    )
+    binding.pry
+    card = Card.new(user_id:current_user.id,customer_id:customer.id,card_id:customer.cards.data[0].id)
+    card.save
+    
   end
 
   def pay #payjpとCardのデータベース作成を実施します。
