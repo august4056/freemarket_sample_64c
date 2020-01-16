@@ -43,5 +43,6 @@ Rails.application.routes.draw do
   get 'registration', to: 'cards#registration'
 
   resources :cards, only: [:new, :create, :show, :destroy]
+
 end
 

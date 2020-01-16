@@ -1,3 +1,15 @@
-// Place all the styles related to the cards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.card-box {
+  display: flex;
+  justify-content: space-around;
+  &__right {
+    display: flex;
+    align-items: center;
+    
+  }
+}
+
+.card-btn {
+  color: #ea352d;
+  border: 1px #ea352d solid;
+  border-radius: 3px;
+  }
