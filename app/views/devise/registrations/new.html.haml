@@ -19,12 +19,12 @@
               %i.fab.fa-google
               = link_to 'Googleで登録する', user_google_oauth2_omniauth_authorize_path, method: :post
   .login-footer
-    .footer__nav
-      %ul.footer__nav__messages
-        %li.message プライバシーポリシー
-        %li.message メルカリ利用規約
-        %li.message 特定商取引に関する表記
-    .footer__logo
+    .login-footer__nav
+      %ul.login-footer__nav__messages
+        %li.login-footer__nav__messages__m プライバシーポリシー
+        %li.login-footer__nav__messages__m メルカリ利用規約
+        %li.login-footer__nav__messages__m 特定商取引に関する表記
+    .login-footer__logo
       = image_tag 'logo_gray.svg',class:"flogo"
-    %p.copy ©Mercari,Inc.
+    %p.login-footer__copy ©Mercari,Inc.
 

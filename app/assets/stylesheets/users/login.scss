@@ -20,8 +20,7 @@
 .user-single-main{
   .user-single-login-panel{
     width: 456px;
-    height: 731px;
-    background-color: $Background;
+    background-color: $White;
     margin: 0 auto;
     &__no-account{
       width: 456px;
@@ -161,7 +160,7 @@
 .user-single-main{
   &__content{
     width: 700px;
-    height: 350px;
+    height: 385px;
     margin: 0 auto;
     background-color: #fff;
     &__section{
@@ -175,7 +174,7 @@
     .user-single-form-content{
       height: 200px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
+      padding: 40px 16px 40px;
       .user-single-forms{
         width: 343px;
         margin: 0 auto;
