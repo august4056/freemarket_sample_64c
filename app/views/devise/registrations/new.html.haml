@@ -11,7 +11,7 @@
           .user-form-group
             %button.btn.mail
               %i.far.fa-envelope
-              メールアドレスで登録する
+              = link_to 'メールアドレスで登録する', step1_signup_index_path
             %button.btn.facebook
               %i.fab.fa-facebook-square
               = link_to 'Facebookで登録する', user_facebook_omniauth_authorize_path, method: :post, class:"facebook-signin"

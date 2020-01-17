@@ -5,7 +5,8 @@
   .user-single-main
     .user-single-login-panel
       .user-single-login-panel__no-account
-        %p.user-single-login-panel__no-account__account-message アカウントをお持ちでない方はこちら
+        %p.user-single-login-panel__no-account__account-message 
+          アカウントをお持ちでない方はこちら
         = link_to new_user_registration_path do
           %button.user-single-login-panel__no-account__create-account
             新規会員登録
@@ -43,5 +44,6 @@
         %li.message 特定商取引に関する表記
     .footer__logo
       = image_tag 'logo_gray.svg',class:"flogo"
+      
     %p.copy ©Mercari,Inc.
 

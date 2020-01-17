@@ -1,0 +1,61 @@
+= render 'users/header'
+.user-main
+  .user-member-info
+    %h2.user-member-info__title 支払い方法
+    = form_with model: @user, name: "charge-form", id: 'charge-form', method: :post do |form|
+      .user-single-content
+        %form.user-form-group
+          %label{for: "inputCardNumber"}
+            カード番号
+            %span.required 必須
+          = form.text_field "number", id: "card_number", class: "card-num-field", placeholder: "カード番号", type: "text", maxlength: "16"
+          %ul.user-cards
+            %li.user-cards__card= image_tag 'visa.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'mastercard.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'saison.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'amex.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'diners.gif',class:"card-logo"
+            %li.user-cards__card= image_tag 'discover.gif',class:"card-logo"
+        .user-form-group
+          %label{for: "inputExp"}
+            有効期限
+            %span.required 必須
+          .row
+            %select#exp_year.security-field{:placeholder => "年", :type => "text"}
+              %option{value: "--"} --
+              %option{value: "01"} 01
+              %option{value: "02"} 02
+              %option{value: "03"} 03
+              %option{value: "04"} 04
+              %option{value: "05"} 05
+              %option{value: "06"} 06
+              %option{value: "07"} 07
+              %option{value: "08"} 08
+              %option{value: "09"} 09
+              %option{value: "10"} 10
+              %option{value: "11"} 11
+              %option{value: "12"} 12
+            %i.fas.fa-chevron-down.select_arrow__month
+            %p 月
+          .row
+            %select#exp_month.security-field{:placeholder => "月", :type => "text"}
+              %option{value: "--"} --
+              %option{value: "2019"} 19
+              %option{value: "2020"} 20
+              %option{value: "2021"} 21
+              %option{value: "2022"} 22
+              %option{value: "2023"} 23
+              %option{value: "2024"} 24
+              %option{value: "2025"} 25
+            %i.fas.fa-chevron-down.select_arrow__year
+            %p 年
+        .user-form-group
+          %label{for: "inputCVV"}
+            CVV/セキュリティコード
+            %span.required 必須
+          = form.text_field "cvc", id: "cvv", class: "security-field--cvv", placeholder: "CVV（カード背面4桁もしくは3桁の番号）", type: "text"
+          = link_to "" do
+            カード背面の番号とは
+        .user-form-group#card_token
+          =form.submit "次へ進む",id: "token_submit", class:"submit-btn"
+= render 'users/footer'
