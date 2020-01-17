@@ -16,12 +16,14 @@ Rails.application.routes.draw do
   get 'mypage', to: 'items#mypage'
   
 
-  get 'item_confirm/:id', to: 'purchase#item_confirm'
-  post 'item_confirm/:id', to: 'purchase#item_confirm'
-  post 'pay', to: 'purchase#pay'
-  get 'done/:id', to: 'purchase#done'
-  post 'done/:id', to: 'purchase#done'
-  
+  get 'purchase/:id', to: 'purchase#index'
+
+  resources :purchase, only: [:index] do
+    member do
+      post 'pay'
+      get 'done'
+    end
+  end
   
   resources :users, only: [:new, :edit, :create, :show]
   

@@ -1,30 +1,29 @@
 class PurchaseController < ApplicationController
   require 'payjp'
   
-  before_action :set_card
-  before_action :set_item, except: :done
-
-  def item_confirm
-
+  before_action :set_card, :set_item
+        
+  def index
+    if @card.blank?
+      #登録された情報がない場合にカード登録画面に移動
+      redirect_to controller: "cards", action: "new"
+    else
+      Payjp.api_key = 'sk_test_608b28bb0addb6bcaa776aa4'
+      #保管した顧客IDでpayjpから情報取得
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      #保管したカードIDでpayjpから情報取得、カード情報表示のためインスタンス変数に代入
+      @card_information = customer.cards.retrieve(@card.card_id)
+    end
   end
 
   def pay
-    Payjp.api_key = 'pk_test_e62349859c2f9a2db51bfa9c' # APIキーの呼び出し
-      
-    customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
-        description: 'test~~~~',                    # なくてもいいです
-        email: current_user.email,              # なくてもいいです
-        card: params[:payjp_token],            # 必須です
-        metadata: {user_id: current_user.id}    # なくてもいいです
-      )
-
-    amount = @item.price
+    Payjp.api_key = "sk_test_608b28bb0addb6bcaa776aa4"
     Payjp::Charge.create(
-    :amount => amount,
-    :currency => 'jpy',
-    :customer => customer.id,
-    :description => '決済に関する説明'
-)
+    :amount => @item.price,          #支払金額を引っ張ってくる
+    :customer => @card.customer_id,  #顧客ID
+    :currency => 'jpy',              #日本円
+  )
+  redirect_to action: 'done' #完了画面に移動
   end
 
   def done
@@ -32,6 +31,7 @@ class PurchaseController < ApplicationController
   end
 
 private
+
 
   def set_card
     @card = Card.where(user_id: current_user).first
