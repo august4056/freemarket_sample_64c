@@ -34,5 +34,5 @@
             .ladies__price-box__price
               ¥
               = item.price
-          -# 購入機能実装後if分岐
+          -# -if item.buyer_id.present?
             .ladies__box__photo__sold
