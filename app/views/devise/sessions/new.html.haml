@@ -19,23 +19,22 @@
           %button.btn.google
             %i.fab.fa-google
             = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
-  .login-footer
-    = form_with model: @user do |form|
-      .user-login-form
-        .user-form-group
-          = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
-        .user-form-group
-          = form.password_field :text, class:"password-field", placeholder:"" 
-        .user-form-group
-          .robot
-            %button.robot-button
-              %input.check{type: "checkbox"}/
-              私はロボットではありません
-        .login-btn
-          %button.login-submit{type: "submit"}
-            ログイン
-        = link_to "#" do
-          パスワードをお忘れの方
+      = form_with model: @user do |form|
+        .user-login-form
+          .user-form-group
+            = form.text_field :email, class:"mail-field", placeholder: "メールアドレス"
+          .user-form-group
+            = form.password_field :text, class:"password-field", placeholder:"" 
+          .user-form-group
+            .robot
+              %button.robot-button
+                %input.check{type: "checkbox"}/
+                私はロボットではありません
+          .login-btn
+            %button.login-submit{type: "submit"}
+              ログイン
+          = link_to "#" do
+            パスワードをお忘れの方
   .footer
     .footer__nav
       %ul.footer__nav__messages

@@ -1,45 +1,44 @@
 class CardsController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   require "payjp"
-  before_action :set_card
-  
-  def pay
-    sign_in User.find(params[:id]) unless user_signed_in?
-    Payjp.api_key = 'pk_test_e62349859c2f9a2db51bfa9c' # APIキーの呼び出し
 
-      customer = Payjp::Customer.create(        # customerの定義、ここの情報を元に、カード情報との紐付けがされる
-        description: 'test~~~~',                    # なくてもいいです
-        # email: current_user.email,              # なくてもいいです
-        card: params[:payjp_token],            # 必須です
-        metadata: {user_id: current_user.id}    # なくてもいいです
-      )
-
-      @card = Card.new(                  # カードテーブルのデータの作成
-        user_id: current_user.id,        # ここでcurrent_user.idがいるので、前もってsigninさせておく
-        customer_id: customer.id,        # customerは上で定義
-        card_id: customer.default_card   # .default_cardを使うことで、customer定義時に紐付けされたカード情報を引っ張ってくる ここがnullなら上のcustomerのcard: params['payjp_token']が読み込めていないことが多い
-      )
-
-      if @card.save
-        redirect_to mypage_path
-      else
-        redirect_to action: "create"
-      end
+  def new
+    @card = Card.new
   end
 
-  def credit
-    
-  end
-  
-  def registration
+  def create
+    Payjp.api_key = 'sk_test_608b28bb0addb6bcaa776aa4'
+    customer = Payjp::Customer.create(
+      description: 'test',
+      card: params["payjp_token"]
+    )
+    @card = Card.new(user_id:current_user.id,customer_id:customer.id,card_id:customer.cards.data[0].id)
 
-  end
-
-  private
-
-  def set_card
-    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+    @card.save
+    redirect_to card_path(current_user)
   end
 
+  def destroy #PayjpとCardデータベースを削除します
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+      redirect_to action: "new" 
+    else
+      Payjp.api_key = "sk_test_608b28bb0addb6bcaa776aa4"
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      customer.delete
+      card.delete
+      redirect_to card_path
+    end
   end
+
+  def show #Cardのデータpayjpに送り情報を取り出します
+    card = Card.where(user_id:current_user.id).first
+    if card.blank?
+      render  "/cards/show" 
+    else
+      Payjp.api_key = "sk_test_608b28bb0addb6bcaa776aa4"
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @card_information = customer.cards.retrieve(card.card_id)
+    end
+  end
+end

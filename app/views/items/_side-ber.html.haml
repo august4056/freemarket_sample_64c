@@ -63,8 +63,9 @@
         %li.user__mypage-left-list
           発送元・お届け先住所変更
           %i.fas.fa-chevron-right
-        %li.user__mypage-left-list
-          支払い方法
+        = link_to card_path(current_user) do
+          %li.user__mypage-left-list
+            支払い方法
           %i.fas.fa-chevron-right
         %li.user__mypage-left-list
           メール/パスワード

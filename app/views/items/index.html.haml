@@ -27,6 +27,13 @@
       %li.ladies__box__photo
         =link_to "items/#{item.id}" do
           = image_tag "#{item.image}", class: "ladies-photo"
+          - if item.buyer_id.present?
+            .p 売り切れ!!
+            .p 売り切れ!!
+            .p 売り切れ!!
+            .p 売り切れ!!
+            .p 売り切れ!!
+            .p 売り切れ!!
           .ladies__comment-box
             .ladies__comment-box__text
               = simple_format(item.name)

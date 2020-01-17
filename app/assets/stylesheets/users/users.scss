@@ -363,14 +363,8 @@
   margin-bottom: 30px;
 }
 
-//フッター
-.login-footer {
-  height:140px;
-  background-color: $Background;
-  padding: 40px 0;
-  text-align: center;
-  padding-top: 110px;
-}
+// フッター
+
 
 .footer {
   height:140px;
@@ -399,5 +393,39 @@
       text-align: center;
       font-size: 13px;
     }
+  }
+}
+
+// registration/new.html.hamlのフッター限定で適用
+.login-footer {
+  height:140px;
+  background-color: $Background;
+  padding: 40px 0;
+  text-align: center;
+  padding-top: 110px;
+  &__nav {
+    &__messages {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      &__m {
+        margin-top: -40px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+    
+      }
+    }
+  }
+  &__logo {
+    text-align: center;
+    .flogo {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  &__copy {
+    margin-top: -7px;
+    text-align: center;
+    font-size: 13px;
   }
 }

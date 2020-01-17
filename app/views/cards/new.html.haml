@@ -4,13 +4,13 @@
   .user-main
     .user-member-info
       %h2.user-member-info__title 支払い方法
-      = form_with url: credit_path, method: :get, name: "charge-form", id: 'charge-form' do |form|
+      = form_with model: @card ,url: cards_path, name: "charge-form", id: 'charge-form' do |form|
         .user-single-content
           .user-form-group
             %p
               カード番号
               %span.required 必須
-            %p= form.text_field :card_number, id: "card_number", placeholder: "半角数字のみ" ,class: "card-num-field", type: "text", maxlength: "16", name:
+            = form.text_field :card_id, id: "card_number", placeholder: "半角数字のみ" ,class: "card-num-field", type: "text", maxlength: "16"
             %ul.user-cards
               %li.user-cards__card= image_tag 'visa.gif',class:"card-logo"
               %li.user-cards__card= image_tag 'mastercard.gif',class:"card-logo"
@@ -22,9 +22,9 @@
             %p
               有効期限
               %span.required 必須
-            = form.select :exp_month, 1..12, class:"security-field", id:"exp_month", name: "exp_month", type: "text"
+            = form.select :exp_month, 1..12, class:"security-field", name: "exp_month"
             %p 月
-            = form.select :exp_year, Time.current.year..2030, class:"security-field", id:"exp_year", name: "exp_year", type: "text"
+            = form.select :exp_year, Time.current.year..2030, class:"security-field", name: "exp_year", type: "text"
             %p 年
           .user-form-group
             %p

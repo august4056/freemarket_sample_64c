@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  require 'payjp'
+  
   layout "items"
 
   before_action :set_item, only: [:show, :edit, :destroy]
@@ -40,7 +40,6 @@ class ItemsController < ApplicationController
     
     
   def mypage
-      @user= User.find(params[:id])
   end
 
 

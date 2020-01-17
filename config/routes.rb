@@ -5,33 +5,28 @@ Rails.application.routes.draw do
   
   root "items#index"
 
-  get 'mypage/:id', to: 'items#mypage'
+  resources :items
   get 'logout', to: 'items#logout'
   get 'identification', to: 'items#identification'
   get 'edit_profile', to: 'items#edit_profile'
-  
-  get 'registration', to: 'users#registration'
-  get 'login', to: 'users#login'
-  get 'info', to: 'users#info'
-  get 'complete', to: 'users#complete'
-  get 'confirm', to: 'users#confirm'
-  get 'address', to: 'users#address'
-  get 'logout', to: 'users#logout'
-  
-  get 'mypage/:id/credit', to: 'cards#credit'
-  get 'credit/:id', to: 'cards#credit'
-  get 'registration', to: 'cards#registration'
+  get 'item_edit_delete', to: 'items#item_edit_delete'
 
-  get 'item_confirm/:id', to: 'purchase#item_confirm'
-  post 'item_confirm/:id', to: 'purchase#item_confirm'
-  post 'pay', to: 'purchase#pay'
-  get 'done/:id', to: 'purchase#done'
-  post 'done/:id', to: 'purchase#done'
+  get 'identification', to: 'items#identification'
+  get 'identification', to: 'items#identification'
+  get 'mypage', to: 'items#mypage'
   
-  resources :items
+
+  get 'purchase/:id', to: 'purchase#index'
+
+  resources :purchase, only: [:index,:update] do
+    member do
+      post 'pay'
+      get 'done'
+    end
+  end
+  
   resources :users, only: [:new, :edit, :create, :show]
   
-  get 'item_edit_delete', to: 'items#item_edit_delete'
 
   resources :signup, except:[:index,:show] do
     collection do
@@ -44,5 +39,12 @@ Rails.application.routes.draw do
       get 'complete' # 登録完了後のページ
     end
   end
+
+
+  get 'mypage/credit/:id', to: 'cards#credit'
+  get 'registration', to: 'cards#registration'
+
+  resources :cards, only: [:new, :create, :show, :destroy]
+
 end
 
