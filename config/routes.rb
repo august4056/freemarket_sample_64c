@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get 'purchase/:id', to: 'purchase#index'
 
-  resources :purchase, only: [:index] do
+  resources :purchase, only: [:index,:update] do
     member do
       post 'pay'
       get 'done'

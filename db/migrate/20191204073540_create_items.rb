@@ -12,6 +12,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :price
       t.integer :fee
       t.integer :gross_profit
+      t.integer :buyer_id
      
 
       t.timestamps

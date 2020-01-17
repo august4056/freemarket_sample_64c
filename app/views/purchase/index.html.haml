@@ -39,11 +39,11 @@
             %p.tem_confirm__content__buy-container-inner__credit__cards__info
               クレジットカード
               .card-logo
-              -# = "**** **** **** " + @card_information.last4
+              = "**** **** **** " + @card_information.last4
               %br/
-              -# - exp_month = @card_information.exp_month.to_s
-              -# - exp_year = @card_information.exp_year.to_s.slice(2,3)
-              -# = "有効期限" + exp_month + " / " + exp_year
+              - exp_month = @card_information.exp_month.to_s
+              - exp_year = @card_information.exp_year.to_s.slice(2,3)
+              = "有効期限" + exp_month + " / " + exp_year
             = image_tag "visa.gif",class:"item_confirm__credit-card"
         .item_confirm__content__buy-container-inner__address
           %ul.item_confirm__content__buy-container-inner__address__info

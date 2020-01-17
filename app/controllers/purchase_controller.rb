@@ -23,14 +23,24 @@ class PurchaseController < ApplicationController
     :customer => @card.customer_id,  #顧客ID
     :currency => 'jpy',              #日本円
   )
+  @item.update(buyer_id: current_user.id) 
   redirect_to action: 'done' #完了画面に移動
   end
 
   def done
-    
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params)
+    redirect_to action: 'show' 
   end
 
 private
+
+  def item_params
+    params.require(:item).permit(:buyer_id)
+  end
 
 
   def set_card
