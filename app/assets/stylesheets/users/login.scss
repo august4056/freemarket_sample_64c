@@ -59,6 +59,15 @@
         .facebook{
           background-color: #385185;
           color: white;
+          margin-top: 16px;
+          & fab{
+            position: absolute;
+            left: 10px;
+            width: 20px;
+            height: 16px;
+            bottom: 15px;
+            font-size: 20px;
+          }
         }
         .google{
           background-color: #fff;
@@ -202,19 +211,7 @@
   background-color: #ea352d;
   color: #fff;
   }
-.facebook{
-  margin-top: 16px;
-  background-color: #385185;
-  color: #fff;
-  & fab{
-    position: absolute;
-    left: 10px;
-    width: 20px;
-    height: 16px;
-    bottom: 15px;
-    font-size: 20px;
-  }
-}
+
 .google {
   margin-top: 16px;
   color: #333;
