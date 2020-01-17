@@ -5,7 +5,7 @@ end
 
 # マイページ
 crumb :mypage do
-  link "マイページ", mypage_path
+  link "マイページ", "mypage/:id"
   parent :root
 end
 
@@ -13,18 +13,6 @@ crumb :logout do
   link "ログアウト", logout_path
   parent :mypage
 end
-
-
-
-
-crumb :logout do
-  link "ログアウト", logout_path
-  parent :mypage
-end
-
-
-
-
 
 
 

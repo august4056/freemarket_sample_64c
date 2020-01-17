@@ -7,7 +7,7 @@
       =@item.name
     .item-detail-main
       .item-detail-main__photos
-        = image_tag "#{@item.image}",  class: "item-detail-main__photos__photo"
+        = image_tag "#{@item.image}", class: "item-detail-main__photos__photo"
       %table.item-detail-main__table
         %tbody
           %tr
@@ -28,17 +28,17 @@
                   %i.fas.fa-frown
                 .item-user__rating
                   12
-          %tr
-            -# カテゴリーGEM:アンセストリーが実装できたらblandともに実装、今は仮置き
-            %th
-              カテゴリー
-            %td
-              =@item.category_id
-          %tr
-            %th
-              ブランド
-            %td
-              =@item.category_id
+          -if @item.category_id.present?
+            %tr
+              %th
+                カテゴリー
+              %td
+                =@item.category_id
+            %tr
+              %th
+                ブランド
+              %td
+                =@item.category_id
           -# もし商品のサイズがあれば表示するようif分岐させる
           -if @item.size.present?
             %tr
@@ -84,7 +84,7 @@
 
     %label.item-detail-buy
       %button 
-      = link_to item_confirm_path do
+      = link_to "/item_confirm/#{@item.id}" do
         購入画面に進む
 
     -if user_signed_in?

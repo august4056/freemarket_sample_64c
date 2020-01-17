@@ -1,4 +1,4 @@
-//ヘッダー
+// ヘッダー
 .header {
   height: 128px;
   display: flex;
@@ -54,7 +54,6 @@
   }
 }
 
-
 //メイン
 .user-main {
   display: flex;
@@ -74,10 +73,22 @@
 }
 
 //入力フォーム
+.mail-field {
+  width: 341px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+}
 .user-single-content {
   max-width: 343px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0;
+  & label{
+    font-size: 14px;
+    font-weight: bold;
+  }
   .user-form-group-top {
     font-size: 14px;
     font-weight: bold;
@@ -99,82 +110,89 @@
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
-    .mail-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .identification-title {
-      font-weight: bold;
-    }
-    .identification-text {
-      font-weight: normal;
-      font-size: 12px;
-    }
-    .family-name-kanji {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .first-name-kanji {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      margin-left: 10px;
-      padding: 10px 16px 8px;
-    }
-    .family-name-kana {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-    .first-name-kana {
-      width: 130px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      margin-left: 10px;
-      padding: 10px 16px 8px;
-    }
-    .birthday-field {
-      width: 100px;
-      height: 48px;
-    }
-    #telephone-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
+    & label{
+      font-size: 14px;
     }
   }
-  .user-form-group-password {
-    font-size: 14px;
+  .mail-field {
+    width: 341px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+  .identification-title {
     font-weight: bold;
     margin: 30px 0;
-    .password-field {
-      width: 341px;
-      height: 28px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      padding: 10px 16px 8px;
-    }
-  }   
+  }
 }
+
+.identification-text {
+  font-weight: normal;
+  font-size: 12px;
+}
+.family-name-kanji {
+  width: 130px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+}
+.first-name-kanji {
+  width: 130px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 10px 16px 8px;
+}
+.family-name-kana {
+  width: 130px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+}
+.first-name-kana {
+  width: 130px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 10px 16px 8px;
+}
+.birthday-field {
+  width: 100px;
+  height: 48px;
+}
+#telephone-field {
+  width: 341px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+}
+
+.user-form-group-password {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 30px 0;
+  .password-field {
+    width: 341px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 16px 8px;
+  }
+}
+
 
 .registration-link a {
   text-decoration: none;
@@ -241,13 +259,28 @@
   margin-bottom: 5px;
 }
 .security-field {
-  width: 341px;
+  width: 100px;
   height: 28px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   padding: 10px 16px 8px;
+  display: block;
+  margin: 5px 0;
+  
 }
+.security-field--cvv {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 16px 8px;
+  display: block;
+  margin: 10px 0;
+}
+
+
 .user-cards {
   display: flex;
   &__card {
@@ -257,6 +290,31 @@
       width: 30px;
       height: 20px;
     }
+  }
+}
+
+.row{
+  display: flex;
+  position: relative;
+  margin: 5px 0;
+  line-height: 40px;
+  & p{
+    margin-left: 20px;
+  }
+}
+
+.fa-chevron-down.select_arrow{
+  &__month{
+    position: absolute;
+    top:13px;
+    left:75px;
+    background: $White;
+  }
+  &__year{
+    position: absolute;
+    top:13px;
+    left:75px;
+    background: $White;
   }
 }
 
@@ -291,8 +349,6 @@
   border-radius: 3px;
 }
 
-
-
 .submit-btn {
   width: 341px;
   height: 48px;
@@ -300,16 +356,14 @@
   background-color: #e62017;
   color: #fff;
   text-align: center;
-
+  
 }
 
 .sms-text {
   margin-bottom: 30px;
 }
 
-
 //フッター
-
 .login-footer {
   height:140px;
   background-color: $Background;
@@ -317,7 +371,6 @@
   text-align: center;
   padding-top: 110px;
 }
-
 
 .footer {
   height:140px;

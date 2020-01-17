@@ -44,7 +44,6 @@ end
   after :finishing, 'deploy:cleanup'
 end
 
-
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
@@ -53,5 +52,4 @@ set :default_env, {
 }
 
 # secrets.yml用のシンボリックリンクを追加
-
 set :linked_files, %w{ config/secrets.yml }
