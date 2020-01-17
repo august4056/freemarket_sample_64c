@@ -74,8 +74,26 @@
     list-style: none;
     background-color: powderblue;
     transition: background-color .5s;
-
-    
+    display: flex;
+    &__sold::before {
+      content: "";
+      top: 0;
+      left: 0;
+      border-bottom: 4em solid transparent;
+      border-left: 4em solid #c12748; /* ラベルの色はここで変更 */
+      position: absolute;
+      z-index: 100;
+    }
+    &__sold::after {
+	  content: "SOLD";
+    display: block;
+    top: 12px;
+    left: 3px;
+    transform: rotate(-45deg);
+    color: #fff; /* 文字色はここで変更 */
+    position: absolute;
+    z-index: 101;
+    }
     
     .ladies-photo {
       height: 188px;

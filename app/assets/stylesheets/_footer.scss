@@ -4,6 +4,11 @@
   display: flex;
   position:relative;
   overflow: hidden;
+  &__contents{
+    margin-left: 100px;
+    height: 100%;
+    width: 100%;
+  }
 
   .smph__img {
     position: absolute;
@@ -20,7 +25,7 @@
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   top: 60px;
-  left: 150px;
+  left: 250px;
 
 }
 
@@ -30,7 +35,7 @@
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   top: 100px;
-  left: 150px;
+  left: 250px;
 
 }
 
@@ -39,26 +44,26 @@
   width: 68px;
   position: absolute;
   top: 170px;
-  left: 150px;
+  left: 250px;
 }
 
 .footer__apple__img {
   position: absolute;
   top: 184px;
-  left: 240px;
+  left: 340px;
 }
 
 .footer__google__img {
   position: absolute;
   top: 184px;
-  left: 400px;
+  left: 500px;
 }
 
 .footer__free__img {
   height: 399px;
   position: absolute;
   top: 0;
-  left: 600px;
+  left: 700px;
 }
 
 .footer__index {
