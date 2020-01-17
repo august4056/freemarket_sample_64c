@@ -14,7 +14,7 @@
             %th
               出品者
             %td
-              = @item.user.nickname
+              -# = @item.user.nickname
               .item-user
                 .item-user__laugh
                   %i.fas.fa-laugh
@@ -87,15 +87,16 @@
       = link_to "/item_confirm/#{@item.id}" do
         購入画面に進む
 
-    .item-detail-caution
-      -# - if @item.user_id == current_user.id
-      .item-detail-delete
-        = link_to "出品者として商品を編集する", edit_item_path(@item.id), class: "item-detail-delete__link"
-      .item-detail-delete
-        = link_to "出品者として商品を削除する", item_path(@item.id), method: :delete, class: "item-detail-delete__link"
-      -# - else
+    -if user_signed_in?
       .item-detail-caution
-        この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
+        -if current_user.id == @item.user_id
+          .item-detail-delete
+            = link_to "出品者として商品を編集する", edit_item_path(@item.id), class: "item-detail-delete__link"
+          .item-detail-delete
+            = link_to "出品者として商品を削除する", item_path(@item.id), method: :delete, class: "item-detail-delete__link"
+        -else
+    .item-detail-caution
+      この商品はゆうゆうエフマケ便を利用しているため、アプリからのみ購入できます。
 
     .item-detail-description
       .item-detail-description__text

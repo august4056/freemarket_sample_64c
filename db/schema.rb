@@ -73,21 +73,6 @@ ActiveRecord::Schema.define(version: 2019_12_24_113022) do
     t.string "nickname", null: false
     t.string "email", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "family_name_kanji", null: false
-    t.string "first_name_kanji", null: false
-    t.string "family_name_kana", null: false
-    t.string "first_name_kana", null: false
-    t.string "phone_number", null: false
-    t.string "address_family_name_kanji", null: false
-    t.string "address_first_name_kanji", null: false
-    t.string "address_family_name_kana", null: false
-    t.string "address_first_name_kana", null: false
-    t.string "address_number", null: false
-    t.integer "address_prefecture", null: false
-    t.string "address_city", null: false
-    t.string "address_block", null: false
-    t.string "address_building"
-    t.integer "address_phone_number"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

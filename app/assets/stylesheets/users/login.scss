@@ -59,6 +59,7 @@
         .facebook{
           background-color: #385185;
           color: white;
+          margin-top: 16px;
         }
         .google{
           background-color: #fff;
@@ -78,6 +79,7 @@
 
 .user-login-form {
   .user-form-group {
+    color: white;
     font-size: 14px;
     font-weight: bold;
     margin: 30px 0;
@@ -177,6 +179,7 @@
       margin: 0 auto;
       padding: 24px 16px 40px;
       .user-single-forms{
+        display: block;
         width: 343px;
         margin: 0 auto;
         & .form-group {
@@ -200,19 +203,7 @@
   background-color: #ea352d;
   color: #fff;
   }
-.facebook {
-  margin-top: 16px;
-  background-color: #385185;
-  color: #fff;
-  & fab{
-    position: absolute;
-    left: 10px;
-    width: 20px;
-    height: 16px;
-    bottom: 15px;
-    font-size: 20px;
-  }
-}
+
 .google {
   margin-top: 16px;
   color: #333;
@@ -225,4 +216,12 @@
     bottom: 15px;
     font-size: 20px;
   }
+}
+
+.facebook-signin{
+  color: #fff;
+}
+
+.google-signin{
+  color: #333;
 }
