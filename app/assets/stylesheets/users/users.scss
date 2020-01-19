@@ -1,11 +1,10 @@
 // ヘッダー
-.header {
+.user-header {
   height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $Background;
-  margin-top: -20px;
   &__left {
     .logo {
       height: 180px;
@@ -14,45 +13,151 @@
   }
   &__right {
     margin-left: 40px;
-    .nav-bar__lists {
+    .progress-bar {
       display: flex;
-      .item {
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-        text-align: center;
-        width: 100px;
-        .circle {
-          width: 12px;
-          height: 12px;
-          background-color: black;
-          border-radius: 50%;
-          margin: 8px auto 0;
-          text-align: center;
-          position: relative;
-        }
-        .last-circle {
-          width: 12px;
-          height: 12px;
-          background-color: black;
-          border-radius: 50%;
-          margin: 8px auto 0;
-          text-align: center;
-          position: relative;
-        }
-        .circle::after {
-          content: "";
-          width: 100px;
-          height: 2px;
-          display: block;
-          background-color: black;
-          position: absolute;
-          top: 5px;
-        }
-      }
+      color: #888;
+      font-size: 12px;
     }
   }
 }
+
+
+.progress-bar__item__start {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  width: 100px;
+  color: #888;
+  // margin-right: 25px;
+}
+      
+.progress-bar__item__start__red {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  width: 100px;
+  color: #ea352d;
+  // margin-right: 25px;
+}
+
+.circle__start {
+  width: 12px;
+  height: 12px;
+  background-color: #ea352d;
+  border-radius: 50%;
+  margin: 8px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+      
+.progress-bar__item {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  width: 100px;
+  color: #888;
+}
+.progress-bar__item__red {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  width: 100px;
+  color: #ea352d;
+}
+
+
+
+
+
+.progress-bar__red {
+  font-size: 12px;
+  color:#ea352d;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 8px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.circle__red {
+  width: 12px;
+  height: 12px;
+  background-color: #ea352d;
+  border-radius: 50%;
+  margin: 8px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.circle::before {
+  content: "";
+  width: 90px;
+  height: 2px;
+  display: block;
+  background-color: #ccc;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.circle__red::before {
+  content: "";
+  width: 90px;
+  height: 2px;
+  display: block;
+  background-color: #ea352d;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+    
+
+// .circle__start {
+//   width: 12px;
+//   height: 12px;
+//   background-color: #ea352d;
+//   border-radius: 50%;
+//   margin: 8px auto 0;
+//   text-align: center;
+//   position: relative;
+//   z-index: 2;
+// }
+
+.circle__red {
+  width: 12px;
+  height: 12px;
+  background-color: #ea352d;
+  border-radius: 50%;
+  margin: 8px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+
+
+// .progress-bar__item:nth-child(2) {
+//   margin-left: 26px;
+// }
+
+
+
+
+
+
 
 //メイン
 .user-main {

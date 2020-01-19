@@ -32,9 +32,9 @@ Rails.application.routes.draw do
     collection do
       get 'step1'
       post 'save_step1'
-      get 'step2'
+      post 'step2'
       post 'save_step2'
-      get 'step3'
+      post 'step3'
       post 'save_step3'
       get 'complete' # 登録完了後のページ
     end

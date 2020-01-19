@@ -1,7 +1,7 @@
 .user-main
   .user-member-info
     %h2.user-member-info__title 会員情報入力
-    = form_for @user ,url: step2_signup_index_path, method: :get do |form|
+    = form_for @user ,url: step2_signup_index_path, method: :post do |form|
       .user-single-content
         .user-form-group-top
           %p.nick-name
