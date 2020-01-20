@@ -7,7 +7,7 @@ class CardsController < ApplicationController
   end
 
   def create
-    Payjp.api_key = 'sk_test_608b28bb0addb6bcaa776aa4'
+    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     customer = Payjp::Customer.create(
       description: 'test',
       card: params["payjp_token"]
@@ -23,7 +23,7 @@ class CardsController < ApplicationController
     if card.blank?
       redirect_to action: "new" 
     else
-      Payjp.api_key = "sk_test_608b28bb0addb6bcaa776aa4"
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)
       customer.delete
       card.delete
@@ -36,7 +36,7 @@ class CardsController < ApplicationController
     if card.blank?
       render  "/cards/show" 
     else
-      Payjp.api_key = "sk_test_608b28bb0addb6bcaa776aa4"
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)
       @card_information = customer.cards.retrieve(card.card_id)
     end
