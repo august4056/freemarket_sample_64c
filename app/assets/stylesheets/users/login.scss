@@ -191,6 +191,22 @@
 }
 //login ログインボタン
 .btn{
+  
+}
+.mail-btn{
+  background-color: #ea352d;
+  color: #fff;
+  width: 343px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 16px;
+  }
+
+.facebook-btn {
+  background-color: #385185;
   width: 343px;
   height: 50px;
   border-radius: 4px;
@@ -198,15 +214,22 @@
   cursor: pointer;
   position: relative;
 }
-.mail{
-  background-color: #ea352d;
-  color: #fff;
-  }
 
-.google {
+.fa-facebook-square {
+  color: #fff;
+  
+}
+
+.google-btn {
   margin-top: 16px;
   color: #333;
-  border: #979797 1px solid; 
+  border: #979797 1px solid;
+  width: 343px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative; 
   & fab{
     position: absolute;
     left: 10px;
@@ -216,6 +239,7 @@
     font-size: 20px;
   }
 }
+
 
 .facebook-signin{
   color: #fff;
