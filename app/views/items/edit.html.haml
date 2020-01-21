@@ -35,18 +35,18 @@
                   %label
                     カテゴリー
                   %span.item__sell--uploadbox__form-require 必須
-                .item__sell-select-wrap
+                .item__sell-select
                   %i.fas.fa-chevron-down 
-                  .item__sell-fontawsome
+                  .item__sell-select__default
                     = f.select :category_id, [["選択してください", 0],[ "レディース", 1],["メンズ", 196],["ベビー・キッズ", 341],["インテリア・住まい・小物", 477],["本・音楽・ゲーム", 618],["おもちゃ・ホビー・グッズ", 677],["コスメ・香水・美容", 790],["家電・スマホ・カメラ", 890],["スポーツ・レジャー", 975],["ハンドメイド", 1083],["チケット", 1134],["自動車・オートバイ", 1193],["その他", 1255],], {}, {class: "item__sell-select-default"}
                       
                 .item__sell-form-box__group2
                   %label
                     商品の状態
                   %span.item__sell--uploadbox__form-require 必須
-                .item__sell-select-wrap
+                .item__sell-select
                   %i.fas.fa-chevron-down
-                  .item__sell-fontawsome
+                  .item__sell-select__default
                     = f.select :state, [["選択してください","選択してください"],["新品、未使用","新品、未使用"],["未使用に近い","未使用に近い"],["目立った傷や汚れなし","目立った傷や汚れなし"],["やや傷や汚れあり","やや傷や汚れあり"],["傷や汚れあり","傷や汚れあり"],["全体的に状態が悪い","全体的に状態が悪い"]], {}, {class: "item__sell-select-default"}         
             .item__sell-content-sub2
               %p.item__sell-content-sub2__sub-head2 配送について
@@ -56,25 +56,26 @@
                   %label
                     配送料の負担
                   %span.item__sell--uploadbox__form-require 必須
-                .item__sell-select-wrap
+                .item__sell-select
                   %i.fas.fa-chevron-down
-                  .item__sell-fontawsome
+                  .item__sell-select__default
                     = f.select :delivery_fee, [["選択してください", 0],["送料込み(出品者負担)", 1],["着払い(購入者負担)", 2]], {}, {class: "item__sell-select-default"}
 
                 .item__sell-content-sub2__form-group4
                   %label
                     発送元の地域
                   %span.item__sell--uploadbox__form-require 必須
-                  .item__sell-select-wrap
+                  .item__sell-select
                     %i.fas.fa-chevron-down
-                    .item__sell-fontawsome
+                    .item__sell-select__default
                       = f.collection_select :prefecture_id, Prefecture.all, :id, :name , {}, {class: "item__sell-select-default"}
                 .item__sell-content-sub2__form-group5
                   %label.label 発送までの日数
                   %span.item__sell--uploadbox__form-require 必須
-                  .item__sell-select-wrap
+                  .item__sell-select
                     %i.fas.fa-chevron-down
-                    = f.select :delivery_date, [["選択してください", 0],["1~2日で発送", 1],["2~3日で発送", 2],["4~7日で発送", 3]], {}, {class: "item__sell-select-default"}
+                    .item__sell-select__default
+                      = f.select :delivery_date, [["選択してください", 0],["1~2日で発送", 1],["2~3日で発送", 2],["4~7日で発送", 3]], {}, {class: "item__sell-select-default"}
             .item__sell-content-low
               %p.item__sell-sub-head2 販売価格(300~9,999,999)
               %a.item__sell-content-low__form-question2{href: "", target: "_blank"} ?
