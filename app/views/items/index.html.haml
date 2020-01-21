@@ -27,13 +27,6 @@
       %li.ladies__box__photo
         =link_to "items/#{item.id}" do
           = image_tag "#{item.image}", class: "ladies-photo"
-          - if item.buyer_id.present?
-            .p 売り切れ!!
-            .p 売り切れ!!
-            .p 売り切れ!!
-            .p 売り切れ!!
-            .p 売り切れ!!
-            .p 売り切れ!!
           .ladies__comment-box
             .ladies__comment-box__text
               = simple_format(item.name)
@@ -41,5 +34,5 @@
             .ladies__price-box__price
               ¥
               = item.price
-          -# 購入機能実装後if分岐
-            .ladies__box__photo__sold
+        - if item.buyer_id.present?
+          .ladies__box__photo__sold
